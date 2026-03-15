@@ -13,3 +13,4 @@ C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\obj\Debug\AxInterop.WMP
 C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.ResolveComReference.cache
 C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\bin\Debug\Interop.WMPLib.dll
 C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Form2.resources

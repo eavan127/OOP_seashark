@@ -110,7 +110,7 @@
             this.Controls.Add(this.btnStart);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Home Screen";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.picFish)).EndInit();
             this.ResumeLayout(false);
