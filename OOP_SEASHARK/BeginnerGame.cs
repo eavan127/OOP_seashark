@@ -190,10 +190,6 @@ namespace OOP_SEASHARK
                         moveLeft = false;
                         moveRight = false;
 
-                        // Nudge player slightly past the obstacle so they don't get stuck
-                        playerX = obstacles[i].Right + 2;
-                        playerX = Math.Max(0, Math.Min(playerX, this.ClientSize.Width - picFishBeginner.Width));
-                        picFishBeginner.Left = playerX;
 
                         // Resume game
                         gameTimer.Start();
