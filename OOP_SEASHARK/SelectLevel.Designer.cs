@@ -131,6 +131,7 @@
             this.btnPlayBeginner.TabIndex = 2;
             this.btnPlayBeginner.Text = "Play Level";
             this.btnPlayBeginner.UseVisualStyleBackColor = false;
+            this.btnPlayBeginner.Click += new System.EventHandler(this.btnPlayBeginner_Click);
             // 
             // label2
             // 
@@ -215,7 +216,7 @@
             this.btnBackMain.UseVisualStyleBackColor = false;
             this.btnBackMain.Click += new System.EventHandler(this.btnBackMain_Click);
             // 
-            // Form2
+            // SelectLevel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -228,7 +229,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblSelect);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Name = "Form2";
+            this.Name = "SelectLevel";
             this.Text = "Level Selection Screen";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

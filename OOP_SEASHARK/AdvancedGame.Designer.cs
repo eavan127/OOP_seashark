@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "AdvancedGame";
+            this.SuspendLayout();
+            // 
+            // AdvancedGame
+            // 
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Name = "AdvancedGame";
+            this.Load += new System.EventHandler(this.AdvancedGame_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

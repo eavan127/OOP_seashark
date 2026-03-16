@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace OOP_SEASHARK
 {
-    internal class AdvancedLevel
+    public class AdvancedLevel : Level
     {
+        public AdvancedLevel()
+        {
+            timeLimit = 420;
+        }
+        public override void LoadQuiz() { }
     }
 }

@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace OOP_SEASHARK
 {
-    public partial class AdvancedGame : Form
+    public partial class AdvancedGame : System.Windows.Forms.Form
     {
-        public AdvancedGame()
+        public AdvancedGame() { InitializeComponent(); }
+
+        private void AdvancedGame_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
     }
 }

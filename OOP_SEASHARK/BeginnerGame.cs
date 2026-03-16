@@ -58,10 +58,6 @@ namespace OOP_SEASHARK
             countdownTimer.Tick += Countdown_Tick;
             countdownTimer.Start();
 
-            // Allow keyboard input
-            this.KeyPreview = true;
-            this.KeyDown += BeginnerGame_KeyDown;
-            this.KeyUp += BeginnerGame_KeyUp;
         }
 
         // GAME LOOP
@@ -107,8 +103,8 @@ namespace OOP_SEASHARK
                 }
             }
 
-            // Floor - bottom panel area
-            int floorY = panel4.Top - picFishBeginner.Height; // panel4 = bottom control bar
+            // Floor - bottom of the form
+            int floorY = this.ClientSize.Height - picFishBeginner.Height;
             if (playerY >= floorY)
             {
                 playerY = floorY;
@@ -134,12 +130,12 @@ namespace OOP_SEASHARK
         }
 
         // BUTTON CONTROLS
-        private void btnLeftBeginner_Click(object sender, EventArgs e)
+        private void btnLeftBeginner_MouseDown(object sender, MouseEventArgs e)
         {
             moveLeft = true;
         }
 
-        private void btnRightBeginner_Click(object sender, EventArgs e)
+        private void btnRightBeginner_MouseDown(object sender, MouseEventArgs e)
         {
             moveRight = true;
         }

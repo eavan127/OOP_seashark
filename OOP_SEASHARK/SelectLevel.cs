@@ -17,6 +17,13 @@ namespace OOP_SEASHARK
             InitializeComponent();
         }
 
+        private void btnPlayBeginner_Click(object sender, EventArgs e)
+        {
+            BeginnerGame beginnerGame = new BeginnerGame();
+            beginnerGame.Show();
+            this.Hide();
+        }
+
         private void btnBackMain_Click(object sender, EventArgs e)
         {
             Main main = new Main();  

@@ -12,7 +12,6 @@ namespace OOP_SEASHARK
 
         public Quiz()
         {
-            // Define all 3 questions, options and correct answers
             questions = new string[]
             {
                 "What is the correct syntax to declare a variable in C#?",
@@ -24,40 +23,25 @@ namespace OOP_SEASHARK
             {
                 new string[] { "int x = 5;", "x = 5;", "variable x = 5;", "int = x 5;" },
                 new string[] { "object", "class", "struct", "form" },
-                new string[] { "Object Oriented Programming", "Open Object Program", "Output Oriented Process", "Object Order Program" }
+                new string[] { "Object Oriented Programming", "Open Object Program",
+                               "Output Oriented Process", "Object Order Program" }
             };
 
-            // Index of correct answer for each question (0=A, 1=B, 2=C, 3=D)
             correctAnswerIndex = new int[] { 0, 1, 0 };
-
             currentQuestionIndex = 0;
             score = 0;
         }
 
-        public string GetQuestion(int index)
-        {
-            return questions[index];
-        }
-
-        public string[] GetOptions(int index)
-        {
-            return options[index];
-        }
+        public string GetQuestion(int index) { return questions[index]; }
+        public string[] GetOptions(int index) { return options[index]; }
 
         public bool CheckAns(int questionIndex, int answerIndex)
         {
             return answerIndex == correctAnswerIndex[questionIndex];
         }
 
-        public void UpdateScore()
-        {
-            score++;
-        }
-
-        public int GetScore()
-        {
-            return score;
-        }
+        public void UpdateScore() { score++; }
+        public int GetScore() { return score; }
 
         public string GetHint(int questionIndex)
         {
@@ -70,9 +54,6 @@ namespace OOP_SEASHARK
             return hints[questionIndex];
         }
 
-        public int TotalQuestions()
-        {
-            return questions.Length;
-        }
+        public int TotalQuestions() { return questions.Length; }
     }
 }

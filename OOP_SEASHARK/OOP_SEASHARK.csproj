@@ -64,6 +64,7 @@
     <Compile Include="AdvancedGame.Designer.cs">
       <DependentUpon>AdvancedGame.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdvancedLevel.cs" />
     <Compile Include="BeginnerCompleted.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +115,9 @@
     <Compile Include="TimeUp.Designer.cs">
       <DependentUpon>TimeUp.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdvancedGame.resx">
+      <DependentUpon>AdvancedGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BeginnerGame.resx">
       <DependentUpon>BeginnerGame.cs</DependentUpon>
     </EmbeddedResource>

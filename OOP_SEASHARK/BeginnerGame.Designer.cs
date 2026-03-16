@@ -154,9 +154,9 @@
             // 
             this.picFishBeginner.BackColor = System.Drawing.Color.Transparent;
             this.picFishBeginner.Image = global::OOP_SEASHARK.Properties.Resources.shark2;
-            this.picFishBeginner.Location = new System.Drawing.Point(2, 316);
+            this.picFishBeginner.Location = new System.Drawing.Point(12, 324);
             this.picFishBeginner.Name = "picFishBeginner";
-            this.picFishBeginner.Size = new System.Drawing.Size(177, 136);
+            this.picFishBeginner.Size = new System.Drawing.Size(132, 114);
             this.picFishBeginner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFishBeginner.TabIndex = 5;
             this.picFishBeginner.TabStop = false;
@@ -183,7 +183,8 @@
             this.btnRightBeginner.TabIndex = 2;
             this.btnRightBeginner.Text = "→";
             this.btnRightBeginner.UseVisualStyleBackColor = false;
-            this.btnRightBeginner.Click += new System.EventHandler(this.btnRightBeginner_Click);
+            this.btnRightBeginner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnRightBeginner_MouseDown);
+            this.btnRightBeginner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnRightBeginner_MouseUp);
             // 
             // btnLeftBeginner
             // 
@@ -195,7 +196,8 @@
             this.btnLeftBeginner.TabIndex = 1;
             this.btnLeftBeginner.Text = "←";
             this.btnLeftBeginner.UseVisualStyleBackColor = false;
-            this.btnLeftBeginner.Click += new System.EventHandler(this.btnLeftBeginner_Click);
+            this.btnLeftBeginner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLeftBeginner_MouseDown);
+            this.btnLeftBeginner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnLeftBeginner_MouseUp);
             // 
             // btnUpBeginner
             // 
