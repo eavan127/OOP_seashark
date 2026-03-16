@@ -1,6 +1,6 @@
 ﻿namespace OOP_SEASHARK
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -49,7 +49,7 @@
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start Game";
             this.btnStart.UseVisualStyleBackColor = false;
-            this.btnStart.Click += new System.EventHandler(this.button1_Click);
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // contextMenuStrip1
             // 
@@ -70,7 +70,6 @@
             this.lblTitle.TabIndex = 3;
             this.lblTitle.Text = "C# Deep Sea Challenge";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // picFish
             // 
@@ -97,7 +96,7 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,7 +108,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnStart);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Home Screen";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.picFish)).EndInit();

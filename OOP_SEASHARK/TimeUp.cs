@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace OOP_SEASHARK
 {
-    public partial class Form2 : Form
+    public partial class TimeUp : Form
     {
-        public Form2()
+        public TimeUp()
         {
             InitializeComponent();
         }
 
-        private void lblKeys_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
+        private void TimeUp_Load(object sender, EventArgs e)
         {
 
         }

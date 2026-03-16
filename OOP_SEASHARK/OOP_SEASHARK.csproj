@@ -32,6 +32,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
@@ -48,25 +52,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AdvancedCompleted.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AdvancedCompleted.Designer.cs">
+      <DependentUpon>AdvancedCompleted.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="AdvancedGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="AdvancedGame.Designer.cs">
+      <DependentUpon>AdvancedGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeginnerCompleted.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeginnerCompleted.Designer.cs">
+      <DependentUpon>BeginnerCompleted.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeginnerGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeginnerGame.Designer.cs">
+      <DependentUpon>BeginnerGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeginnerLevel.cs" />
+    <Compile Include="GameManager.cs" />
+    <Compile Include="Hint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hint.Designer.cs">
+      <DependentUpon>Hint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Level.cs" />
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
+    <Compile Include="PopQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PopQuiz.Designer.cs">
+      <DependentUpon>PopQuiz.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quiz.cs" />
+    <Compile Include="SelectLevel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLevel.Designer.cs">
+      <DependentUpon>SelectLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Timer.cs" />
+    <Compile Include="TimeUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimeUp.Designer.cs">
+      <DependentUpon>TimeUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BeginnerGame.resx">
+      <DependentUpon>BeginnerGame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PopQuiz.resx">
+      <DependentUpon>PopQuiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectLevel.resx">
+      <DependentUpon>SelectLevel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +136,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TimeUp.resx">
+      <DependentUpon>TimeUp.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -127,6 +188,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anchor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradientblue.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace OOP_SEASHARK
 {
-    partial class Form2
+    partial class SelectLevel
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnBackMain = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picKeys)).BeginInit();
             this.panel2.SuspendLayout();
@@ -95,7 +96,6 @@
             this.lblKeys.Size = new System.Drawing.Size(61, 30);
             this.lblKeys.TabIndex = 1;
             this.lblKeys.Text = "0 / 6";
-            this.lblKeys.Click += new System.EventHandler(this.lblKeys_Click);
             // 
             // label1
             // 
@@ -141,7 +141,6 @@
             this.label2.Size = new System.Drawing.Size(144, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Beginner Level";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
             // 
@@ -153,7 +152,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel3
             // 
@@ -202,6 +200,21 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
+            // btnBackMain
+            // 
+            this.btnBackMain.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackMain.FlatAppearance.BorderSize = 0;
+            this.btnBackMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBackMain.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBackMain.ForeColor = System.Drawing.Color.Navy;
+            this.btnBackMain.Location = new System.Drawing.Point(686, 36);
+            this.btnBackMain.Name = "btnBackMain";
+            this.btnBackMain.Size = new System.Drawing.Size(75, 53);
+            this.btnBackMain.TabIndex = 4;
+            this.btnBackMain.Text = "Back";
+            this.btnBackMain.UseVisualStyleBackColor = false;
+            this.btnBackMain.Click += new System.EventHandler(this.btnBackMain_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -209,6 +222,7 @@
             this.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnBackMain);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -245,5 +259,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnBackMain;
     }
 }
