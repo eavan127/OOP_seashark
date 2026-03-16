@@ -3,3 +3,20 @@ bin/
 obj/
 *.user
 *.suo
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet
+packages/
+*.nupkg
+
+# Rider / ReSharper
+*.DotSettings.user
+_ReSharper*/
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store

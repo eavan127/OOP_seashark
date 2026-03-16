@@ -14,3 +14,24 @@ C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.
 C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\bin\Debug\Interop.WMPLib.dll
 C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\ASUS\Documents\GitHub\OOP_SEASHARK\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Form2.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\bin\Debug\OOP_SEASHARK.exe.config
+D:\github clone\OOP_seashark\OOP_SEASHARK\bin\Debug\OOP_SEASHARK.exe
+D:\github clone\OOP_seashark\OOP_SEASHARK\bin\Debug\OOP_SEASHARK.pdb
+D:\github clone\OOP_seashark\OOP_SEASHARK\bin\Debug\Interop.WMPLib.dll
+D:\github clone\OOP_seashark\OOP_SEASHARK\bin\Debug\AxInterop.WMPLib.dll
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.AssemblyReference.cache
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\Interop.WMPLib.dll
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\AxInterop.WMPLib.dll
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.ResolveComReference.cache
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Properties.Resources.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.GenerateResource.cache
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.CoreCompileInputs.cache
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.pdb
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Main.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.SelectLevel.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.BeginnerGame.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.PopQuiz.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.TimeUp.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.AdvancedGame.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe.config
