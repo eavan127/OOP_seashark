@@ -79,7 +79,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LemonChiffon;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(-1, 264);
+            this.panel1.Location = new System.Drawing.Point(-1, 282);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(190, 46);
             this.panel1.TabIndex = 2;
@@ -88,9 +88,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel2.Location = new System.Drawing.Point(309, 225);
+            this.panel2.Location = new System.Drawing.Point(286, 225);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(198, 33);
+            this.panel2.Size = new System.Drawing.Size(221, 51);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -142,9 +142,9 @@
             // 
             this.picObstacle1.BackColor = System.Drawing.Color.Transparent;
             this.picObstacle1.Image = global::OOP_SEASHARK.Properties.Resources.coral;
-            this.picObstacle1.Location = new System.Drawing.Point(-1, 183);
+            this.picObstacle1.Location = new System.Drawing.Point(-1, 192);
             this.picObstacle1.Name = "picObstacle1";
-            this.picObstacle1.Size = new System.Drawing.Size(68, 75);
+            this.picObstacle1.Size = new System.Drawing.Size(86, 84);
             this.picObstacle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picObstacle1.TabIndex = 6;
             this.picObstacle1.TabStop = false;
@@ -154,7 +154,7 @@
             // 
             this.picFishBeginner.BackColor = System.Drawing.Color.Transparent;
             this.picFishBeginner.Image = global::OOP_SEASHARK.Properties.Resources.shark2;
-            this.picFishBeginner.Location = new System.Drawing.Point(12, 324);
+            this.picFishBeginner.Location = new System.Drawing.Point(12, 334);
             this.picFishBeginner.Name = "picFishBeginner";
             this.picFishBeginner.Size = new System.Drawing.Size(132, 114);
             this.picFishBeginner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

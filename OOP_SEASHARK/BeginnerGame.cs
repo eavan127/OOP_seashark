@@ -185,9 +185,23 @@ namespace OOP_SEASHARK
                         obstacles[i].Visible = false;
                         obstacleCleared[i] = true;
 
+                        // Reset movement flags (dialog steals mouse focus,
+                        // so MouseUp events are lost on the on-screen buttons)
+                        moveLeft = false;
+                        moveRight = false;
+
+                        // Nudge player slightly past the obstacle so they don't get stuck
+                        playerX = obstacles[i].Right + 2;
+                        playerX = Math.Max(0, Math.Min(playerX, this.ClientSize.Width - picFishBeginner.Width));
+                        picFishBeginner.Left = playerX;
+
                         // Resume game
                         gameTimer.Start();
                         countdownTimer.Start();
+
+                        // Only handle one obstacle per frame — don't
+                        // let the loop continue into the next obstacle
+                        return;
                     }
                 }
             }
