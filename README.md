@@ -20,16 +20,16 @@ The main goals of this project are to apply and understand:
 
 ---
 
-🛠 **Features**
-
-- Multi-tiered undersea levels: Beginner and Advanced stages  
-- Interactive quiz pop-ups with multiple-choice questions  
-- Hint system for quizzes  
-- Score and key tracking  
-- Timer-based level progression with level-locking  
-- Visual HUD displaying score, keys, timer, and current level  
-- Win/Lose screens for feedback  
-
+## 🛠 Features
+| Feature | Description |
+|---------|-------------|
+| Multi-tiered Levels | Beginner and Advanced stages with increasing difficulty |
+| Quiz Pop-ups | Multiple-choice C# questions appear during gameplay |
+| Hint System | Provides guidance for quizzes if players are stuck |
+| Score & Key Tracking | Tracks player score and keys collected |
+| Timer System | Level-based countdown for challenge |
+| HUD Interface | Displays score, keys, timer, and level info |
+| Win/Lose Feedback | Displays success or fail screen at level completion |
 ---
 
 💻 **Technologies Used**
