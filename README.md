@@ -17,10 +17,10 @@ This project applies and demonstrates the following OOP concepts:
 
 | Concept | Description |
 |---------|-------------|
-| 🟡 **Encapsulation** | Protects sensitive data like score, keys, position, and quiz answers |
-| 🔵 **Abstraction** | Simplifies level and quiz management using abstract classes |
-| 🟢 **Inheritance** | Levels share common behaviors but can have unique features |
-| 🔴 **Polymorphism** | Uniform methods behave differently depending on the object instance |
+| **Encapsulation** | Protects sensitive data like score, keys, position, and quiz answers |
+| **Abstraction** | Simplifies level and quiz management using abstract classes |
+| **Inheritance** | Levels share common behaviors but can have unique features |
+| **Polymorphism** | Uniform methods behave differently depending on the object instance |
 
 ---
 
