@@ -36,9 +36,32 @@ The main goals of this project are to apply and understand:
 
 - **Language:** C#  
 - **Concepts:** Encapsulation, Inheritance, Polymorphism, Abstraction  
-- **IDE:** Visual Studio / Visual Studio Code  
+- **IDE:** Visual Studio Code  
 - **Version Control:** GitHub  
 
 ---
 
+🚀 **How to Play**
+
+1. Launch the game to reach the Home screen.  
+2. Select a level to start the game.  
+3. Control the shark avatar to navigate platforms, collect keys, and avoid obstacles.  
+4. Answer quizzes when they appear; use the Hint button if needed.  
+5. Complete all quizzes within the time limit to unlock the next level.  
+6. Reach the final goal in Advanced Level to win the game.  
+
+---
+
+💡 **Possible Improvements**
+
+- Add more levels and varied obstacles for extended gameplay  
+- Implement more difficulty level and obstacles based on player performance  
+- Add more interactive quiz types and visual feedback  
+- Include multiplayer modes  
+
+---
+
+📝 **License**
+
+This project was developed as part of an educational C# OOP course for learning purposes.
 
