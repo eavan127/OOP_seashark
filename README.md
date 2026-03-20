@@ -15,10 +15,12 @@ The game combines learning and gameplay, ensuring that players can practice prog
 ## 🎯 Objectives
 This project applies and demonstrates the following OOP concepts:
 
-- **Encapsulation** – protecting data like player score, keys collected, and position with private fields and public properties  
-- **Abstraction** – simplifying level and quiz management using abstract classes  
-- **Inheritance** – sharing common behaviors between different levels while allowing level-specific features (BeginnerLevel, AdvancedLevel)  
-- **Polymorphism** – enabling consistent method calls that execute differently depending on the object instance    
+<div style="display:flex; gap:20px;">
+<div style="background:#FFD700; padding:10px; border-radius:8px;"><b>Encapsulation</b><br>Protects sensitive data (score, keys, position, quiz answers)</div>
+<div style="background:#87CEFA; padding:10px; border-radius:8px;"><b>Abstraction</b><br>Simplifies level and quiz management with abstract classes</div>
+<div style="background:#90EE90; padding:10px; border-radius:8px;"><b>Inheritance</b><br>Levels share common behaviors but can have unique features</div>
+<div style="background:#FFB6C1; padding:10px; border-radius:8px;"><b>Polymorphism</b><br>Uniform methods behave differently per object instance</div>
+</div>   
 
 ---
 
