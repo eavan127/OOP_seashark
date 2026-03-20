@@ -1,22 +1,24 @@
 # OOP_seashark
 ---
 
-📌 **Overview**
+## 📌 **Overview**
 
 **Sea Shark Game** is an interactive educational game designed to teach C# programming concepts through a gamified undersea platformer. Players control a shark avatar, navigating multi-tiered underwater levels, collecting keys, avoiding obstacles, and answering C# quizzes with immediate feedback and hints. The project demonstrates how Object-Oriented Programming (OOP) can be applied in a practical and engaging scenario.
 
 The game combines learning and gameplay, ensuring that players can practice programming concepts in an interactive and progressive manner.
 
+**🎮 Game Preview:**
+
+![Gameplay Preview](;;;.png)
 ---
 
-🎯 **Objectives**
+## 🎯 Objectives
+This project applies and demonstrates the following OOP concepts:
 
-The main goals of this project are to apply and understand:
-
-- **Encapsulation** – protecting data such as player score, keys, and position using properties and controlled methods  
-- **Inheritance** – sharing common behaviors between different level types while allowing specific customizations (BeginnerLevel, AdvancedLevel)  
-- **Polymorphism** – executing uniform methods that behave differently depending on the object instance  
-- **Abstraction** – simplifying the management of levels and quizzes using abstract classes  
+- **Encapsulation** – protecting data like player score, keys collected, and position with private fields and public properties  
+- **Abstraction** – simplifying level and quiz management using abstract classes  
+- **Inheritance** – sharing common behaviors between different levels while allowing level-specific features (BeginnerLevel, AdvancedLevel)  
+- **Polymorphism** – enabling consistent method calls that execute differently depending on the object instance    
 
 ---
 
@@ -32,7 +34,7 @@ The main goals of this project are to apply and understand:
 | Win/Lose Feedback | Displays success or fail screen at level completion |
 ---
 
-💻 **Technologies Used**
+## 💻 **Technologies Used**
 
 - **Language:** C#  
 - **Concepts:** Encapsulation, Inheritance, Polymorphism, Abstraction  
@@ -41,7 +43,7 @@ The main goals of this project are to apply and understand:
 
 ---
 
-🚀 **How to Play**
+## 🚀 **How to Play**
 
 1. Launch the game to reach the Home screen.  
 2. Select a level to start the game.  
@@ -52,7 +54,7 @@ The main goals of this project are to apply and understand:
 
 ---
 
-💡 **Possible Improvements**
+## 💡 **Possible Improvements**
 
 - Add more levels and varied obstacles for extended gameplay  
 - Implement more difficulty level and obstacles based on player performance  
@@ -61,7 +63,7 @@ The main goals of this project are to apply and understand:
 
 ---
 
-📝 **License**
+## 📝 **License**
 
 This project was developed as part of an educational C# OOP course for learning purposes.
 
