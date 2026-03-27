@@ -208,7 +208,7 @@
             this.btnBackMain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBackMain.Font = new System.Drawing.Font("Segoe Print", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackMain.ForeColor = System.Drawing.Color.Navy;
-            this.btnBackMain.Location = new System.Drawing.Point(686, 36);
+            this.btnBackMain.Location = new System.Drawing.Point(693, 29);
             this.btnBackMain.Name = "btnBackMain";
             this.btnBackMain.Size = new System.Drawing.Size(75, 53);
             this.btnBackMain.TabIndex = 4;
