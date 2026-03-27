@@ -1,4 +1,7 @@
-﻿namespace OOP_GroupProject
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+namespace OOP_GroupProject
 {
     partial class frmQuizPopup
     {

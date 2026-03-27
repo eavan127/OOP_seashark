@@ -1,4 +1,8 @@
+using System;
+using System.Drawing;
+using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using OOP_SEASHARK.Properties;
 namespace OOP_GroupProject
 
 {
@@ -247,14 +251,14 @@ namespace OOP_GroupProject
             // check correct or wrong
             if (selectedAnswer == correctAnswer)
             {
-                picAnswerResult.Image = Properties.Resources.correct_icon;
+                picAnswerResult.Image = OOP_SEASHARK.Properties.Resources.correct_icon;
                 picAnswerResult.Visible = true;
 
                 // MessageBox.Show("Correct answer!", "Quiz", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                picAnswerResult.Image = Properties.Resources.incorrect_icon;
+                picAnswerResult.Image = OOP_SEASHARK.Properties.Resources.incorrect_icon;
                 picAnswerResult.Visible = true;
 
                 // MessageBox.Show("Wrong answer!", "Quiz", MessageBoxButtons.OK, MessageBoxIcon.Error);

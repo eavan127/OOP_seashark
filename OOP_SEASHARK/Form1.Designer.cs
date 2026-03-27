@@ -1,4 +1,7 @@
-﻿namespace OOP_GroupProject
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
+namespace OOP_GroupProject
 {
     partial class frmQuiz
     {
@@ -90,7 +93,7 @@
             // pnlBackground
             // 
             pnlBackground.BackColor = Color.Transparent;
-            pnlBackground.BackgroundImage = Properties.Resources.background_blur;
+            pnlBackground.BackgroundImage = OOP_SEASHARK.Properties.Resources.background_blur;
             pnlBackground.BackgroundImageLayout = ImageLayout.None;
             pnlBackground.Controls.Add(btnHint);
             pnlBackground.Controls.Add(lblTimer);
@@ -111,7 +114,7 @@
             btnHint.FlatAppearance.BorderSize = 0;
             btnHint.FlatStyle = FlatStyle.Flat;
             btnHint.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnHint.Image = Properties.Resources.hint_icon1;
+            btnHint.Image = OOP_SEASHARK.Properties.Resources.hint_icon1;
             btnHint.Location = new Point(858, 450);
             btnHint.Name = "btnHint";
             btnHint.Size = new Size(75, 75);
@@ -249,7 +252,7 @@
             // pnlSharkInner2
             // 
             pnlSharkInner2.BackColor = Color.Transparent;
-            pnlSharkInner2.BackgroundImage = Properties.Resources.shark1;
+            pnlSharkInner2.BackgroundImage = OOP_SEASHARK.Properties.Resources.shark1;
             pnlSharkInner2.Location = new Point(-210, 82);
             pnlSharkInner2.Name = "pnlSharkInner2";
             pnlSharkInner2.Size = new Size(300, 300);
@@ -280,7 +283,7 @@
             // pnlSharkInner1
             // 
             pnlSharkInner1.BackColor = Color.Transparent;
-            pnlSharkInner1.BackgroundImage = Properties.Resources.shark1;
+            pnlSharkInner1.BackgroundImage = OOP_SEASHARK.Properties.Resources.shark1;
             pnlSharkInner1.Location = new Point(-195, 97);
             pnlSharkInner1.Name = "pnlSharkInner1";
             pnlSharkInner1.Size = new Size(300, 300);
@@ -289,7 +292,7 @@
             // pnlSharkOuter
             // 
             pnlSharkOuter.BackColor = Color.Transparent;
-            pnlSharkOuter.BackgroundImage = Properties.Resources.shark1;
+            pnlSharkOuter.BackgroundImage = OOP_SEASHARK.Properties.Resources.shark1;
             pnlSharkOuter.Location = new Point(72, 197);
             pnlSharkOuter.Name = "pnlSharkOuter";
             pnlSharkOuter.Size = new Size(300, 300);
