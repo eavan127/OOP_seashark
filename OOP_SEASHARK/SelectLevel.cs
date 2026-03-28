@@ -30,5 +30,10 @@ namespace OOP_SEASHARK
             main.Show();
             this.Hide();
         }
+
+        private void SelectLevel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

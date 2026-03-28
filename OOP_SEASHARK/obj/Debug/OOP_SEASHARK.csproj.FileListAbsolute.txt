@@ -65,3 +65,5 @@ C:\Users\afifa\source\repos\OOP_SeaShark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe
 C:\Users\afifa\source\repos\OOP_SeaShark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.pdb
 C:\Users\afifa\source\repos\OOP_SeaShark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Form1.resources
 C:\Users\afifa\source\repos\OOP_SeaShark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.frmQuizPopup.resources
+C:\Users\ASUS\Documents\GitHub\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_GroupProject.frmQuiz.resources
+C:\Users\ASUS\Documents\GitHub\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.frmQuizPopup.resources

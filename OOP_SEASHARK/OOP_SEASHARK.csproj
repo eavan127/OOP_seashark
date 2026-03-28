@@ -84,6 +84,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQuizPopup.Designer.cs" />
+    <Compile Include="frmQuizPopup1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>frmQuizPopup.resx</DependentUpon>
+    </Compile>
     <Compile Include="GameManager.cs" />
     <Compile Include="Hint.cs">
       <SubType>Form</SubType>
@@ -133,7 +138,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmQuizPopup.resx" />
+    <EmbeddedResource Include="frmQuizPopup.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmQuizPopup1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +233,12 @@
     <Content Include="music\background.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\background sea.png" />
+    <None Include="Resources\canvas.png" />
+    <None Include="Resources\clam.png" />
+    <None Include="Resources\sea star.png" />
+    <None Include="Resources\sea star.jpg" />
+    <None Include="Resources\sea.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
