@@ -103,7 +103,7 @@
             this.pictureBox3.Image = global::OOP_SEASHARK.Properties.Resources.shark__111;
             this.pictureBox3.Location = new System.Drawing.Point(22, 336);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(129, 64);
+            this.pictureBox3.Size = new System.Drawing.Size(144, 75);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;

@@ -97,6 +97,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>frmQuizPopup.resx</DependentUpon>
     </Compile>
+    <Compile Include="frmTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimer.Designer.cs">
+      <DependentUpon>frmTimer.cs</DependentUpon>
+    </Compile>
     <Compile Include="GameManager.cs" />
     <Compile Include="Hint.cs">
       <SubType>Form</SubType>
@@ -152,6 +158,9 @@
     <EmbeddedResource Include="frmQuizPopup.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>frmQuizPopup1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimer.resx">
+      <DependentUpon>frmTimer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
