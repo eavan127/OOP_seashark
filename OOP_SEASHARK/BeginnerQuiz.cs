@@ -46,9 +46,9 @@ namespace OOP_GroupProject
         {
             string[] hints = new string[]
             {
-                "Hint: In C#, you must declare the data type before the variable name!",
-                "Hint: It is the same keyword used in most OOP languages!",
-                "Hint: Think about what the letters stand for — Object, Oriented..."
+                "In C#, every variable must have a defined type (like int, string, or bool). The standard way to declare a variable is: [Type] [Variable Name] = [Value]; For example: int score = 10;",
+                "Classes are the blueprints for objects in OOP. In C#, you define them using the 'class' keyword followed by the name of the class (usually capitalized).",
+                "OOP stands for Object-Oriented Programming. It is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields, and code in the form of procedures."
             };
             return hints[questionIndex];
         }

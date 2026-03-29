@@ -45,9 +45,9 @@ namespace OOP_GroupProject
         {
             string[] hints = new string[]
             {
-                "Hint: Poly means many, morph means forms. Think of overridden methods.",
-                "Hint: It restricts direct access to some components of an object.",
-                "Hint: C# classes can inherit from only one base class."
+                "Polymorphism allows objects of different classes to be treated as objects of a common superclass. This is often achieved through 'method overriding' where a subclass provides its own version of a method already defined in its parent class.",
+                "Encapsulation is the practice of bundling data (fields) and the methods that operate on that data into a single unit (class). It also involves using access modifiers like 'private' to hide internal data from outside interference.",
+                "In C#, a class can only inherit from one other class (single inheritance). However, to achieve similar results to multiple inheritance, a class can implement multiple 'interfaces', which define contracts for behavior."
             };
             return hints[questionIndex];
         }

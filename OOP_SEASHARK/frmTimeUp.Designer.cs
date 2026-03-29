@@ -1,4 +1,4 @@
-﻿namespace OOP_GroupProject
+namespace OOP_GroupProject
 {
     partial class frmTimeUp
     {
@@ -84,6 +84,7 @@
             button2.TabIndex = 6;
             button2.Text = "Exit To Home 🏠";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label3
             // 
@@ -103,6 +104,7 @@
             button1.TabIndex = 4;
             button1.Text = "Restart Level 🔄";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // label1
             // 

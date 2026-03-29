@@ -8,7 +8,6 @@ namespace OOP_GroupProject
         public frmMain()
         {
             InitializeComponent();
-            MessageBox.Show("Constructor running");
         }
 
         private void btnStart_Click(object sender, EventArgs e)

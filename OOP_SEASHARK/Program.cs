@@ -19,12 +19,11 @@ namespace OOP_GroupProject
             
             try 
             {
-                MessageBox.Show("Debug: Application starting...", "Diagnostic");
                 Application.Run(new frmMain());
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Debug: Application crashed with error:\n\n{ex.Message}\n\nStack Trace:\n{ex.StackTrace}", "Startup Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Startup Error: {ex.Message}", "Fatal Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
