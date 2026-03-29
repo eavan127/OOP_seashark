@@ -1,4 +1,4 @@
-﻿namespace OOP_SEASHARK
+﻿namespace OOP_GroupProject
 {
     partial class Main
     {
@@ -75,7 +75,7 @@
             // picFish
             // 
             picFish.BackColor = Color.Transparent;
-            picFish.Image = OOP_GroupProject.Properties.Resources.shark2;
+            picFish.Image = global::OOP_GroupProject.Properties.Resources.shark2;
             picFish.Location = new Point(262, 134);
             picFish.Margin = new Padding(3, 4, 3, 4);
             picFish.Name = "picFish";
@@ -103,7 +103,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = OOP_GroupProject.Properties.Resources.background;
+            BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 562);
             Controls.Add(btnExit);

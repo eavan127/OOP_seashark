@@ -1,6 +1,6 @@
 using System;
 
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     public class AdvancedQuiz : IQuiz
     {

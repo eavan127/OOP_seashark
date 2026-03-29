@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     public partial class BeginnerCompleted : Form
     {

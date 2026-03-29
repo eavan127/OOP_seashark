@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
 
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     public class GameManager
     {

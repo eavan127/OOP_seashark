@@ -1,4 +1,4 @@
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     /// <summary>
     /// Static singleton to share game progress state between forms.

@@ -1,4 +1,4 @@
-﻿namespace OOP_SEASHARK
+﻿namespace OOP_GroupProject
 {
     partial class SelectLevel
     {
@@ -78,7 +78,7 @@
             // picKeys
             // 
             picKeys.BackColor = Color.Transparent;
-            picKeys.Image = OOP_GroupProject.Properties.Resources.key;
+            picKeys.Image = global::OOP_GroupProject.Properties.Resources.key;
             picKeys.Location = new Point(12, 19);
             picKeys.Margin = new Padding(3, 4, 3, 4);
             picKeys.Name = "picKeys";
@@ -140,7 +140,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.Image = OOP_GroupProject.Properties.Resources.shark2;
+            pictureBox2.Image = global::OOP_GroupProject.Properties.Resources.shark2;
             pictureBox2.Location = new Point(363, 15);
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
@@ -196,7 +196,7 @@
             // pictureBox3
             // 
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox3.Image = OOP_GroupProject.Properties.Resources.sea_star1;
+            pictureBox3.Image = global::OOP_GroupProject.Properties.Resources.sea_star1;
             pictureBox3.Location = new Point(157, 176);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
@@ -208,7 +208,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Image = OOP_GroupProject.Properties.Resources.clam;
+            pictureBox1.Image = global::OOP_GroupProject.Properties.Resources.clam;
             pictureBox1.Location = new Point(456, 176);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
@@ -221,7 +221,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = OOP_GroupProject.Properties.Resources.background_sea;
+            BackgroundImage = global::OOP_GroupProject.Properties.Resources.background_sea;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 562);
             Controls.Add(pictureBox1);

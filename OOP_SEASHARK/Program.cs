@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     internal static class Program
     {

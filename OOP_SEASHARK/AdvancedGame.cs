@@ -6,7 +6,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     public partial class AdvancedGame : Form
     {
@@ -306,6 +306,11 @@ namespace OOP_SEASHARK
         }
 
         private void lblTimer2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picFishAdvanced_Click(object sender, EventArgs e)
         {
 
         }

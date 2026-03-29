@@ -5,11 +5,11 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     using System;
 
-    namespace OOP_SEASHARK
+    namespace OOP_GroupProject
     {
         public class Player
         {

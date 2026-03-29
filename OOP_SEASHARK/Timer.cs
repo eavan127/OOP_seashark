@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 {
     public class Timer
     {

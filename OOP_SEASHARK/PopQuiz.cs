@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-namespace OOP_SEASHARK
+namespace OOP_GroupProject
 
 {
     public partial class PopQuiz : Form

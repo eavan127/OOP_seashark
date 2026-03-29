@@ -1,4 +1,4 @@
-﻿namespace OOP_SEASHARK
+﻿namespace OOP_GroupProject
 {
     partial class BeginnerGame
     {
@@ -107,7 +107,7 @@
             // picDoorBeginner
             // 
             picDoorBeginner.BackColor = Color.Transparent;
-            picDoorBeginner.Image = OOP_GroupProject.Properties.Resources.door;
+            picDoorBeginner.Image = global::OOP_GroupProject.Properties.Resources.door;
             picDoorBeginner.Location = new Point(739, 87);
             picDoorBeginner.Name = "picDoorBeginner";
             picDoorBeginner.Size = new Size(78, 74);
@@ -118,7 +118,7 @@
             // 
             // picObstacle3
             // 
-            picObstacle3.Image = OOP_GroupProject.Properties.Resources.anchor;
+            picObstacle3.Image = global::OOP_GroupProject.Properties.Resources.anchor;
             picObstacle3.Location = new Point(536, 77);
             picObstacle3.Name = "picObstacle3";
             picObstacle3.Size = new Size(99, 80);
@@ -130,7 +130,7 @@
             // picObstacle2
             // 
             picObstacle2.BackColor = Color.Transparent;
-            picObstacle2.Image = OOP_GroupProject.Properties.Resources.rock;
+            picObstacle2.Image = global::OOP_GroupProject.Properties.Resources.rock;
             picObstacle2.Location = new Point(325, 154);
             picObstacle2.Name = "picObstacle2";
             picObstacle2.Size = new Size(100, 65);
@@ -142,7 +142,7 @@
             // picObstacle1
             // 
             picObstacle1.BackColor = Color.Transparent;
-            picObstacle1.Image = OOP_GroupProject.Properties.Resources.coral;
+            picObstacle1.Image = global::OOP_GroupProject.Properties.Resources.coral;
             picObstacle1.Location = new Point(-1, 192);
             picObstacle1.Name = "picObstacle1";
             picObstacle1.Size = new Size(86, 84);
@@ -154,7 +154,7 @@
             // picFishBeginner
             // 
             picFishBeginner.BackColor = Color.Transparent;
-            picFishBeginner.Image = OOP_GroupProject.Properties.Resources.shark2;
+            picFishBeginner.Image = global::OOP_GroupProject.Properties.Resources.shark2;
             picFishBeginner.Location = new Point(12, 334);
             picFishBeginner.Name = "picFishBeginner";
             picFishBeginner.Size = new Size(132, 114);
@@ -228,7 +228,7 @@
             // 
             // BeginnerGame
             // 
-            BackgroundImage = OOP_GroupProject.Properties.Resources.background;
+            BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(picFishBeginner);

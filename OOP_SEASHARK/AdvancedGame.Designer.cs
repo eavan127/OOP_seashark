@@ -1,4 +1,4 @@
-﻿namespace OOP_SEASHARK
+﻿namespace OOP_GroupProject
 {
     partial class AdvancedGame
     {
@@ -90,7 +90,7 @@
             // 
             btnRightAdvanced.BackColor = Color.LightBlue;
             btnRightAdvanced.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRightAdvanced.Location = new Point(142, 78);
+            btnRightAdvanced.Location = new Point(137, 78);
             btnRightAdvanced.Name = "btnRightAdvanced";
             btnRightAdvanced.Size = new Size(87, 56);
             btnRightAdvanced.TabIndex = 2;
@@ -101,7 +101,7 @@
             // 
             btnLeftAdvanced.BackColor = Color.LightBlue;
             btnLeftAdvanced.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLeftAdvanced.Location = new Point(13, 78);
+            btnLeftAdvanced.Location = new Point(14, 78);
             btnLeftAdvanced.Name = "btnLeftAdvanced";
             btnLeftAdvanced.Size = new Size(95, 56);
             btnLeftAdvanced.TabIndex = 1;
@@ -112,7 +112,7 @@
             // 
             btnUpAdvanced.BackColor = Color.LightBlue;
             btnUpAdvanced.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnUpAdvanced.Location = new Point(83, 6);
+            btnUpAdvanced.Location = new Point(78, 6);
             btnUpAdvanced.Name = "btnUpAdvanced";
             btnUpAdvanced.Size = new Size(87, 69);
             btnUpAdvanced.TabIndex = 0;
@@ -122,10 +122,10 @@
             // picFishAdvanced
             // 
             picFishAdvanced.BackColor = Color.Transparent;
-            picFishAdvanced.Image = OOP_GroupProject.Properties.Resources.shark2;
-            picFishAdvanced.Location = new Point(392, 334);
+            picFishAdvanced.Image = global::OOP_GroupProject.Properties.Resources.shark2;
+            picFishAdvanced.Location = new Point(17, 351);
             picFishAdvanced.Name = "picFishAdvanced";
-            picFishAdvanced.Size = new Size(132, 114);
+            picFishAdvanced.Size = new Size(96, 87);
             picFishAdvanced.SizeMode = PictureBoxSizeMode.Zoom;
             picFishAdvanced.TabIndex = 12;
             picFishAdvanced.TabStop = false;
@@ -143,7 +143,7 @@
             // 
             panel5.BackColor = Color.LemonChiffon;
             panel5.BackgroundImageLayout = ImageLayout.Stretch;
-            panel5.Location = new Point(0, 429);
+            panel5.Location = new Point(298, 429);
             panel5.Name = "panel5";
             panel5.Size = new Size(201, 29);
             panel5.TabIndex = 14;
@@ -161,7 +161,7 @@
             // 
             panel2.BackColor = Color.LemonChiffon;
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Location = new Point(298, 246);
+            panel2.Location = new Point(317, 253);
             panel2.Name = "panel2";
             panel2.Size = new Size(212, 20);
             panel2.TabIndex = 15;
@@ -179,7 +179,7 @@
             // 
             panel6.BackColor = Color.LemonChiffon;
             panel6.BackgroundImageLayout = ImageLayout.Stretch;
-            panel6.Location = new Point(298, 150);
+            panel6.Location = new Point(298, 129);
             panel6.Name = "panel6";
             panel6.Size = new Size(212, 25);
             panel6.TabIndex = 17;
@@ -187,7 +187,7 @@
             // panelAnchor
             // 
             panelAnchor.BackColor = Color.Transparent;
-            panelAnchor.BackgroundImage = OOP_GroupProject.Properties.Resources.Untitled_design__2_;
+            panelAnchor.BackgroundImage = global::OOP_GroupProject.Properties.Resources.Untitled_design__2_;
             panelAnchor.BackgroundImageLayout = ImageLayout.Stretch;
             panelAnchor.Location = new Point(589, -2);
             panelAnchor.Name = "panelAnchor";
@@ -198,7 +198,7 @@
             // 
             panelPiranha2.BackColor = Color.Transparent;
             panelPiranha2.BackgroundImageLayout = ImageLayout.Stretch;
-            panelPiranha2.Location = new Point(382, 114);
+            panelPiranha2.Location = new Point(382, 90);
             panelPiranha2.Name = "panelPiranha2";
             panelPiranha2.Size = new Size(37, 33);
             panelPiranha2.TabIndex = 15;
@@ -206,7 +206,7 @@
             // picDoorAdvanced
             // 
             picDoorAdvanced.BackColor = Color.Transparent;
-            picDoorAdvanced.Image = OOP_GroupProject.Properties.Resources.door;
+            picDoorAdvanced.Image = global::OOP_GroupProject.Properties.Resources.door;
             picDoorAdvanced.Location = new Point(0, 40);
             picDoorAdvanced.Name = "picDoorAdvanced";
             picDoorAdvanced.Size = new Size(78, 74);
@@ -225,7 +225,7 @@
             // 
             // AdvancedGame
             // 
-            BackgroundImage = OOP_GroupProject.Properties.Resources.background;
+            BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(panelPiranha1);

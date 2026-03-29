@@ -1,4 +1,4 @@
-﻿namespace OOP_SEASHARK
+﻿namespace OOP_GroupProject
 {
     partial class BeginnerCompleted
     {
