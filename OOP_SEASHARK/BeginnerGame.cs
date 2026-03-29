@@ -16,6 +16,7 @@ namespace OOP_SEASHARK
         private BeginnerLevel level = new BeginnerLevel();
         private GameManager gameManager = new GameManager();
         private int totalSeconds;
+        private IQuiz currentQuiz = new BeginnerQuiz();
 
         // Game loop timer 
         private System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer();
@@ -178,7 +179,7 @@ namespace OOP_SEASHARK
                         countdownTimer.Stop();
 
                         // Open quiz for this obstacle
-                        PopQuiz quiz = new PopQuiz(i, totalSeconds);
+                        PopQuiz quiz = new PopQuiz(i, totalSeconds, currentQuiz);
                         quiz.ShowDialog();
 
                         // After quiz closes - hide obstacle regardless
