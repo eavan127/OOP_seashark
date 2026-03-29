@@ -23,20 +23,20 @@ namespace OOP_SEASHARK
             // --- Keys label ---
             lblKeys.Text = $"{GameState.KeysCollected} / 6";
 
-            // --- Beginner button ---
-            if (GameState.BeginnerCompleted)
-            {
-                btnPlayBeginner.Text = "Completed ✓";
-                btnPlayBeginner.Enabled = false;  // prevent replaying; remove this line to allow replay
-            }
-            else
-            {
-                btnPlayBeginner.Text = "Play Level";
-                btnPlayBeginner.Enabled = true;
-            }
+            //// --- Beginner button ---
+            //if (GameState.BeginnerCompleted)
+            //{
+            //    btnPlayBeginner.Text = "Completed ✓";
+            //    btnPlayBeginner.Enabled = false;  // prevent replaying; remove this line to allow replay
+            //}
+            //else
+            //{
+            //    btnPlayBeginner.Text = "Play Level";
+            //    btnPlayBeginner.Enabled = true;
+            //}
 
-            // --- Advanced button: enabled only after Beginner is done ---
-            button1.Enabled = GameState.BeginnerCompleted;
+            //// --- Advanced button: enabled only after Beginner is done ---
+            //btnPlayAdvanced.Enabled = GameState.BeginnerCompleted;
         }
 
         private void btnPlayBeginner_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace OOP_SEASHARK
             this.Hide();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPlayAdvanced_Click(object sender, EventArgs e)
         {
             AdvancedGame advancedGame = new AdvancedGame();
             advancedGame.Show();
