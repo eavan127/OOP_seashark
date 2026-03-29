@@ -56,8 +56,8 @@ namespace OOP_GroupProject
             // 
             // pictureBox3
             // 
-            pictureBox3.BackgroundImage = OOP_GroupProject.Properties.Resources.background;
-            pictureBox3.Image = OOP_GroupProject.Properties.Resources.background_sea;
+            pictureBox3.BackgroundImage = Properties.Resources.background;
+            pictureBox3.Image = Properties.Resources.background_sea;
             pictureBox3.Location = new Point(44, 74);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(717, 286);
@@ -89,10 +89,11 @@ namespace OOP_GroupProject
             label2.TabIndex = 4;
             label2.Text = resources.GetString("label2.Text");
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Click += label2_Click;
             // 
             // button1
             // 
-            button1.BackgroundImage = OOP_GroupProject.Properties.Resources.blue;
+            button1.BackgroundImage = Properties.Resources.blue;
             button1.Location = new Point(338, 305);
             button1.Name = "button1";
             button1.Size = new Size(112, 34);
@@ -112,7 +113,7 @@ namespace OOP_GroupProject
             // pictureBox4
             // 
             pictureBox4.BackColor = Color.Transparent;
-            pictureBox4.Image = OOP_GroupProject.Properties.Resources.shark__2__removebg_preview;
+            pictureBox4.Image = Properties.Resources.shark__2__removebg_preview;
             pictureBox4.Location = new Point(114, 379);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(155, 59);

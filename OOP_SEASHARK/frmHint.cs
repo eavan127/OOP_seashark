@@ -44,5 +44,10 @@ namespace OOP_GroupProject
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
