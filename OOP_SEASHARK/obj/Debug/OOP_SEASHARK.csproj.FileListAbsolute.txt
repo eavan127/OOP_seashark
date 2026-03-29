@@ -32,7 +32,6 @@ D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.BeginnerGame.re
 D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.PopQuiz.resources
 D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.TimeUp.resources
 D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.AdvancedGame.resources
-D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe.config
 C:\Users\ASUS\Documents\GitHub\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe.config
 C:\Users\ASUS\Documents\GitHub\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.AdvancedGame.resources
 C:\Users\ASUS\Documents\GitHub\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.BeginnerGame.resources
@@ -88,3 +87,5 @@ C:\Users\HP\source\repos\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.pdb
 D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_GroupProject.frmQuiz.resources
 D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.frmQuizPopup.resources
 D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Hint.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\bin\Debug\music\background.mp3
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe.config

@@ -61,7 +61,7 @@
             this.lblAdvanced.Size = new System.Drawing.Size(119, 24);
             this.lblAdvanced.TabIndex = 2;
             this.lblAdvanced.Text = "Advanced Level";
-            this.lblAdvanced.Click += new System.EventHandler(this.lblAdvanced_Click);
+            //this.lblAdvanced.Click += new System.EventHandler(this.lblAdvanced_Click);
             // 
             // lblTimer2
             // 
@@ -129,7 +129,7 @@
             this.picFishAdvanced.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picFishAdvanced.TabIndex = 12;
             this.picFishAdvanced.TabStop = false;
-            this.picFishAdvanced.Click += new System.EventHandler(this.picFishAdvanced_Click);
+            //this.picFishAdvanced.Click += new System.EventHandler(this.picFishAdvanced_Click);
             // 
             // panel4
             // 
@@ -166,7 +166,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(277, 21);
             this.panel2.TabIndex = 15;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            //this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -195,7 +195,7 @@
             this.panelAnchor.Name = "panelAnchor";
             this.panelAnchor.Size = new System.Drawing.Size(94, 190);
             this.panelAnchor.TabIndex = 18;
-            this.panelAnchor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAnchor_Paint);
+            //this.panelAnchor.Paint += new System.Windows.Forms.PaintEventHandler(this.panelAnchor_Paint);
             // 
             // panelPiranha2
             // 
@@ -249,7 +249,7 @@
             this.Controls.Add(this.lblAdvanced);
             this.DoubleBuffered = true;
             this.Name = "AdvancedGame";
-            this.Load += new System.EventHandler(this.AdvancedGame_Load);
+            //this.Load += new System.EventHandler(this.AdvancedGame_Load);
             this.panel42.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picFishAdvanced)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDoorAdvanced)).EndInit();
