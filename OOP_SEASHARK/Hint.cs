@@ -16,5 +16,10 @@ namespace OOP_SEASHARK
         {
             InitializeComponent();
         }
+
+        private void Hint_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

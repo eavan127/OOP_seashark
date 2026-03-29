@@ -142,6 +142,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>frmQuizPopup1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hint.resx">
+      <DependentUpon>Hint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -233,6 +236,9 @@
     <Content Include="music\background.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\piranha-removebg-preview.png" />
+    <None Include="Resources\Untitled design %282%291.png" />
+    <None Include="Resources\Untitled design %282%29.png" />
     <None Include="Resources\background sea.png" />
     <None Include="Resources\canvas.png" />
     <None Include="Resources\clam.png" />
