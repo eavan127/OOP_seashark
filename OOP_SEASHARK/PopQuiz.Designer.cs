@@ -272,7 +272,7 @@ namespace OOP_SEASHARK
             this.pnlCategory.Controls.Add(this.lblCategory);
             this.pnlCategory.Location = new System.Drawing.Point(280, 27);
             this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(149, 37);
+            this.pnlCategory.Size = new System.Drawing.Size(176, 37);
             this.pnlCategory.TabIndex = 0;
             // 
             // lblCategory
