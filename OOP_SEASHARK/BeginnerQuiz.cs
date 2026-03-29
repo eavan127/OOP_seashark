@@ -1,16 +1,15 @@
-﻿using System;
+using System;
 
 namespace OOP_SEASHARK
 {
-    public class Quiz
+    public class BeginnerQuiz : IQuiz
     {
         private string[] questions;
         private string[][] options;
         private int[] correctAnswerIndex;
-        private int currentQuestionIndex;
         private int score;
 
-        public Quiz()
+        public BeginnerQuiz()
         {
             questions = new string[]
             {
@@ -28,10 +27,10 @@ namespace OOP_SEASHARK
             };
 
             correctAnswerIndex = new int[] { 0, 1, 0 };
-            currentQuestionIndex = 0;
             score = 0;
         }
 
+        public string GetCategory() { return "BEGINNER CHALLENGE"; }
         public string GetQuestion(int index) { return questions[index]; }
         public string[] GetOptions(int index) { return options[index]; }
 

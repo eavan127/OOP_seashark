@@ -99,7 +99,12 @@
     <Compile Include="PopQuiz.Designer.cs">
       <DependentUpon>PopQuiz.cs</DependentUpon>
     </Compile>
-    <Compile Include="Quiz.cs" />
+    <Compile Include="AdvancedQuiz.cs" />
+    <Compile Include="BeginnerQuiz.cs" />
+    <Compile Include="IQuiz.cs" />
+    <Compile Include="OutlineLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="SelectLevel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +217,7 @@
     <Content Include="music\background.mp3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\lightbulb.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
