@@ -125,8 +125,6 @@ This project applies and demonstrates the following OOP concepts:
 | Settings.settings | Application settings |
 </details>
 
-| OOP_GroupProject.csproj | Project configuration |
-| OOP_SEASHARK.sln / OOP_SEASHARK.slnx | Solution files |
 ---
 
 ## 🚀 **How to Play**
