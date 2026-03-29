@@ -28,215 +28,232 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblTimer = new System.Windows.Forms.Label();
-            this.lblBeginner = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.picDoorBeginner = new System.Windows.Forms.PictureBox();
-            this.picObstacle3 = new System.Windows.Forms.PictureBox();
-            this.picObstacle2 = new System.Windows.Forms.PictureBox();
-            this.picObstacle1 = new System.Windows.Forms.PictureBox();
-            this.picFishBeginner = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.btnRightBeginner = new System.Windows.Forms.Button();
-            this.btnLeftBeginner = new System.Windows.Forms.Button();
-            this.btnUpBeginner = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picDoorBeginner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picObstacle3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picObstacle2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picObstacle1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFishBeginner)).BeginInit();
-            this.panel4.SuspendLayout();
-            this.SuspendLayout();
+            lblTimer = new Label();
+            lblBeginner = new Label();
+            panel1 = new Panel();
+            panel2 = new Panel();
+            panel3 = new Panel();
+            picDoorBeginner = new PictureBox();
+            picObstacle3 = new PictureBox();
+            picObstacle2 = new PictureBox();
+            picObstacle1 = new PictureBox();
+            picFishBeginner = new PictureBox();
+            panel4 = new Panel();
+            btnRightBeginner = new Button();
+            btnLeftBeginner = new Button();
+            btnUpBeginner = new Button();
+            btnDebugComplete = new Button();
+            ((System.ComponentModel.ISupportInitialize)picDoorBeginner).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picObstacle3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picObstacle2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picObstacle1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picFishBeginner).BeginInit();
+            panel4.SuspendLayout();
+            SuspendLayout();
             // 
             // lblTimer
             // 
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.BackColor = System.Drawing.Color.IndianRed;
-            this.lblTimer.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.Navy;
-            this.lblTimer.Location = new System.Drawing.Point(722, 9);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(66, 30);
-            this.lblTimer.TabIndex = 0;
-            this.lblTimer.Text = "05:00";
-            this.lblTimer.Click += new System.EventHandler(this.lblTimer_Click);
+            lblTimer.AutoSize = true;
+            lblTimer.BackColor = Color.IndianRed;
+            lblTimer.Font = new Font("Segoe Print", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTimer.ForeColor = Color.Navy;
+            lblTimer.Location = new Point(722, 9);
+            lblTimer.Name = "lblTimer";
+            lblTimer.Size = new Size(66, 30);
+            lblTimer.TabIndex = 0;
+            lblTimer.Text = "05:00";
+            lblTimer.Click += lblTimer_Click;
             // 
             // lblBeginner
             // 
-            this.lblBeginner.AutoSize = true;
-            this.lblBeginner.BackColor = System.Drawing.Color.YellowGreen;
-            this.lblBeginner.Font = new System.Drawing.Font("Segoe Print", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBeginner.ForeColor = System.Drawing.Color.Navy;
-            this.lblBeginner.Location = new System.Drawing.Point(12, 9);
-            this.lblBeginner.Name = "lblBeginner";
-            this.lblBeginner.Size = new System.Drawing.Size(139, 30);
-            this.lblBeginner.TabIndex = 1;
-            this.lblBeginner.Text = "Beginner Level";
+            lblBeginner.AutoSize = true;
+            lblBeginner.BackColor = Color.YellowGreen;
+            lblBeginner.Font = new Font("Segoe Print", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblBeginner.ForeColor = Color.Navy;
+            lblBeginner.Location = new Point(12, 9);
+            lblBeginner.Name = "lblBeginner";
+            lblBeginner.Size = new Size(139, 30);
+            lblBeginner.TabIndex = 1;
+            lblBeginner.Text = "Beginner Level";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LemonChiffon;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(-1, 282);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(190, 46);
-            this.panel1.TabIndex = 2;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            panel1.BackColor = Color.LemonChiffon;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Location = new Point(-1, 282);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(190, 46);
+            panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel2.Location = new System.Drawing.Point(286, 225);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(221, 51);
-            this.panel2.TabIndex = 3;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            panel2.BackColor = Color.PaleGoldenrod;
+            panel2.Location = new Point(286, 225);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(221, 51);
+            panel2.TabIndex = 3;
+            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Beige;
-            this.panel3.Location = new System.Drawing.Point(536, 163);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(266, 36);
-            this.panel3.TabIndex = 3;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            panel3.BackColor = Color.Beige;
+            panel3.Location = new Point(536, 163);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(266, 36);
+            panel3.TabIndex = 3;
+            panel3.Paint += panel3_Paint;
             // 
             // picDoorBeginner
             // 
-            this.picDoorBeginner.BackColor = System.Drawing.Color.Transparent;
-            this.picDoorBeginner.Image = global::OOP_SEASHARK.Properties.Resources.door;
-            this.picDoorBeginner.Location = new System.Drawing.Point(739, 87);
-            this.picDoorBeginner.Name = "picDoorBeginner";
-            this.picDoorBeginner.Size = new System.Drawing.Size(78, 74);
-            this.picDoorBeginner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picDoorBeginner.TabIndex = 9;
-            this.picDoorBeginner.TabStop = false;
-            this.picDoorBeginner.Click += new System.EventHandler(this.picDoorBeginner_Click);
+            picDoorBeginner.BackColor = Color.Transparent;
+            picDoorBeginner.Image = OOP_GroupProject.Properties.Resources.door;
+            picDoorBeginner.Location = new Point(739, 87);
+            picDoorBeginner.Name = "picDoorBeginner";
+            picDoorBeginner.Size = new Size(78, 74);
+            picDoorBeginner.SizeMode = PictureBoxSizeMode.StretchImage;
+            picDoorBeginner.TabIndex = 9;
+            picDoorBeginner.TabStop = false;
+            picDoorBeginner.Click += picDoorBeginner_Click;
             // 
             // picObstacle3
             // 
-            this.picObstacle3.Image = global::OOP_SEASHARK.Properties.Resources.anchor;
-            this.picObstacle3.Location = new System.Drawing.Point(536, 77);
-            this.picObstacle3.Name = "picObstacle3";
-            this.picObstacle3.Size = new System.Drawing.Size(99, 80);
-            this.picObstacle3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picObstacle3.TabIndex = 8;
-            this.picObstacle3.TabStop = false;
-            this.picObstacle3.Click += new System.EventHandler(this.picAnchor_Click);
+            picObstacle3.Image = OOP_GroupProject.Properties.Resources.anchor;
+            picObstacle3.Location = new Point(536, 77);
+            picObstacle3.Name = "picObstacle3";
+            picObstacle3.Size = new Size(99, 80);
+            picObstacle3.SizeMode = PictureBoxSizeMode.StretchImage;
+            picObstacle3.TabIndex = 8;
+            picObstacle3.TabStop = false;
+            picObstacle3.Click += picAnchor_Click;
             // 
             // picObstacle2
             // 
-            this.picObstacle2.BackColor = System.Drawing.Color.Transparent;
-            this.picObstacle2.Image = global::OOP_SEASHARK.Properties.Resources.rock;
-            this.picObstacle2.Location = new System.Drawing.Point(325, 154);
-            this.picObstacle2.Name = "picObstacle2";
-            this.picObstacle2.Size = new System.Drawing.Size(100, 65);
-            this.picObstacle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picObstacle2.TabIndex = 7;
-            this.picObstacle2.TabStop = false;
-            this.picObstacle2.Click += new System.EventHandler(this.picRock_Click);
+            picObstacle2.BackColor = Color.Transparent;
+            picObstacle2.Image = OOP_GroupProject.Properties.Resources.rock;
+            picObstacle2.Location = new Point(325, 154);
+            picObstacle2.Name = "picObstacle2";
+            picObstacle2.Size = new Size(100, 65);
+            picObstacle2.SizeMode = PictureBoxSizeMode.StretchImage;
+            picObstacle2.TabIndex = 7;
+            picObstacle2.TabStop = false;
+            picObstacle2.Click += picRock_Click;
             // 
             // picObstacle1
             // 
-            this.picObstacle1.BackColor = System.Drawing.Color.Transparent;
-            this.picObstacle1.Image = global::OOP_SEASHARK.Properties.Resources.coral;
-            this.picObstacle1.Location = new System.Drawing.Point(-1, 192);
-            this.picObstacle1.Name = "picObstacle1";
-            this.picObstacle1.Size = new System.Drawing.Size(86, 84);
-            this.picObstacle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picObstacle1.TabIndex = 6;
-            this.picObstacle1.TabStop = false;
-            this.picObstacle1.Click += new System.EventHandler(this.picCoral_Click);
+            picObstacle1.BackColor = Color.Transparent;
+            picObstacle1.Image = OOP_GroupProject.Properties.Resources.coral;
+            picObstacle1.Location = new Point(-1, 192);
+            picObstacle1.Name = "picObstacle1";
+            picObstacle1.Size = new Size(86, 84);
+            picObstacle1.SizeMode = PictureBoxSizeMode.StretchImage;
+            picObstacle1.TabIndex = 6;
+            picObstacle1.TabStop = false;
+            picObstacle1.Click += picCoral_Click;
             // 
             // picFishBeginner
             // 
-            this.picFishBeginner.BackColor = System.Drawing.Color.Transparent;
-            this.picFishBeginner.Image = global::OOP_SEASHARK.Properties.Resources.shark2;
-            this.picFishBeginner.Location = new System.Drawing.Point(12, 334);
-            this.picFishBeginner.Name = "picFishBeginner";
-            this.picFishBeginner.Size = new System.Drawing.Size(132, 114);
-            this.picFishBeginner.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picFishBeginner.TabIndex = 5;
-            this.picFishBeginner.TabStop = false;
-            this.picFishBeginner.Click += new System.EventHandler(this.picFishBeginner_Click);
+            picFishBeginner.BackColor = Color.Transparent;
+            picFishBeginner.Image = OOP_GroupProject.Properties.Resources.shark2;
+            picFishBeginner.Location = new Point(12, 334);
+            picFishBeginner.Name = "picFishBeginner";
+            picFishBeginner.Size = new Size(132, 114);
+            picFishBeginner.SizeMode = PictureBoxSizeMode.Zoom;
+            picFishBeginner.TabIndex = 5;
+            picFishBeginner.TabStop = false;
+            picFishBeginner.Click += picFishBeginner_Click;
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.Controls.Add(this.btnRightBeginner);
-            this.panel4.Controls.Add(this.btnLeftBeginner);
-            this.panel4.Controls.Add(this.btnUpBeginner);
-            this.panel4.Location = new System.Drawing.Point(559, 304);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(243, 148);
-            this.panel4.TabIndex = 10;
+            panel4.BackColor = Color.Transparent;
+            panel4.Controls.Add(btnRightBeginner);
+            panel4.Controls.Add(btnLeftBeginner);
+            panel4.Controls.Add(btnUpBeginner);
+            panel4.Location = new Point(559, 304);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(243, 148);
+            panel4.TabIndex = 10;
             // 
             // btnRightBeginner
             // 
-            this.btnRightBeginner.BackColor = System.Drawing.Color.LightBlue;
-            this.btnRightBeginner.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRightBeginner.Location = new System.Drawing.Point(142, 78);
-            this.btnRightBeginner.Name = "btnRightBeginner";
-            this.btnRightBeginner.Size = new System.Drawing.Size(87, 56);
-            this.btnRightBeginner.TabIndex = 2;
-            this.btnRightBeginner.Text = "→";
-            this.btnRightBeginner.UseVisualStyleBackColor = false;
-            this.btnRightBeginner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnRightBeginner_MouseDown);
-            this.btnRightBeginner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnRightBeginner_MouseUp);
+            btnRightBeginner.BackColor = Color.LightBlue;
+            btnRightBeginner.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRightBeginner.Location = new Point(142, 78);
+            btnRightBeginner.Name = "btnRightBeginner";
+            btnRightBeginner.Size = new Size(87, 56);
+            btnRightBeginner.TabIndex = 2;
+            btnRightBeginner.Text = "→";
+            btnRightBeginner.UseVisualStyleBackColor = false;
+            btnRightBeginner.MouseDown += btnRightBeginner_MouseDown;
+            btnRightBeginner.MouseUp += btnRightBeginner_MouseUp;
             // 
             // btnLeftBeginner
             // 
-            this.btnLeftBeginner.BackColor = System.Drawing.Color.LightBlue;
-            this.btnLeftBeginner.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLeftBeginner.Location = new System.Drawing.Point(13, 78);
-            this.btnLeftBeginner.Name = "btnLeftBeginner";
-            this.btnLeftBeginner.Size = new System.Drawing.Size(95, 56);
-            this.btnLeftBeginner.TabIndex = 1;
-            this.btnLeftBeginner.Text = "←";
-            this.btnLeftBeginner.UseVisualStyleBackColor = false;
-            this.btnLeftBeginner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnLeftBeginner_MouseDown);
-            this.btnLeftBeginner.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnLeftBeginner_MouseUp);
+            btnLeftBeginner.BackColor = Color.LightBlue;
+            btnLeftBeginner.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLeftBeginner.Location = new Point(13, 78);
+            btnLeftBeginner.Name = "btnLeftBeginner";
+            btnLeftBeginner.Size = new Size(95, 56);
+            btnLeftBeginner.TabIndex = 1;
+            btnLeftBeginner.Text = "←";
+            btnLeftBeginner.UseVisualStyleBackColor = false;
+            btnLeftBeginner.MouseDown += btnLeftBeginner_MouseDown;
+            btnLeftBeginner.MouseUp += btnLeftBeginner_MouseUp;
             // 
             // btnUpBeginner
             // 
-            this.btnUpBeginner.BackColor = System.Drawing.Color.LightBlue;
-            this.btnUpBeginner.Font = new System.Drawing.Font("Segoe Print", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpBeginner.Location = new System.Drawing.Point(83, 6);
-            this.btnUpBeginner.Name = "btnUpBeginner";
-            this.btnUpBeginner.Size = new System.Drawing.Size(87, 69);
-            this.btnUpBeginner.TabIndex = 0;
-            this.btnUpBeginner.Text = "↑";
-            this.btnUpBeginner.UseVisualStyleBackColor = false;
-            this.btnUpBeginner.Click += new System.EventHandler(this.btnUpBeginner_Click);
+            btnUpBeginner.BackColor = Color.LightBlue;
+            btnUpBeginner.Font = new Font("Segoe Print", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnUpBeginner.Location = new Point(83, 6);
+            btnUpBeginner.Name = "btnUpBeginner";
+            btnUpBeginner.Size = new Size(87, 69);
+            btnUpBeginner.TabIndex = 0;
+            btnUpBeginner.Text = "↑";
+            btnUpBeginner.UseVisualStyleBackColor = false;
+            btnUpBeginner.Click += btnUpBeginner_Click;
+            // 
+            // btnDebugComplete
+            // 
+            btnDebugComplete.BackColor = Color.Firebrick;
+            btnDebugComplete.FlatStyle = FlatStyle.Flat;
+            btnDebugComplete.Font = new Font("Segoe UI", 7.2F, FontStyle.Bold);
+            btnDebugComplete.ForeColor = Color.White;
+            btnDebugComplete.Location = new Point(560, 6);
+            btnDebugComplete.Name = "btnDebugComplete";
+            btnDebugComplete.Size = new Size(150, 28);
+            btnDebugComplete.TabIndex = 20;
+            btnDebugComplete.Text = "[DEBUG] Complete Level";
+            btnDebugComplete.UseVisualStyleBackColor = false;
+            btnDebugComplete.Click += btnDebugComplete_Click;
             // 
             // BeginnerGame
             // 
-            this.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.picFishBeginner);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.picDoorBeginner);
-            this.Controls.Add(this.picObstacle3);
-            this.Controls.Add(this.picObstacle2);
-            this.Controls.Add(this.picObstacle1);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblBeginner);
-            this.Controls.Add(this.lblTimer);
-            this.Name = "BeginnerGame";
-            this.Load += new System.EventHandler(this.BeginnerGame_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picDoorBeginner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picObstacle3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picObstacle2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picObstacle1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picFishBeginner)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            BackgroundImage = OOP_GroupProject.Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(800, 450);
+            Controls.Add(picFishBeginner);
+            Controls.Add(panel4);
+            Controls.Add(picDoorBeginner);
+            Controls.Add(picObstacle3);
+            Controls.Add(picObstacle2);
+            Controls.Add(picObstacle1);
+            Controls.Add(panel3);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
+            Controls.Add(lblBeginner);
+            Controls.Add(lblTimer);
+            Controls.Add(btnDebugComplete);
+            Name = "BeginnerGame";
+            StartPosition = FormStartPosition.CenterScreen;
+            Load += BeginnerGame_Load;
+            ((System.ComponentModel.ISupportInitialize)picDoorBeginner).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picObstacle3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picObstacle2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picObstacle1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picFishBeginner).EndInit();
+            panel4.ResumeLayout(false);
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -256,5 +273,6 @@
         private System.Windows.Forms.Button btnRightBeginner;
         private System.Windows.Forms.Button btnLeftBeginner;
         private System.Windows.Forms.Button btnUpBeginner;
+        private System.Windows.Forms.Button btnDebugComplete;
     }
 }

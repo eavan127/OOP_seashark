@@ -1,65 +1,92 @@
-﻿using System.Drawing;
-using System.Drawing.Drawing2D;
+﻿using System;
+using System.ComponentModel;
+using System.Drawing;
 using System.Windows.Forms;
 
-public class OutlineLabel : Label
+namespace OOP_SEASHARK
 {
-    public Color OutlineColor { get; set; } = Color.White;
-    public float OutlineWidth { get; set; } = 4f;
-
-    public OutlineLabel()
+    public class OutlineLabel : Label
     {
-        this.AutoSize = false;
-        this.BackColor = Color.Transparent;
-    }
+        [Browsable(true)]
+        [Category("Appearance")]
+        [Description("The color of the outline.")]
+        public Color OutlineColor { get; set; } = Color.White;
 
-    protected override void OnPaint(PaintEventArgs e)
-    {
-        e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
-        e.Graphics.TextRenderingHint = System.Drawing.Text.TextRenderingHint.AntiAlias;
+        [Browsable(true)]
+        [Category("Appearance")]
+        [Description("The width of the outline.")]
+        public float OutlineWidth { get; set; } = 2f;
 
-        using (GraphicsPath path = new GraphicsPath())
+        protected override void OnPaint(PaintEventArgs e)
         {
-            StringFormat sf = new StringFormat();
-
-            if (this.TextAlign == ContentAlignment.MiddleCenter)
+            using (var outline = new System.Drawing.Drawing2D.GraphicsPath())
+            using (var format = new StringFormat())
             {
-                sf.Alignment = StringAlignment.Center;
-                sf.LineAlignment = StringAlignment.Center;
+                format.Alignment = StringAlignmentFromContentAlignment(TextAlign);
+                format.LineAlignment = LineAlignmentFromContentAlignment(TextAlign);
+
+                outline.AddString(
+                    Text,
+                    Font.FontFamily,
+                    (int)Font.Style,
+                    e.Graphics.DpiY * Font.Size / 72,
+                    ClientRectangle,
+                    format
+                );
+
+                e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+
+                using (var pen = new Pen(OutlineColor, OutlineWidth) { LineJoin = System.Drawing.Drawing2D.LineJoin.Round })
+                {
+                    e.Graphics.DrawPath(pen, outline);
+                }
+
+                using (var brush = new SolidBrush(ForeColor))
+                {
+                    e.Graphics.FillPath(brush, outline);
+                }
             }
-            else if (this.TextAlign == ContentAlignment.MiddleLeft)
+        }
+
+        private static StringAlignment StringAlignmentFromContentAlignment(ContentAlignment align)
+        {
+            switch (align)
             {
-                sf.Alignment = StringAlignment.Near;
-                sf.LineAlignment = StringAlignment.Center;
+                case ContentAlignment.TopLeft:
+                case ContentAlignment.MiddleLeft:
+                case ContentAlignment.BottomLeft:
+                    return StringAlignment.Near;
+                case ContentAlignment.TopCenter:
+                case ContentAlignment.MiddleCenter:
+                case ContentAlignment.BottomCenter:
+                    return StringAlignment.Center;
+                case ContentAlignment.TopRight:
+                case ContentAlignment.MiddleRight:
+                case ContentAlignment.BottomRight:
+                    return StringAlignment.Far;
+                default:
+                    return StringAlignment.Near;
             }
-            else if (this.TextAlign == ContentAlignment.MiddleRight)
-            {
-                sf.Alignment = StringAlignment.Far;
-                sf.LineAlignment = StringAlignment.Center;
-            }
+        }
 
-            float emSize = e.Graphics.DpiY * this.Font.Size / 72;
-
-            path.AddString(
-                this.Text,
-                this.Font.FontFamily,
-                (int)this.Font.Style,
-                emSize,
-                this.ClientRectangle,
-                sf
-            );
-
-            using (Pen outlinePen = new Pen(OutlineColor, OutlineWidth)
+        private static StringAlignment LineAlignmentFromContentAlignment(ContentAlignment align)
+        {
+            switch (align)
             {
-                LineJoin = LineJoin.Round
-            })
-            {
-                e.Graphics.DrawPath(outlinePen, path);
-            }
-
-            using (SolidBrush textBrush = new SolidBrush(this.ForeColor))
-            {
-                e.Graphics.FillPath(textBrush, path);
+                case ContentAlignment.TopLeft:
+                case ContentAlignment.TopCenter:
+                case ContentAlignment.TopRight:
+                    return StringAlignment.Near;
+                case ContentAlignment.MiddleLeft:
+                case ContentAlignment.MiddleCenter:
+                case ContentAlignment.MiddleRight:
+                    return StringAlignment.Center;
+                case ContentAlignment.BottomLeft:
+                case ContentAlignment.BottomCenter:
+                case ContentAlignment.BottomRight:
+                    return StringAlignment.Far;
+                default:
+                    return StringAlignment.Near;
             }
         }
     }

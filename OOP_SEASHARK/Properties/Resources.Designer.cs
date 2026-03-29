@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OOP_SEASHARK.Properties {
+namespace OOP_GroupProject.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace OOP_SEASHARK.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OOP_SEASHARK.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OOP_GroupProject.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -83,6 +83,7 @@ namespace OOP_SEASHARK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap background_blur {
             get {
                 object obj = ResourceManager.GetObject("background_blur", resourceCulture);
@@ -96,6 +97,11 @@ namespace OOP_SEASHARK.Properties {
         internal static System.Drawing.Bitmap background_blur1 {
             get {
                 object obj = ResourceManager.GetObject("background_blur1", resourceCulture);
+
+        internal static System.Drawing.Bitmap background_sea {
+            get {
+                object obj = ResourceManager.GetObject("background sea", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +129,25 @@ namespace OOP_SEASHARK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+
         internal static System.Drawing.Bitmap clock {
             get {
                 object obj = ResourceManager.GetObject("clock", resourceCulture);
+
+        internal static System.Drawing.Bitmap canvas {
+            get {
+                object obj = ResourceManager.GetObject("canvas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clam {
+            get {
+                object obj = ResourceManager.GetObject("clam", resourceCulture);
+
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,9 +235,59 @@ namespace OOP_SEASHARK.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lightbulb {
+            get {
+                object obj = ResourceManager.GetObject("lightbulb", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap piranha_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("piranha-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rock {
             get {
                 object obj = ResourceManager.GetObject("rock", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sea {
+            get {
+                object obj = ResourceManager.GetObject("sea", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sea_star {
+            get {
+                object obj = ResourceManager.GetObject("sea star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sea_star1 {
+            get {
+                object obj = ResourceManager.GetObject("sea star1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +328,26 @@ namespace OOP_SEASHARK.Properties {
         internal static System.Drawing.Bitmap shark2 {
             get {
                 object obj = ResourceManager.GetObject("shark2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_design__2_ {
+            get {
+                object obj = ResourceManager.GetObject("Untitled design (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Untitled_design__2_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled design (2)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

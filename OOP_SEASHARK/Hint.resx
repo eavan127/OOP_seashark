@@ -117,6 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+
   <data name="label2.Text" xml:space="preserve">
     <value>In C#, "int" stands for integer and is used to store whole numbers 
 without decimals (e.g., 5, 10, 100).
@@ -126,4 +127,6 @@ If your value contains decimal points, you should use "double"
 
 Choosing the correct data type helps your program run correctly and efficiently.</value>
   </data>
+
+
 </root>

@@ -16,5 +16,23 @@ namespace OOP_GroupProject
         {
             InitializeComponent();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // frmQuizPopup
+            // 
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "frmQuizPopup";
+            this.Load += new System.EventHandler(this.frmQuizPopup_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void frmQuizPopup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -17,6 +17,7 @@ namespace OOP_SEASHARK
             InitializeComponent();
         }
 
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
@@ -43,6 +44,9 @@ namespace OOP_SEASHARK
         }
 
         private void pictureBox2_Click_1(object sender, EventArgs e)
+
+        private void Hint_Load(object sender, EventArgs e)
+
         {
 
         }

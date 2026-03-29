@@ -16,6 +16,7 @@ namespace OOP_SEASHARK
         private BeginnerLevel level = new BeginnerLevel();
         private GameManager gameManager = new GameManager();
         private int totalSeconds;
+        private IQuiz currentQuiz = new BeginnerQuiz();
 
         // Game loop timer 
         private System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer();
@@ -178,7 +179,7 @@ namespace OOP_SEASHARK
                         countdownTimer.Stop();
 
                         // Open quiz for this obstacle
-                        PopQuiz quiz = new PopQuiz(i, totalSeconds);
+                        PopQuiz quiz = new PopQuiz(i, totalSeconds, currentQuiz);
                         quiz.ShowDialog();
 
                         // After quiz closes - hide obstacle regardless
@@ -220,9 +221,17 @@ namespace OOP_SEASHARK
                     countdownTimer.Stop();
                     level.CompleteLevel();
 
+                    // Persist completion state
+                    GameState.BeginnerCompleted = true;
+                    GameState.KeysCollected = 3;
+
                     BeginnerCompleted completed = new BeginnerCompleted();
-                    completed.Show();
-                    this.Hide();
+                    completed.ShowDialog(); // ShowDialog so we wait for it to close
+
+                    // After the completed screen closes, go back to SelectLevel
+                    SelectLevel selectLevel = new SelectLevel();
+                    selectLevel.Show();
+                    this.Close();
                 }
             }
         }
@@ -264,5 +273,23 @@ namespace OOP_SEASHARK
         private void panel3_Paint(object sender, PaintEventArgs e) { }
         private void picFishBeginner_Click(object sender, EventArgs e) { }
         private void lblTimer_Click(object sender, EventArgs e) { }
+
+        // DEBUG ONLY — simulates completing the level instantly
+        private void btnDebugComplete_Click(object sender, EventArgs e)
+        {
+            gameTimer.Stop();
+            countdownTimer.Stop();
+            level.CompleteLevel();
+
+            GameState.BeginnerCompleted = true;
+            GameState.KeysCollected = 3;
+
+            BeginnerCompleted completed = new BeginnerCompleted();
+            completed.ShowDialog();
+
+            SelectLevel selectLevel = new SelectLevel();
+            selectLevel.Show();
+            this.Close();
+        }
     }
 }
