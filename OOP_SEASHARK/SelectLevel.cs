@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace OOP_SEASHARK
@@ -17,6 +10,35 @@ namespace OOP_SEASHARK
             InitializeComponent();
         }
 
+        // Re-check state every time the form becomes the active window
+        // (covers the case where we return from BeginnerCompleted)
+        protected override void OnActivated(EventArgs e)
+        {
+            base.OnActivated(e);
+            RefreshState();
+        }
+
+        private void RefreshState()
+        {
+            // --- Keys label ---
+            lblKeys.Text = $"{GameState.KeysCollected} / 6";
+
+            // --- Beginner button ---
+            if (GameState.BeginnerCompleted)
+            {
+                btnPlayBeginner.Text = "Completed ✓";
+                btnPlayBeginner.Enabled = false;  // prevent replaying; remove this line to allow replay
+            }
+            else
+            {
+                btnPlayBeginner.Text = "Play Level";
+                btnPlayBeginner.Enabled = true;
+            }
+
+            // --- Advanced button: enabled only after Beginner is done ---
+            button1.Enabled = GameState.BeginnerCompleted;
+        }
+
         private void btnPlayBeginner_Click(object sender, EventArgs e)
         {
             BeginnerGame beginnerGame = new BeginnerGame();
@@ -24,16 +46,20 @@ namespace OOP_SEASHARK
             this.Hide();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdvancedGame advancedGame = new AdvancedGame();
+            advancedGame.Show();
+            this.Hide();
+        }
+
         private void btnBackMain_Click(object sender, EventArgs e)
         {
-            Main main = new Main();  
+            Main main = new Main();
             main.Show();
             this.Hide();
         }
 
-        private void SelectLevel_Load(object sender, EventArgs e)
-        {
-
-        }
+        private void SelectLevel_Load(object sender, EventArgs e) { }
     }
 }

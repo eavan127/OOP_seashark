@@ -65,6 +65,7 @@
       <DependentUpon>AdvancedGame.cs</DependentUpon>
     </Compile>
     <Compile Include="AdvancedLevel.cs" />
+    <Compile Include="GameState.cs" />
     <Compile Include="BeginnerCompleted.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +126,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BeginnerGame.resx">
       <DependentUpon>BeginnerGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuizPopup.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>frmQuizPopup1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hint.resx">
+      <DependentUpon>Hint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -218,6 +229,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\lightbulb.png" />
+    <None Include="Resources\piranha-removebg-preview.png" />
+    <None Include="Resources\Untitled design %282%291.png" />
+    <None Include="Resources\Untitled design %282%29.png" />
+    <None Include="Resources\background sea.png" />
+    <None Include="Resources\canvas.png" />
+    <None Include="Resources\clam.png" />
+    <None Include="Resources\sea star.png" />
+    <None Include="Resources\sea star.jpg" />
+    <None Include="Resources\sea.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
