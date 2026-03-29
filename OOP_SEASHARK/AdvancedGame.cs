@@ -35,6 +35,27 @@ namespace OOP_SEASHARK
         public AdvancedGame()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+
+            // Wire up keyboard events
+            this.KeyDown += AdvancedGame_KeyDown;
+            this.KeyUp += AdvancedGame_KeyUp;
+
+            // Wire up button events manually (they're inside panel42)
+            btnLeftAdvanced.MouseDown += (s, e) => { moveLeft = true; };
+            btnLeftAdvanced.MouseUp += (s, e) => { moveLeft = false; };
+            btnLeftAdvanced.MouseLeave += (s, e) => { moveLeft = false; };
+
+            btnRightAdvanced.MouseDown += (s, e) => { moveRight = true; };
+            btnRightAdvanced.MouseUp += (s, e) => { moveRight = false; };
+            btnRightAdvanced.MouseLeave += (s, e) => { moveRight = false; };
+
+            btnUpAdvanced.Click += (s, e) => { velY = -20; };
+
+            btnLeftAdvanced.TabStop = false;
+            btnRightAdvanced.TabStop = false;
+            btnUpAdvanced.TabStop = false;
+
             gameManager.currentLvl = level;
             gameManager.StartGame();
             totalSeconds = (int)level.GetTimeLimit();
@@ -70,10 +91,18 @@ namespace OOP_SEASHARK
 
         private void GameLoop(object sender, EventArgs e)
         {
-            MoveShark();
-            ApplyGravity();
-            CheckHazardCollision();
-            CheckDoorReached();
+            try
+            {
+                MoveShark();
+                ApplyGravity();
+                CheckHazardCollision();
+                CheckDoorReached();
+            }
+            catch (Exception ex)
+            {
+                gameTimer.Stop();
+                MessageBox.Show("Game error: " + ex.Message);
+            }
         }
 
         // --- SHARK MOVEMENT ---
@@ -87,10 +116,46 @@ namespace OOP_SEASHARK
 
         private void ApplyGravity()
         {
-            velY += 2;
+            isGrounded = false;
+            velY += 1;
             playerY += velY;
 
-            // Floor boundary
+            // Hardcode all platform panels directly
+            Panel[] platforms = { panel1, panel2, panel3, panel4, panel5, panel6 };
+            foreach (Panel p in platforms)
+            {
+                Rectangle fishRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
+                Rectangle platRect = new Rectangle(p.Left, p.Top, p.Width, p.Height);
+
+                if (fishRect.IntersectsWith(platRect))
+                {
+                    // Landing on top
+                    if (velY >= 0 && playerY + picFishAdvanced.Height - velY <= p.Top + 10)
+                    {
+                        playerY = p.Top - picFishAdvanced.Height;
+                        velY = 0;
+                        isGrounded = true;
+                    }
+                    // Hitting from below
+                    else if (velY < 0 && playerY - velY >= p.Top + p.Height - 10)
+                    {
+                        playerY = p.Top + p.Height;
+                        velY = 0;
+                    }
+                    // Side collision
+                    else
+                    {
+                        int fishCenterX = playerX + picFishAdvanced.Width / 2;
+                        int platCenterX = p.Left + p.Width / 2;
+                        if (fishCenterX < platCenterX)
+                            playerX = p.Left - picFishAdvanced.Width;
+                        else
+                            playerX = p.Left + p.Width;
+                    }
+                }
+            }
+
+            // Floor
             int floorY = this.ClientSize.Height - picFishAdvanced.Height;
             if (playerY >= floorY)
             {
@@ -99,15 +164,17 @@ namespace OOP_SEASHARK
                 isGrounded = true;
             }
 
+            picFishAdvanced.Left = playerX;
             picFishAdvanced.Top = playerY;
         }
+
 
         // --- KEYBOARD CONTROLS ---
         private void AdvancedGame_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Left) moveLeft = true;
             if (e.KeyCode == Keys.Right) moveRight = true;
-            if (e.KeyCode == Keys.Up && isGrounded) velY = -18;
+            if (e.KeyCode == Keys.Up) velY = -20; // no isGrounded check = unlimited jumps
         }
 
         private void AdvancedGame_KeyUp(object sender, KeyEventArgs e)
@@ -126,6 +193,8 @@ namespace OOP_SEASHARK
                 Rectangle hazardRect = new Rectangle(hazard.Left, hazard.Top, hazard.Width, hazard.Height);
                 if (sharkRect.IntersectsWith(hazardRect))
                 {
+                    moveLeft = false;  // only reset when hit
+                    moveRight = false;
                     ResetSharkPosition();
                     break;
                 }
@@ -144,33 +213,34 @@ namespace OOP_SEASHARK
         {
             Rectangle sharkRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
             Rectangle doorRect = new Rectangle(picDoorAdvanced.Left, picDoorAdvanced.Top, picDoorAdvanced.Width, picDoorAdvanced.Height);
+
             if (sharkRect.IntersectsWith(doorRect))
             {
+                moveLeft = false;  // only reset when door reached
+                moveRight = false;
                 gameTimer.Stop();
                 countdownTimer.Stop();
                 anchorTimer.Stop();
                 piranhaTimer.Stop();
 
-                IQuiz levelQuiz = null; // Obtain or create a valid IQuiz instance
+                IQuiz levelQuiz = null;
                 PopQuiz quiz = new PopQuiz(0, totalSeconds, levelQuiz);
                 quiz.ShowDialog();
 
                 if (quiz.AnsweredCorrectly)
                 {
                     level.CompleteLevel();
-                    GameState.KeysCollected = 6; // All keys collected
+                    GameState.KeysCollected = 6;
 
                     AdvancedCompleted completed = new AdvancedCompleted();
                     completed.ShowDialog();
 
-                    // Return to Select Level
                     SelectLevel selectLevel = new SelectLevel();
                     selectLevel.Show();
                     this.Close();
                 }
                 else
                 {
-                    // Wrong answer — resume game
                     gameTimer.Start();
                     countdownTimer.Start();
                     anchorTimer.Start();
@@ -225,13 +295,19 @@ namespace OOP_SEASHARK
                 piranha2Direction = -piranha2Direction;
         }
 
-        // --- BUTTON CONTROLS ---
-        private void btnLeftAdvanced_MouseDown(object sender, MouseEventArgs e) { moveLeft = true; }
-        private void btnLeftAdvanced_MouseUp(object sender, MouseEventArgs e) { moveLeft = false; }
+        private void panelPiranha2_Paint(object sender, PaintEventArgs e)
+        {
 
-        private void btnRightAdvanced_MouseDown(object sender, MouseEventArgs e) { moveRight = true; }
-        private void btnRightAdvanced_MouseUp(object sender, MouseEventArgs e) { moveRight = false; }
+        }
 
-        private void btnUpAdvanced_Click(object sender, EventArgs e) { if (isGrounded) velY = -18; }
+        private void AdvancedGame_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTimer2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
