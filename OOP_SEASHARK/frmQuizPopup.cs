@@ -19,14 +19,14 @@ namespace OOP_GroupProject
 
         private void InitializeComponent()
         {
-            this.SuspendLayout();
+            SuspendLayout();
             // 
             // frmQuizPopup
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "frmQuizPopup";
-            this.Load += new System.EventHandler(this.frmQuizPopup_Load);
-            this.ResumeLayout(false);
+            ClientSize = new Size(735, 377);
+            Name = "frmQuizPopup";
+            Load += frmQuizPopup_Load;
+            ResumeLayout(false);
 
         }
 

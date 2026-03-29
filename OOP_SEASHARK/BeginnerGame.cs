@@ -11,12 +11,15 @@ using System.Windows.Forms;
 
 namespace OOP_GroupProject
 {
+    
     public partial class BeginnerGame : Form
     {
         private BeginnerLevel level = new BeginnerLevel();
         private GameManager gameManager = new GameManager();
         private int totalSeconds;
         private IQuiz currentQuiz = new BeginnerQuiz();
+        public event Action TimeUpTriggered;
+        private frmTimeUp timeUpForm;
 
         // Game loop timer 
         private System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer();
@@ -32,6 +35,7 @@ namespace OOP_GroupProject
         // Obstacle state 
         private bool[] obstacleCleared = { false, false, false };
 
+
         public BeginnerGame()
         {
             InitializeComponent();
@@ -40,6 +44,7 @@ namespace OOP_GroupProject
             totalSeconds = (int)level.GetTimeLimit();
             UpdateTimerLabel();
             SetupGame();
+            timeUpForm = new frmTimeUp(this);
         }
 
         // SETUP
@@ -243,9 +248,7 @@ namespace OOP_GroupProject
                 countdownTimer.Stop();
                 gameTimer.Stop();
 
-                TimeUp timeUp = new TimeUp();
-                timeUp.Show();
-                this.Hide();
+                TimeUpTriggered?.Invoke(); // 🔥 trigger event
             }
         }
 
