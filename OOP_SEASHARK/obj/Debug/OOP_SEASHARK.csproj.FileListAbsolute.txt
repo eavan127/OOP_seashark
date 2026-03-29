@@ -89,3 +89,4 @@ C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\bin\Debug\OOP_SEA
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\bin\Debug\Interop.WMPLib.dll
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\bin\Debug\AxInterop.WMPLib.dll
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Hint.resources
+C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe.config
