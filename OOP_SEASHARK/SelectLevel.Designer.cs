@@ -114,9 +114,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Navy;
-            this.button1.Location = new System.Drawing.Point(489, 371);
+            this.button1.Location = new System.Drawing.Point(478, 371);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 41);
+            this.button1.Size = new System.Drawing.Size(156, 41);
             this.button1.TabIndex = 2;
             this.button1.Text = "Play Level";
             this.button1.UseVisualStyleBackColor = false;
@@ -179,9 +179,9 @@
             this.btnPlayBeginner.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlayBeginner.Font = new System.Drawing.Font("Californian FB", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayBeginner.ForeColor = System.Drawing.Color.Navy;
-            this.btnPlayBeginner.Location = new System.Drawing.Point(183, 371);
+            this.btnPlayBeginner.Location = new System.Drawing.Point(176, 371);
             this.btnPlayBeginner.Name = "btnPlayBeginner";
-            this.btnPlayBeginner.Size = new System.Drawing.Size(131, 41);
+            this.btnPlayBeginner.Size = new System.Drawing.Size(138, 41);
             this.btnPlayBeginner.TabIndex = 2;
             this.btnPlayBeginner.Text = "Play Level";
             this.btnPlayBeginner.UseVisualStyleBackColor = false;

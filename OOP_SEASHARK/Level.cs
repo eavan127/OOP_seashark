@@ -11,7 +11,7 @@ namespace OOP_SEASHARK
         protected int difficultyIndex;
         protected double timeLimit;
         protected bool Completed; 
-        private List<Quiz> quiz = new List<Quiz>();
+        private List<IQuiz> quiz = new List<IQuiz>();
 
         public abstract void LoadQuiz();
         public virtual void StartLevel() { }
