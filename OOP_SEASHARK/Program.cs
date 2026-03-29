@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,10 +14,18 @@ namespace OOP_GroupProject
         [STAThread]
         static void Main()
         {
-           
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            
+            try 
+            {
+                MessageBox.Show("Debug: Application starting...", "Diagnostic");
+                Application.Run(new frmMain());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Debug: Application crashed with error:\n\n{ex.Message}\n\nStack Trace:\n{ex.StackTrace}", "Startup Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

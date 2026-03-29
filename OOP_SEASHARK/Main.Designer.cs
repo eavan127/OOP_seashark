@@ -1,6 +1,6 @@
-﻿namespace OOP_GroupProject
+namespace OOP_GroupProject
 {
-    partial class Main
+    partial class frmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -99,7 +99,7 @@
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
-            // Main
+            // frmMain
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -111,7 +111,7 @@
             Controls.Add(lblTitle);
             Controls.Add(btnStart);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Main";
+            Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Home Screen";
             Load += Form1_Load_1;

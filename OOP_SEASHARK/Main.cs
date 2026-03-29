@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace OOP_GroupProject
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
             MessageBox.Show("Constructor running");

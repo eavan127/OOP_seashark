@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
 namespace OOP_GroupProject
@@ -55,7 +55,7 @@ namespace OOP_GroupProject
 
         private void btnBackMain_Click(object sender, EventArgs e)
         {
-            Main main = new Main();
+            frmMain main = new frmMain();
             main.Show();
             this.Hide();
         }
