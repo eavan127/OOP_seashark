@@ -61,43 +61,72 @@ This project applies and demonstrates the following OOP concepts:
 
 ---
 
-
 ## 📁 Project Structure
 
+| File / Folder | Description |
+|---------------|-------------|
+| Program.cs | Main program entry |
+| GameManager.cs | Controls overall game logic |
+| GameState.cs | Manages game states (Start, Playing, Completed) |
+| Player.cs | Player class handling movement and stats |
+| Level.cs | Base class for all levels |
+| BeginnerLevel.cs | Beginner level implementation |
+| AdvancedLevel.cs | Advanced level implementation |
+| BeginnerQuiz.cs | Quiz handling for Beginner level |
+| AdvancedQuiz.cs | Quiz handling for Advanced level |
+| frmQuizPopup.cs | Pop-up quiz interface |
+| Hint.cs | Quiz hint interface |
+| SelectLevel.cs | Level selection screen |
+| TimeUp.cs | Time-up notification screen |
+| Main.cs | Main game form |
+| OutlineLabel.cs | Custom label for UI |
 <details>
-<summary>Click to expand Project Files</summary>
-OOP_SEASHARK.slnx / OOP_SEASHARK.sln     # Solution files
-Program.cs                              # Main program entry
-GameManager.cs                           # Controls overall game logic
-GameState.cs                             # Manages game states (Start, Playing, Completed)
-Player.cs                                 # Player class handling movement and stats
-Level.cs                                  # Base class for all levels
-BeginnerLevel.cs / AdvancedLevel.cs      # Level implementations
-BeginnerQuiz.cs / AdvancedQuiz.cs        # Quiz handling for each level
-frmQuizPopup.cs                           # Pop-up quiz interface
-Hint.cs                                   # Quiz hint interface
-SelectLevel.cs                            # Level selection screen
-TimeUp.cs                                 # Time-up notification screen
-Main.cs                                   # Main game form
-OutlineLabel.cs                           # Custom label for UI
-Resources/                                # Images and assets
-    shark.png
-    shark2.png
-    background.jpg
-    background sea.png
-    key.png
-    door.png
-    coral.png
-    sea star.png
-    ... (other images)
-music/
-    background.mp3                        # Background music
-Properties/
-    AssemblyInfo.cs                        # Project metadata
-    Resources.Designer.cs                  # Resources class
-    Settings.Designer.cs                   # Settings configuration
-OOP_GroupProject.csproj                   # Project configuration
-build_err.txt / build_err_utf8.txt        # Build error logs
+<summary>Resources/ (Click to expand)</summary>
+
+| File | Description |
+|------|-------------|
+| Untitled design (2).png | Example background / placeholder image |
+| anchor.png | Asset for anchor obstacle |
+| background sea.png | Undersea background |
+| background.jpg | Background image |
+| beach.jpg | Background image for level |
+| blue.jpg | Asset (color canvas) |
+| canvas.png | UI canvas image |
+| clam.png | Clam obstacle image |
+| coral.png | Coral obstacle image |
+| door.png | Level exit door |
+| gradientblue.jpeg | Gradient background |
+| key.png | Key collectible |
+| lightbulb.png | Hint icon |
+| piranha-removebg-preview.png | Enemy obstacle |
+| rock.png | Rock obstacle |
+| sea star.jpg / sea star.png | Star collectible |
+| sea.png | Sea water background |
+| shark.png / shark2.png | Shark avatar images |
+</details>
+
+<details>
+<summary>music/ (Click to expand)</summary>
+
+| File | Description |
+|------|-------------|
+| background.mp3 | Background music |
+</details>
+
+<details>
+<summary>Properties/ (Click to expand)</summary>
+
+| File | Description |
+|------|-------------|
+| AssemblyInfo.cs | Project metadata |
+| Resources.Designer.cs | Resource designer file |
+| Resources.resx | Resource file for images/audio |
+| Settings.Designer.cs | Project settings |
+| Settings.settings | Application settings |
+</details>
+
+| OOP_GroupProject.csproj | Project configuration |
+| OOP_SEASHARK.sln / OOP_SEASHARK.slnx | Solution files |
 ---
 
 ## 🚀 **How to Play**
