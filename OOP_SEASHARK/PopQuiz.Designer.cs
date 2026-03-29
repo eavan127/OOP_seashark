@@ -68,7 +68,7 @@ namespace OOP_SEASHARK
             // pnlBackground
             // 
             this.pnlBackground.BackColor = System.Drawing.Color.Transparent;
-            this.pnlBackground.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background_sea;
+            this.pnlBackground.BackgroundImage = global::OOP_GroupProject.Properties.Resources.background_sea;
             this.pnlBackground.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlBackground.Controls.Add(this.btnHint);
             this.pnlBackground.Controls.Add(this.lblTimer);
@@ -86,7 +86,7 @@ namespace OOP_SEASHARK
             // btnHint
             // 
             this.btnHint.BackColor = System.Drawing.Color.Transparent;
-            this.btnHint.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.lightbulb;
+            this.btnHint.BackgroundImage = global::OOP_GroupProject.Properties.Resources.lightbulb;
             this.btnHint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnHint.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnHint.FlatAppearance.BorderSize = 0;
@@ -299,7 +299,7 @@ namespace OOP_SEASHARK
             // pnlSharkOuter
             // 
             this.pnlSharkOuter.BackColor = System.Drawing.Color.Transparent;
-            this.pnlSharkOuter.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.shark2;
+            this.pnlSharkOuter.BackgroundImage = global::OOP_GroupProject.Properties.Resources.shark2;
             this.pnlSharkOuter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlSharkOuter.Location = new System.Drawing.Point(52, 161);
             this.pnlSharkOuter.Name = "pnlSharkOuter";

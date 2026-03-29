@@ -151,7 +151,8 @@ namespace OOP_SEASHARK
                 anchorTimer.Stop();
                 piranhaTimer.Stop();
 
-                PopQuiz quiz = new PopQuiz(0, totalSeconds);
+                IQuiz levelQuiz = null; // Obtain or create a valid IQuiz instance
+                PopQuiz quiz = new PopQuiz(0, totalSeconds, levelQuiz);
                 quiz.ShowDialog();
 
                 if (quiz.AnsweredCorrectly)

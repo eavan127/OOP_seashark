@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OOP_SEASHARK.Properties
+namespace OOP_GroupProject.Properties
 {
 
 

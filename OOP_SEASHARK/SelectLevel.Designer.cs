@@ -77,7 +77,7 @@
             // picKeys
             // 
             this.picKeys.BackColor = System.Drawing.Color.Transparent;
-            this.picKeys.Image = global::OOP_SEASHARK.Properties.Resources.key;
+            this.picKeys.Image = global::OOP_GroupProject.Properties.Resources.key;
             this.picKeys.Location = new System.Drawing.Point(12, 15);
             this.picKeys.Name = "picKeys";
             this.picKeys.Size = new System.Drawing.Size(52, 61);
@@ -138,7 +138,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::OOP_SEASHARK.Properties.Resources.shark2;
+            this.pictureBox2.Image = global::OOP_GroupProject.Properties.Resources.shark2;
             this.pictureBox2.Location = new System.Drawing.Point(363, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(74, 54);
@@ -191,7 +191,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = global::OOP_SEASHARK.Properties.Resources.sea_star1;
+            this.pictureBox3.Image = global::OOP_GroupProject.Properties.Resources.sea_star1;
             this.pictureBox3.Location = new System.Drawing.Point(157, 141);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(181, 168);
@@ -202,7 +202,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::OOP_SEASHARK.Properties.Resources.clam;
+            this.pictureBox1.Image = global::OOP_GroupProject.Properties.Resources.clam;
             this.pictureBox1.Location = new System.Drawing.Point(456, 141);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(189, 168);
@@ -214,7 +214,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background_sea;
+            this.BackgroundImage = global::OOP_GroupProject.Properties.Resources.background_sea;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox1);

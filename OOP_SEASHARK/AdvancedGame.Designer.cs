@@ -122,7 +122,7 @@
             // picFishAdvanced
             // 
             this.picFishAdvanced.BackColor = System.Drawing.Color.Transparent;
-            this.picFishAdvanced.Image = global::OOP_SEASHARK.Properties.Resources.shark2;
+            this.picFishAdvanced.Image = global::OOP_GroupProject.Properties.Resources.shark2;
             this.picFishAdvanced.Location = new System.Drawing.Point(392, 334);
             this.picFishAdvanced.Name = "picFishAdvanced";
             this.picFishAdvanced.Size = new System.Drawing.Size(132, 114);
@@ -189,7 +189,7 @@
             // panelAnchor
             // 
             this.panelAnchor.BackColor = System.Drawing.Color.Transparent;
-            this.panelAnchor.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.Untitled_design__2_;
+            this.panelAnchor.BackgroundImage = global::OOP_GroupProject.Properties.Resources.Untitled_design__2_;
             this.panelAnchor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelAnchor.Location = new System.Drawing.Point(589, -2);
             this.panelAnchor.Name = "panelAnchor";
@@ -200,7 +200,7 @@
             // panelPiranha2
             // 
             this.panelPiranha2.BackColor = System.Drawing.Color.Transparent;
-            this.panelPiranha2.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.piranha_removebg_preview;
+            this.panelPiranha2.BackgroundImage = null; // TODO: Add piranha_removebg_preview resource
             this.panelPiranha2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelPiranha2.Location = new System.Drawing.Point(381, 120);
             this.panelPiranha2.Name = "panelPiranha2";
@@ -210,7 +210,7 @@
             // picDoorAdvanced
             // 
             this.picDoorAdvanced.BackColor = System.Drawing.Color.Transparent;
-            this.picDoorAdvanced.Image = global::OOP_SEASHARK.Properties.Resources.door;
+            this.picDoorAdvanced.Image = global::OOP_GroupProject.Properties.Resources.door;
             this.picDoorAdvanced.Location = new System.Drawing.Point(0, 40);
             this.picDoorAdvanced.Name = "picDoorAdvanced";
             this.picDoorAdvanced.Size = new System.Drawing.Size(78, 74);
@@ -221,7 +221,7 @@
             // panelPiranha1
             // 
             this.panelPiranha1.BackColor = System.Drawing.Color.Transparent;
-            this.panelPiranha1.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.piranha_removebg_preview;
+            this.panelPiranha1.BackgroundImage = null; // TODO: Add piranha_removebg_preview resource
             this.panelPiranha1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelPiranha1.Location = new System.Drawing.Point(48, 232);
             this.panelPiranha1.Name = "panelPiranha1";
@@ -230,7 +230,7 @@
             // 
             // AdvancedGame
             // 
-            this.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background;
+            this.BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelPiranha1);

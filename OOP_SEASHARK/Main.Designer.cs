@@ -74,7 +74,7 @@
             // picFish
             // 
             this.picFish.BackColor = System.Drawing.Color.Transparent;
-            this.picFish.Image = global::OOP_SEASHARK.Properties.Resources.shark2;
+            this.picFish.Image = global::OOP_GroupProject.Properties.Resources.shark2;
             this.picFish.Location = new System.Drawing.Point(262, 107);
             this.picFish.Name = "picFish";
             this.picFish.Size = new System.Drawing.Size(277, 222);
@@ -100,7 +100,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background;
+            this.BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnExit);

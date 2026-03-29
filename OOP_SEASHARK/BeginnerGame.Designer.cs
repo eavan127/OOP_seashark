@@ -107,7 +107,7 @@
             // picDoorBeginner
             // 
             this.picDoorBeginner.BackColor = System.Drawing.Color.Transparent;
-            this.picDoorBeginner.Image = global::OOP_SEASHARK.Properties.Resources.door;
+            this.picDoorBeginner.Image = global::OOP_GroupProject.Properties.Resources.door;
             this.picDoorBeginner.Location = new System.Drawing.Point(739, 87);
             this.picDoorBeginner.Name = "picDoorBeginner";
             this.picDoorBeginner.Size = new System.Drawing.Size(78, 74);
@@ -118,7 +118,7 @@
             // 
             // picObstacle3
             // 
-            this.picObstacle3.Image = global::OOP_SEASHARK.Properties.Resources.anchor;
+            this.picObstacle3.Image = global::OOP_GroupProject.Properties.Resources.anchor;
             this.picObstacle3.Location = new System.Drawing.Point(536, 77);
             this.picObstacle3.Name = "picObstacle3";
             this.picObstacle3.Size = new System.Drawing.Size(99, 80);
@@ -130,7 +130,7 @@
             // picObstacle2
             // 
             this.picObstacle2.BackColor = System.Drawing.Color.Transparent;
-            this.picObstacle2.Image = global::OOP_SEASHARK.Properties.Resources.rock;
+            this.picObstacle2.Image = global::OOP_GroupProject.Properties.Resources.rock;
             this.picObstacle2.Location = new System.Drawing.Point(325, 154);
             this.picObstacle2.Name = "picObstacle2";
             this.picObstacle2.Size = new System.Drawing.Size(100, 65);
@@ -142,7 +142,7 @@
             // picObstacle1
             // 
             this.picObstacle1.BackColor = System.Drawing.Color.Transparent;
-            this.picObstacle1.Image = global::OOP_SEASHARK.Properties.Resources.coral;
+            this.picObstacle1.Image = global::OOP_GroupProject.Properties.Resources.coral;
             this.picObstacle1.Location = new System.Drawing.Point(-1, 192);
             this.picObstacle1.Name = "picObstacle1";
             this.picObstacle1.Size = new System.Drawing.Size(86, 84);
@@ -154,7 +154,7 @@
             // picFishBeginner
             // 
             this.picFishBeginner.BackColor = System.Drawing.Color.Transparent;
-            this.picFishBeginner.Image = global::OOP_SEASHARK.Properties.Resources.shark2;
+            this.picFishBeginner.Image = global::OOP_GroupProject.Properties.Resources.shark2;
             this.picFishBeginner.Location = new System.Drawing.Point(12, 334);
             this.picFishBeginner.Name = "picFishBeginner";
             this.picFishBeginner.Size = new System.Drawing.Size(132, 114);
@@ -228,7 +228,7 @@
             // 
             // BeginnerGame
             // 
-            this.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background;
+            this.BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.picFishBeginner);
