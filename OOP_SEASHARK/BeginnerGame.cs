@@ -225,13 +225,9 @@ namespace OOP_GroupProject
                     GameState.BeginnerCompleted = true;
                     GameState.KeysCollected = 3;
 
-                    BeginnerCompleted completed = new BeginnerCompleted();
-                    completed.ShowDialog(); // ShowDialog so we wait for it to close
-
-                    // After the completed screen closes, go back to SelectLevel
-                    SelectLevel selectLevel = new SelectLevel();
-                    selectLevel.Show();
-                    this.Close();
+                    BeginnerCompleteForm completed = new BeginnerCompleteForm();
+                    completed.Show();
+                    this.Hide();
                 }
             }
         }
@@ -284,12 +280,9 @@ namespace OOP_GroupProject
             GameState.BeginnerCompleted = true;
             GameState.KeysCollected = 3;
 
-            BeginnerCompleted completed = new BeginnerCompleted();
-            completed.ShowDialog();
-
-            SelectLevel selectLevel = new SelectLevel();
-            selectLevel.Show();
-            this.Close();
+            BeginnerCompleteForm completed = new BeginnerCompleteForm();
+            completed.Show();
+            this.Hide();
         }
     }
 }
