@@ -299,7 +299,9 @@ namespace OOP_GroupProject
 
         private void BtnHint_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(quiz.GetHint(obstacleIndex), "Hint", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            string hintText = quiz.GetHint(obstacleIndex);
+            frmHint hintForm = new frmHint(hintText);
+            hintForm.ShowDialog();
         }
 
         private void pnlBackground_Paint(object sender, PaintEventArgs e)

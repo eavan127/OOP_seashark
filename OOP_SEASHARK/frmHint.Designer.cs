@@ -1,4 +1,4 @@
-﻿namespace OOP_GroupProject
+namespace OOP_GroupProject
 {
     partial class frmHint
     {
@@ -97,6 +97,7 @@
             button1.TabIndex = 5;
             button1.Text = "Got It";
             button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // pictureBox2
             // 

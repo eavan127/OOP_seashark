@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +12,17 @@ namespace OOP_GroupProject
 {
     public partial class frmHint : Form
     {
-        public frmHint()
+        public frmHint(string hintText)
         {
             InitializeComponent();
             pictureBox1.BackColor = Color.Transparent;
+            label2.Text = hintText;
+            this.StartPosition = FormStartPosition.CenterParent;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
