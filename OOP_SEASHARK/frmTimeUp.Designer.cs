@@ -44,7 +44,7 @@ namespace OOP_GroupProject
             // 
             // pictureBox1
             // 
-            //pictureBox1.Image =Properties.Resources.background_sea;
+            pictureBox1.Image = Properties.Resources.background_sea;
             pictureBox1.Location = new Point(-1, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(802, 450);
@@ -54,7 +54,7 @@ namespace OOP_GroupProject
             // 
             // pictureBox2
             // 
-            //pictureBox2.Image = Properties.Resources.Timer;
+            pictureBox2.Image = Properties.Resources.Timer;
             pictureBox2.Location = new Point(230, 89);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(171, 140);

@@ -46,9 +46,9 @@ namespace OOP_GroupProject
         {
             string[] hints = new string[]
             {
-                "In C#, every variable must have a defined type (like int, string, or bool). The standard way to declare a variable is: [Type] [Variable Name] = [Value]; For example: int score = 10;",
-                "Classes are the blueprints for objects in OOP. In C#, you define them using the 'class' keyword followed by the name of the class (usually capitalized).",
-                "OOP stands for Object-Oriented Programming. It is a programming paradigm based on the concept of 'objects', which can contain data and code: data in the form of fields, and code in the form of procedures."
+                "In C#, \"int\" stands for integer and is used to store whole numbers without decimals (e.g., 5, 10, 100).\n\nIf your value contains decimal points, you should use \"double\" (e.g., 3.14, 2.75), which can store floating-point numbers.\n\nChoosing the correct data type helps your program run correctly and efficiently.",
+                "The 'class' keyword is the fundamental building block of Object-Oriented Programming in C#. It acts as a blueprint or template for creating objects.\n\nInside a class, you define the properties (data) and methods (behavior) that the object will have. Most languages like Java and C++ use this same standard keyword.",
+                "OOP stands for Object-Oriented Programming. This approach organizes software design around data, or objects, rather than functions and logic.\n\nAn object can be defined as a data field that has unique attributes and behavior. Think of the letters: O for Object, O for Oriented, and P for Programming!"
             };
             return hints[questionIndex];
         }

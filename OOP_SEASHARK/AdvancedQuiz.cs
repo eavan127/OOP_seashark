@@ -45,9 +45,9 @@ namespace OOP_GroupProject
         {
             string[] hints = new string[]
             {
-                "Polymorphism allows objects of different classes to be treated as objects of a common superclass. This is often achieved through 'method overriding' where a subclass provides its own version of a method already defined in its parent class.",
-                "Encapsulation is the practice of bundling data (fields) and the methods that operate on that data into a single unit (class). It also involves using access modifiers like 'private' to hide internal data from outside interference.",
-                "In C#, a class can only inherit from one other class (single inheritance). However, to achieve similar results to multiple inheritance, a class can implement multiple 'interfaces', which define contracts for behavior."
+                "Polymorphism allows objects of different classes to be treated as objects of a common superclass. This is often achieved through 'method overriding'.\n\nFor example, if you have a 'Fish' superclass with a 'Swim' method, you can have 'Shark' and 'Dolphin' subclasses that provide their own specialized 'Swim' behavior.\n\nThis makes your code more flexible and easier to maintain by focusing on what an object *does* rather than what it *is*.",
+                "Encapsulation is the principle of bundling data and methods into a single unit (a class). It also involves restricting direct access to some of the object's components.\n\nIn C#, we use 'private' fields and 'public' properties to achieve this. This protects the internal state of an object from being modified in an uncontrolled way by outside code.\n\nIt is like a black box: you know how to interact with it, but you don't need to know its internal details.",
+                "In C#, a class can only inherit from one other class. This is called single inheritance. It prevents the complexity and ambiguity that can arise from multiple inheritance.\n\nHowever, a class can implement multiple 'interfaces'. An interface defines a contract of behavior that a class must provide.\n\nThis gives you the benefits of multiple inheritance without the diamond problem or other common complications."
             };
             return hints[questionIndex];
         }
