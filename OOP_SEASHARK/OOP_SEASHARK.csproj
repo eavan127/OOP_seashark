@@ -65,6 +65,7 @@
       <DependentUpon>AdvancedGame.cs</DependentUpon>
     </Compile>
     <Compile Include="AdvancedLevel.cs" />
+    <Compile Include="GameState.cs" />
     <Compile Include="BeginnerCompleted.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,17 +79,6 @@
       <DependentUpon>BeginnerGame.cs</DependentUpon>
     </Compile>
     <Compile Include="BeginnerLevel.cs" />
-    <Compile Include="Form1.cs" />
-    <Compile Include="Form1.Designer.cs" />
-    <Compile Include="frmQuizPopup.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmQuizPopup.Designer.cs" />
-    <Compile Include="frmQuizPopup1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>frmQuizPopup.resx</DependentUpon>
-    </Compile>
     <Compile Include="GameManager.cs" />
     <Compile Include="Hint.cs">
       <SubType>Form</SubType>

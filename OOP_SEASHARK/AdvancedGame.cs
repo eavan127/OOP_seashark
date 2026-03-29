@@ -157,8 +157,23 @@ namespace OOP_SEASHARK
                 if (quiz.AnsweredCorrectly)
                 {
                     level.CompleteLevel();
-                    MessageBox.Show("Advanced Level Completed!");
-                    this.Hide();
+                    GameState.KeysCollected = 6; // All keys collected
+
+                    AdvancedCompleted completed = new AdvancedCompleted();
+                    completed.ShowDialog();
+
+                    // Return to Select Level
+                    SelectLevel selectLevel = new SelectLevel();
+                    selectLevel.Show();
+                    this.Close();
+                }
+                else
+                {
+                    // Wrong answer — resume game
+                    gameTimer.Start();
+                    countdownTimer.Start();
+                    anchorTimer.Start();
+                    piranhaTimer.Start();
                 }
             }
         }

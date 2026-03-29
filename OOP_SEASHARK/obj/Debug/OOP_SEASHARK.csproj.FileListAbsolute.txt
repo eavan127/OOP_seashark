@@ -85,3 +85,6 @@ C:\Users\HP\source\repos\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj
 C:\Users\HP\source\repos\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.CoreCompileInputs.cache
 C:\Users\HP\source\repos\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe
 C:\Users\HP\source\repos\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.pdb
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_GroupProject.frmQuiz.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.frmQuizPopup.resources
+D:\github clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Hint.resources

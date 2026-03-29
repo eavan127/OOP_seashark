@@ -42,6 +42,7 @@
             this.btnRightBeginner = new System.Windows.Forms.Button();
             this.btnLeftBeginner = new System.Windows.Forms.Button();
             this.btnUpBeginner = new System.Windows.Forms.Button();
+            this.btnDebugComplete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picDoorBeginner)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picObstacle3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picObstacle2)).BeginInit();
@@ -211,6 +212,20 @@
             this.btnUpBeginner.UseVisualStyleBackColor = false;
             this.btnUpBeginner.Click += new System.EventHandler(this.btnUpBeginner_Click);
             // 
+            // btnDebugComplete
+            //
+            this.btnDebugComplete.BackColor = System.Drawing.Color.Firebrick;
+            this.btnDebugComplete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDebugComplete.Font = new System.Drawing.Font("Segoe UI", 7.2F, System.Drawing.FontStyle.Bold);
+            this.btnDebugComplete.ForeColor = System.Drawing.Color.White;
+            this.btnDebugComplete.Location = new System.Drawing.Point(560, 6);
+            this.btnDebugComplete.Name = "btnDebugComplete";
+            this.btnDebugComplete.Size = new System.Drawing.Size(150, 28);
+            this.btnDebugComplete.TabIndex = 20;
+            this.btnDebugComplete.Text = "[DEBUG] Complete Level";
+            this.btnDebugComplete.UseVisualStyleBackColor = false;
+            this.btnDebugComplete.Click += new System.EventHandler(this.btnDebugComplete_Click);
+            // 
             // BeginnerGame
             // 
             this.BackgroundImage = global::OOP_SEASHARK.Properties.Resources.background;
@@ -227,6 +242,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblBeginner);
             this.Controls.Add(this.lblTimer);
+            this.Controls.Add(this.btnDebugComplete);
             this.Name = "BeginnerGame";
             this.Load += new System.EventHandler(this.BeginnerGame_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picDoorBeginner)).EndInit();
@@ -256,5 +272,6 @@
         private System.Windows.Forms.Button btnRightBeginner;
         private System.Windows.Forms.Button btnLeftBeginner;
         private System.Windows.Forms.Button btnUpBeginner;
+        private System.Windows.Forms.Button btnDebugComplete;
     }
 }
