@@ -12,7 +12,7 @@ namespace OOP_SEASHARK
     {
         //public Player player = new Player();
         public Level currentLvl;
-        public Timer timer = new Timer();
+        public GameTimer timer = new GameTimer();
         private WindowsMediaPlayer bgMusic = new WindowsMediaPlayer();
 
         public void StartGame() {

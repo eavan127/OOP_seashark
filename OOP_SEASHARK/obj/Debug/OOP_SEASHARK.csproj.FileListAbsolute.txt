@@ -66,7 +66,6 @@ C:\Users\afifa\source\repos\OOP_SeaShark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.pdb
 C:\Users\afifa\source\repos\OOP_SeaShark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Form1.resources
 C:\Users\afifa\source\repos\OOP_SeaShark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.frmQuizPopup.resources
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.AssemblyReference.cache
-C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.exe.config
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\Interop.WMPLib.dll
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.csproj.ResolveComReference.cache
@@ -89,4 +88,4 @@ C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\bin\Debug\OOP_SEA
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\bin\Debug\OOP_SEASHARK.pdb
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\bin\Debug\Interop.WMPLib.dll
 C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.frmHint.resources
+C:\Users\Acer\Documents\GitHub_Clone\OOP_seashark\OOP_SEASHARK\obj\Debug\OOP_SEASHARK.Hint.resources

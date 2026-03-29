@@ -239,8 +239,8 @@ namespace OOP_SEASHARK
                 gameTimer.Stop();
 
                 TimeUp timeUp = new TimeUp();
-                timeUp.Show();
-                this.Hide();
+                timeUp.Owner = this; 
+                timeUp.ShowDialog(); 
             }
         }
 

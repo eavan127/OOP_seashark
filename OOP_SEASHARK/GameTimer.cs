@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP_SEASHARK
 {
-    public class Timer
+    public class GameTimer
     {
         private int timeLeft;
 
