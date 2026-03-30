@@ -58,7 +58,7 @@
             lblAdvanced.ForeColor = Color.Navy;
             lblAdvanced.Location = new Point(12, 9);
             lblAdvanced.Name = "lblAdvanced";
-            lblAdvanced.Size = new Size(146, 30);
+            lblAdvanced.Size = new Size(180, 37);
             lblAdvanced.TabIndex = 2;
             lblAdvanced.Text = "Advanced Level";
             // 
@@ -70,7 +70,7 @@
             lblTimer2.ForeColor = Color.Navy;
             lblTimer2.Location = new Point(734, 9);
             lblTimer2.Name = "lblTimer2";
-            lblTimer2.Size = new Size(66, 30);
+            lblTimer2.Size = new Size(83, 37);
             lblTimer2.TabIndex = 3;
             lblTimer2.Text = "07:00";
             lblTimer2.Click += lblTimer2_Click;
@@ -122,7 +122,7 @@
             // picFishAdvanced
             // 
             picFishAdvanced.BackColor = Color.Transparent;
-            picFishAdvanced.Image = global::OOP_GroupProject.Properties.Resources.shark2;
+            picFishAdvanced.Image = Properties.Resources.shark2;
             picFishAdvanced.Location = new Point(17, 351);
             picFishAdvanced.Name = "picFishAdvanced";
             picFishAdvanced.Size = new Size(96, 87);
@@ -187,7 +187,7 @@
             // panelAnchor
             // 
             panelAnchor.BackColor = Color.Transparent;
-            panelAnchor.BackgroundImage = global::OOP_GroupProject.Properties.Resources.Untitled_design__2_;
+            panelAnchor.BackgroundImage = Properties.Resources.Untitled_design__2_;
             panelAnchor.BackgroundImageLayout = ImageLayout.Stretch;
             panelAnchor.Location = new Point(589, -2);
             panelAnchor.Name = "panelAnchor";
@@ -206,13 +206,14 @@
             // picDoorAdvanced
             // 
             picDoorAdvanced.BackColor = Color.Transparent;
-            picDoorAdvanced.Image = global::OOP_GroupProject.Properties.Resources.door;
+            picDoorAdvanced.Image = Properties.Resources.door;
             picDoorAdvanced.Location = new Point(0, 40);
             picDoorAdvanced.Name = "picDoorAdvanced";
             picDoorAdvanced.Size = new Size(78, 74);
             picDoorAdvanced.SizeMode = PictureBoxSizeMode.StretchImage;
             picDoorAdvanced.TabIndex = 10;
             picDoorAdvanced.TabStop = false;
+            picDoorAdvanced.Click += picDoorAdvanced_Click;
             // 
             // panelPiranha1
             // 
@@ -225,7 +226,7 @@
             // 
             // AdvancedGame
             // 
-            BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
+            BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 450);
             Controls.Add(panelPiranha1);
