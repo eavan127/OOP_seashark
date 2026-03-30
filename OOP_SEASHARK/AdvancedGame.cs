@@ -49,7 +49,7 @@ namespace OOP_GroupProject
             btnRightAdvanced.MouseUp += (s, e) => { moveRight = false; };
             btnRightAdvanced.MouseLeave += (s, e) => { moveRight = false; };
 
-            btnUpAdvanced.Click += (s, e) => { velY = -20; };
+            btnUpAdvanced.MouseDown += (s, e) => { if (isGrounded) velY = -20; };
 
             btnLeftAdvanced.TabStop = false;
             btnRightAdvanced.TabStop = false;
@@ -58,6 +58,7 @@ namespace OOP_GroupProject
             gameManager.currentLvl = level;
             gameManager.StartGame();
             totalSeconds = (int)level.GetTimeLimit();
+            this.DoubleBuffered = true;
             UpdateTimerLabel();
             SetupGame();
         }
@@ -173,7 +174,7 @@ namespace OOP_GroupProject
         {
             if (e.KeyCode == Keys.Left) moveLeft = true;
             if (e.KeyCode == Keys.Right) moveRight = true;
-            if (e.KeyCode == Keys.Up) velY = -20; // no isGrounded check = unlimited jumps
+            if (e.KeyCode == Keys.Up && isGrounded) velY = -20; 
         }
 
         private void AdvancedGame_KeyUp(object sender, KeyEventArgs e)
@@ -233,7 +234,7 @@ namespace OOP_GroupProject
 
                     AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds);
                     completed.Show();
-                    this.Hide();
+                    this.Close(); // Close instead of Hide
                 }
                 else
                 {
@@ -260,7 +261,7 @@ namespace OOP_GroupProject
 
                 frmTimeUp timeUp = new frmTimeUp(this, "Advanced");
                 timeUp.Show();
-                this.Hide();
+                this.Close(); // Close instead of Hide
             }
         }
 

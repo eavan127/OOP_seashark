@@ -1,4 +1,4 @@
-﻿namespace OOP_GroupProject
+namespace OOP_GroupProject
 {
     partial class BeginnerCompleteForm
     {
@@ -191,7 +191,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(24, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "6/6";
+            this.label5.Text = "3/6";
             // 
             // label4
             // 

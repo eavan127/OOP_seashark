@@ -232,7 +232,7 @@ namespace OOP_GroupProject
 
                     BeginnerCompleteForm completed = new BeginnerCompleteForm(totalSeconds);
                     completed.Show();
-                    this.Hide();
+                    this.Close(); // Close instead of Hide to prevent leaking previous game instances
                 }
             }
         }
