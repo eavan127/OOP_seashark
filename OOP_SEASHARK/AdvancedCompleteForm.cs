@@ -16,10 +16,11 @@ namespace OOP_GroupProject
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool DeleteObject(IntPtr hObject);
 
-        public AdvancedCompleteForm(int timeRemaining)
+        public AdvancedCompleteForm(int timeRemaining, int keysCollected)
         {
             InitializeComponent();
             lblTime.Text = FormatTime(timeRemaining);
+            label5.Text = $"{keysCollected}/6";
 
             // keep regions up-to-date when sizes change
             this.Shown += (s, e) => UpdateRegions();

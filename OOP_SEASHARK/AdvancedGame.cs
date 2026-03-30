@@ -14,6 +14,7 @@ namespace OOP_GroupProject
         private int totalSeconds;
         private IQuiz currentQuiz = new AdvancedQuiz();
         private bool[] obstacleCleared = { false, false, false };
+        private int correctAnswers = 0;
 
         private System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer();
         private System.Windows.Forms.Timer countdownTimer = new System.Windows.Forms.Timer();
@@ -210,6 +211,10 @@ namespace OOP_GroupProject
                         quiz.ShowDialog();
 
                         // After quiz closes - hide obstacle and mark as cleared
+                        if (quiz.AnsweredCorrectly)
+                        {
+                            correctAnswers++;
+                        }
                         obstacles[i].Visible = false;
                         obstacleCleared[i] = true;
 
@@ -248,9 +253,9 @@ namespace OOP_GroupProject
                     piranhaTimer.Stop();
 
                     level.CompleteLevel();
-                    GameState.KeysCollected = 6;
+                    GameState.KeysCollected = 3 + correctAnswers; // assuming 3 from beginner
 
-                    AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds);
+                    AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds, GameState.KeysCollected);
                     completed.Show();
                     this.Close(); // Close instead of Hide
                 }

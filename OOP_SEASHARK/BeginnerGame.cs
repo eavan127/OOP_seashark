@@ -18,6 +18,7 @@ namespace OOP_GroupProject
         private GameManager gameManager = new GameManager();
         private int totalSeconds;
         private IQuiz currentQuiz = new BeginnerQuiz();
+        private int correctAnswers = 0;
         public event Action TimeUpTriggered;
         private frmTimeUp timeUpForm;
 
@@ -42,6 +43,7 @@ namespace OOP_GroupProject
             gameManager.currentLvl = level;
             gameManager.StartGame();
             totalSeconds = (int)level.GetTimeLimit();
+            GameState.KeysCollected = 0; // Reset keys for new game
             UpdateTimerLabel();
             SetupGame();
             timeUpForm = new frmTimeUp(this, "Beginner");
@@ -187,7 +189,11 @@ namespace OOP_GroupProject
                         PopQuiz quiz = new PopQuiz(i, totalSeconds, currentQuiz);
                         quiz.ShowDialog();
 
-                        // After quiz closes - hide obstacle regardless
+                        // After quiz closes - increment if correct
+                        if (quiz.AnsweredCorrectly)
+                        {
+                            correctAnswers++;
+                        }
                         obstacles[i].Visible = false;
                         obstacleCleared[i] = true;
 
@@ -228,9 +234,9 @@ namespace OOP_GroupProject
 
                     // Persist completion state
                     GameState.BeginnerCompleted = true;
-                    GameState.KeysCollected = 3;
+                    GameState.KeysCollected = correctAnswers;
 
-                    BeginnerCompleteForm completed = new BeginnerCompleteForm(totalSeconds);
+                    BeginnerCompleteForm completed = new BeginnerCompleteForm(totalSeconds, correctAnswers);
                     completed.Show();
                     this.Close(); // Close instead of Hide to prevent leaking previous game instances
                 }

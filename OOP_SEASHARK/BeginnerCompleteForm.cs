@@ -16,10 +16,13 @@ namespace OOP_GroupProject
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool DeleteObject(IntPtr hObject);
 
-        public BeginnerCompleteForm(int timeRemaining)
+        private int keys;
+        public BeginnerCompleteForm(int timeRemaining, int keysCollected)
         {
             InitializeComponent();
             lblTime.Text = FormatTime(timeRemaining);
+            label5.Text = $"{keysCollected}/6";
+            this.keys = keysCollected;
 
             // Ensure regions are created once sizes are valid and kept up-to-date
             this.Shown += (s, e) => UpdatePanelRegions();
@@ -35,6 +38,11 @@ namespace OOP_GroupProject
                 this.Close();
             };
             btnNextLevel.Click += (s, e) => {
+                if (keys < 3)
+                {
+                    MessageBox.Show("You have to complete all 3 keys to unlock next level", "Level Locked", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 new AdvancedGame().Show();
                 this.Close();
             };
