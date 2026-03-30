@@ -106,14 +106,14 @@ namespace OOP_GroupProject
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(650, 450);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox1);
             Name = "frmHint";
-            Text = "frmHint";
+            Text = "Helpful Tips";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);

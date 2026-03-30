@@ -15,31 +15,33 @@ namespace OOP_GroupProject
         public frmHint(string hintText)
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.None;
-            this.WindowState = FormWindowState.Maximized;
-            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.StartPosition = FormStartPosition.CenterParent;
+            this.Text = "Helpful Tips";
+            
             label2.Text = hintText;
-
-            // Make sure controls center themselves after maximizing
-            this.Load += (s, e) => CenterControls();
+            
+            // Fix layout after components are initialized to ensure centering/wrapping
+            SetupLayout();
         }
 
-        private void CenterControls()
+        private void SetupLayout()
         {
-            // Center label1 (Title)
-            label1.Location = new Point((this.ClientSize.Width - label1.Width) / 2, 50);
+            // Ensure the main decorative background covers enough space
+            pictureBox3.Size = new Size(this.ClientSize.Width - 80, this.ClientSize.Height - 160);
+            pictureBox3.Location = new Point(40, 80);
 
-            // Center pictureBox3 (the blue decorative background)
-            pictureBox3.Size = new Size(this.ClientSize.Width - 100, this.ClientSize.Height - 150);
-            pictureBox3.Location = new Point(50, 100);
-
-            // Center label2 (Hint text) inside pictureBox3 or over it
+            // Ensure the hint text fits perfectly within the blue box and wraps correctly
             label2.AutoSize = false;
-            label2.Size = new Size(pictureBox3.Width - 40, pictureBox3.Height - 100);
+            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.Size = new Size(pictureBox3.Width - 40, pictureBox3.Height - 40);
             label2.Location = new Point(pictureBox3.Left + 20, pictureBox3.Top + 20);
+            label2.BringToFront();
 
-            // Center button1 (Got It)
-            button1.Location = new Point((this.ClientSize.Width - button1.Width) / 2, pictureBox3.Bottom - 50);
+            // Center the "Got It" button
+            button1.Location = new Point((this.ClientSize.Width - button1.Width) / 2, this.ClientSize.Height - 70);
             button1.BringToFront();
         }
 
