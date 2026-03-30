@@ -128,7 +128,7 @@ namespace OOP_GroupProject
         {
             if (e.KeyCode == Keys.Left) moveLeft = true;
             if (e.KeyCode == Keys.Right) moveRight = true;
-            if (e.KeyCode == Keys.Up && isGrounded) velY = -18;
+            if (e.KeyCode == Keys.Up && isGrounded) velY = -24;
         }
 
         private void BeginnerGame_KeyUp(object sender, KeyEventArgs e)
@@ -150,7 +150,7 @@ namespace OOP_GroupProject
 
         private void btnUpBeginner_Click(object sender, EventArgs e)
         {
-            if (isGrounded) velY = -18; // jump
+            if (isGrounded) velY = -24; // jump
         }
 
         // Mouse up = stop moving (for on-screen buttons)

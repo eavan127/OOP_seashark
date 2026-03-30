@@ -52,7 +52,7 @@ namespace OOP_GroupProject
             btnRightAdvanced.MouseUp += (s, e) => { moveRight = false; };
             btnRightAdvanced.MouseLeave += (s, e) => { moveRight = false; };
 
-            btnUpAdvanced.Click += (s, e) => { if (isGrounded) velY = -18; };
+            btnUpAdvanced.Click += (s, e) => { if (isGrounded) velY = -24; };
 
             btnLeftAdvanced.TabStop = false;
             btnRightAdvanced.TabStop = false;
@@ -64,6 +64,7 @@ namespace OOP_GroupProject
             this.DoubleBuffered = true;
             UpdateTimerLabel();
             SetupGame();
+            picFishAdvanced.BringToFront();
         }
 
         private void SetupGame()
@@ -83,13 +84,13 @@ namespace OOP_GroupProject
 
             // Anchor movement
             anchorTimer.Interval = 20;
-            anchorTimer.Tick += AnchorMovement;
-            anchorTimer.Start();
+            // anchorTimer.Tick += AnchorMovement;
+            // anchorTimer.Start();
 
             // Piranha movement
             piranhaTimer.Interval = 20;
-            piranhaTimer.Tick += PiranhaMovement;
-            piranhaTimer.Start();
+            // piranhaTimer.Tick += PiranhaMovement;
+            // piranhaTimer.Start();
         }
 
         private void GameLoop(object sender, EventArgs e)
@@ -132,28 +133,12 @@ namespace OOP_GroupProject
 
                 if (fishRect.IntersectsWith(platRect))
                 {
-                    // Landing on top
-                    if (velY >= 0 && playerY + picFishAdvanced.Height - velY <= p.Top + 10)
+                    // Simple landing: if falling and overlapping with top part of panel
+                    if (velY >= 0 && playerY + picFishAdvanced.Height <= p.Top + 25)
                     {
                         playerY = p.Top - picFishAdvanced.Height;
                         velY = 0;
                         isGrounded = true;
-                    }
-                    // Hitting from below
-                    else if (velY < 0 && playerY - velY >= p.Top + p.Height - 10)
-                    {
-                        playerY = p.Top + p.Height;
-                        velY = 0;
-                    }
-                    // Side collision
-                    else
-                    {
-                        int fishCenterX = playerX + picFishAdvanced.Width / 2;
-                        int platCenterX = p.Left + p.Width / 2;
-                        if (fishCenterX < platCenterX)
-                            playerX = p.Left - picFishAdvanced.Width;
-                        else
-                            playerX = p.Left + p.Width;
                     }
                 }
             }
@@ -177,7 +162,7 @@ namespace OOP_GroupProject
         {
             if (e.KeyCode == Keys.Left) moveLeft = true;
             if (e.KeyCode == Keys.Right) moveRight = true;
-            if (e.KeyCode == Keys.Up && isGrounded) velY = -18;
+            if (e.KeyCode == Keys.Up && isGrounded) velY = -24;
         }
 
         private void AdvancedGame_KeyUp(object sender, KeyEventArgs e)

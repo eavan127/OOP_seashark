@@ -58,7 +58,7 @@
             lblAdvanced.ForeColor = Color.Navy;
             lblAdvanced.Location = new Point(12, 9);
             lblAdvanced.Name = "lblAdvanced";
-            lblAdvanced.Size = new Size(180, 37);
+            lblAdvanced.Size = new Size(146, 30);
             lblAdvanced.TabIndex = 2;
             lblAdvanced.Text = "Advanced Level";
             // 
@@ -70,7 +70,7 @@
             lblTimer2.ForeColor = Color.Navy;
             lblTimer2.Location = new Point(734, 9);
             lblTimer2.Name = "lblTimer2";
-            lblTimer2.Size = new Size(83, 37);
+            lblTimer2.Size = new Size(66, 30);
             lblTimer2.TabIndex = 3;
             lblTimer2.Text = "07:00";
             lblTimer2.Click += lblTimer2_Click;
@@ -126,7 +126,7 @@
             picFishAdvanced.Location = new Point(17, 351);
             picFishAdvanced.Name = "picFishAdvanced";
             picFishAdvanced.Size = new Size(96, 87);
-            picFishAdvanced.SizeMode = PictureBoxSizeMode.Zoom;
+            picFishAdvanced.SizeMode = PictureBoxSizeMode.StretchImage;
             picFishAdvanced.TabIndex = 12;
             picFishAdvanced.TabStop = false;
             // 
@@ -134,18 +134,18 @@
             // 
             panel4.BackColor = Color.LemonChiffon;
             panel4.BackgroundImageLayout = ImageLayout.Stretch;
-            panel4.Location = new Point(0, 279);
+            panel4.Location = new Point(0, 294);
             panel4.Name = "panel4";
-            panel4.Size = new Size(190, 43);
+            panel4.Size = new Size(190, 40);
             panel4.TabIndex = 13;
             // 
             // panel5
             // 
             panel5.BackColor = Color.LemonChiffon;
             panel5.BackgroundImageLayout = ImageLayout.Stretch;
-            panel5.Location = new Point(298, 429);
+            panel5.Location = new Point(234, 408);
             panel5.Name = "panel5";
-            panel5.Size = new Size(201, 29);
+            panel5.Size = new Size(201, 36);
             panel5.TabIndex = 14;
             // 
             // panel1
@@ -161,9 +161,9 @@
             // 
             panel2.BackColor = Color.LemonChiffon;
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Location = new Point(317, 253);
+            panel2.Location = new Point(298, 253);
             panel2.Name = "panel2";
-            panel2.Size = new Size(212, 20);
+            panel2.Size = new Size(231, 49);
             panel2.TabIndex = 15;
             // 
             // panel3
@@ -172,7 +172,7 @@
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
             panel3.Location = new Point(0, 114);
             panel3.Name = "panel3";
-            panel3.Size = new Size(190, 46);
+            panel3.Size = new Size(230, 46);
             panel3.TabIndex = 16;
             // 
             // panel6
@@ -181,7 +181,7 @@
             panel6.BackgroundImageLayout = ImageLayout.Stretch;
             panel6.Location = new Point(298, 129);
             panel6.Name = "panel6";
-            panel6.Size = new Size(212, 25);
+            panel6.Size = new Size(212, 43);
             panel6.TabIndex = 17;
             // 
             // panelAnchor
@@ -197,10 +197,11 @@
             // panelPiranha2
             // 
             panelPiranha2.BackColor = Color.Transparent;
+            panelPiranha2.BackgroundImage = Properties.Resources.coral;
             panelPiranha2.BackgroundImageLayout = ImageLayout.Stretch;
-            panelPiranha2.Location = new Point(382, 90);
+            panelPiranha2.Location = new Point(382, 54);
             panelPiranha2.Name = "panelPiranha2";
-            panelPiranha2.Size = new Size(37, 33);
+            panelPiranha2.Size = new Size(80, 69);
             panelPiranha2.TabIndex = 15;
             // 
             // picDoorAdvanced
@@ -218,10 +219,11 @@
             // panelPiranha1
             // 
             panelPiranha1.BackColor = Color.Transparent;
+            panelPiranha1.BackgroundImage = Properties.Resources.anchor;
             panelPiranha1.BackgroundImageLayout = ImageLayout.Stretch;
-            panelPiranha1.Location = new Point(48, 223);
+            panelPiranha1.Location = new Point(98, 221);
             panelPiranha1.Name = "panelPiranha1";
-            panelPiranha1.Size = new Size(65, 50);
+            panelPiranha1.Size = new Size(76, 67);
             panelPiranha1.TabIndex = 19;
             // 
             // AdvancedGame
