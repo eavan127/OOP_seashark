@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -16,9 +16,10 @@ namespace OOP_GroupProject
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool DeleteObject(IntPtr hObject);
 
-        public BeginnerCompleteForm()
+        public BeginnerCompleteForm(int timeRemaining)
         {
             InitializeComponent();
+            lblTime.Text = FormatTime(timeRemaining);
 
             // Ensure regions are created once sizes are valid and kept up-to-date
             this.Shown += (s, e) => UpdatePanelRegions();
@@ -27,6 +28,23 @@ namespace OOP_GroupProject
             panel1.SizeChanged += (s, e) => UpdatePanelRegions();
             panelKeys.SizeChanged += (s, e) => UpdatePanelRegions();
             panelTime.SizeChanged += (s, e) => UpdatePanelRegions();
+
+            // Wire up buttons
+            btnPlayAgain.Click += (s, e) => {
+                new BeginnerGame().Show();
+                this.Close();
+            };
+            btnNextLevel.Click += (s, e) => {
+                new AdvancedGame().Show();
+                this.Close();
+            };
+        }
+
+        private string FormatTime(int seconds)
+        {
+            int mins = seconds / 60;
+            int secs = seconds % 60;
+            return $"{mins:D2}:{secs:D2}";
         }
 
         // Create/dispose managed Region objects safely using a native HRGN

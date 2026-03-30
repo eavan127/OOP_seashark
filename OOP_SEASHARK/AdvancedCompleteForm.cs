@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Runtime.InteropServices;
@@ -16,15 +16,23 @@ namespace OOP_GroupProject
         [return: MarshalAs(UnmanagedType.Bool)]
         private static extern bool DeleteObject(IntPtr hObject);
 
-        public AdvancedCompleteForm()
+        public AdvancedCompleteForm(int timeRemaining)
         {
             InitializeComponent();
+            lblTime.Text = FormatTime(timeRemaining);
 
             // keep regions up-to-date when sizes change
             this.Shown += (s, e) => UpdateRegions();
             panelMain.SizeChanged += (s, e) => UpdateRegions();
             btnPlayAgain.SizeChanged += (s, e) => UpdateRegions();
             btnExit.SizeChanged += (s, e) => UpdateRegions();
+        }
+
+        private string FormatTime(int seconds)
+        {
+            int mins = seconds / 60;
+            int secs = seconds % 60;
+            return $"{mins:D2}:{secs:D2}";
         }
 
         private void UpdateRegions()
@@ -106,14 +114,16 @@ namespace OOP_GroupProject
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmMain home = new frmMain();
+            home.Show();
+            this.Close();
         }
 
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            var newGame = new AdvancedCompleteForm();
-            newGame.Show();
-            this.Hide();
+            AdvancedGame game = new AdvancedGame();
+            game.Show();
+            this.Close();
         }
 
         private void lblTime_Click(object sender, EventArgs e)

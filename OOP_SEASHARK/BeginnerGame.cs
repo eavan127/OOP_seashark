@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,7 +44,7 @@ namespace OOP_GroupProject
             totalSeconds = (int)level.GetTimeLimit();
             UpdateTimerLabel();
             SetupGame();
-            timeUpForm = new frmTimeUp(this);
+            timeUpForm = new frmTimeUp(this, "Beginner");
         }
 
         // SETUP
@@ -230,7 +230,7 @@ namespace OOP_GroupProject
                     GameState.BeginnerCompleted = true;
                     GameState.KeysCollected = 3;
 
-                    BeginnerCompleteForm completed = new BeginnerCompleteForm();
+                    BeginnerCompleteForm completed = new BeginnerCompleteForm(totalSeconds);
                     completed.Show();
                     this.Hide();
                 }
@@ -248,7 +248,9 @@ namespace OOP_GroupProject
                 countdownTimer.Stop();
                 gameTimer.Stop();
 
-                TimeUpTriggered?.Invoke(); // 🔥 trigger event
+                frmTimeUp timeUp = new frmTimeUp(this, "Beginner");
+                timeUp.Show();
+                this.Hide();
             }
         }
 
@@ -283,7 +285,7 @@ namespace OOP_GroupProject
             GameState.BeginnerCompleted = true;
             GameState.KeysCollected = 3;
 
-            BeginnerCompleteForm completed = new BeginnerCompleteForm();
+            BeginnerCompleteForm completed = new BeginnerCompleteForm(totalSeconds);
             completed.Show();
             this.Hide();
         }

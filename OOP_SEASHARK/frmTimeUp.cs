@@ -13,13 +13,14 @@ namespace OOP_GroupProject
 {
     public partial class frmTimeUp : Form
     {
-        private BeginnerGame gameForm;
-        public frmTimeUp(BeginnerGame game)
+        private Form gameForm;
+        private string levelType;
+
+        public frmTimeUp(Form game, string level)
         {
             InitializeComponent();
             gameForm = game;
-
-            gameForm.TimeUpTriggered += ShowTimeUp;
+            levelType = level;
         }
         private void ShowTimeUp()
         {
@@ -34,12 +35,22 @@ namespace OOP_GroupProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Restart Level: Close current game and start a new BeginnerGame
+            // Restart Level: Close current game and start a new level based on type
             if (gameForm != null)
             {
                 gameForm.Close();
             }
-            BeginnerGame newGame = new BeginnerGame();
+
+            Form newGame;
+            if (levelType == "Advanced")
+            {
+                newGame = new AdvancedGame();
+            }
+            else
+            {
+                newGame = new BeginnerGame();
+            }
+
             newGame.Show();
             this.Close();
         }

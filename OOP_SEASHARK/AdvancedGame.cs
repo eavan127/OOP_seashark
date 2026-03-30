@@ -1,8 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -223,7 +222,7 @@ namespace OOP_GroupProject
                 anchorTimer.Stop();
                 piranhaTimer.Stop();
 
-                IQuiz levelQuiz = null;
+                IQuiz levelQuiz = new AdvancedQuiz();
                 PopQuiz quiz = new PopQuiz(0, totalSeconds, levelQuiz);
                 quiz.ShowDialog();
 
@@ -232,12 +231,9 @@ namespace OOP_GroupProject
                     level.CompleteLevel();
                     GameState.KeysCollected = 6;
 
-                    AdvancedCompleted completed = new AdvancedCompleted();
-                    completed.ShowDialog();
-
-                    SelectLevel selectLevel = new SelectLevel();
-                    selectLevel.Show();
-                    this.Close();
+                    AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds);
+                    completed.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -262,7 +258,7 @@ namespace OOP_GroupProject
                 anchorTimer.Stop();
                 piranhaTimer.Stop();
 
-                TimeUp timeUp = new TimeUp();
+                frmTimeUp timeUp = new frmTimeUp(this, "Advanced");
                 timeUp.Show();
                 this.Hide();
             }
