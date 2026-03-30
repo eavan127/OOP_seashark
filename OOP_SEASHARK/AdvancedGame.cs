@@ -12,6 +12,8 @@ namespace OOP_GroupProject
         private AdvancedLevel level = new AdvancedLevel();
         private GameManager gameManager = new GameManager();
         private int totalSeconds;
+        private bool[] obstacleCleared = { false, false, false };
+        private IQuiz currentQuiz = new AdvancedQuiz();
 
         private System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer();
         private System.Windows.Forms.Timer countdownTimer = new System.Windows.Forms.Timer();
@@ -49,7 +51,7 @@ namespace OOP_GroupProject
             btnRightAdvanced.MouseUp += (s, e) => { moveRight = false; };
             btnRightAdvanced.MouseLeave += (s, e) => { moveRight = false; };
 
-            btnUpAdvanced.MouseDown += (s, e) => { if (isGrounded) velY = -20; };
+            btnUpAdvanced.MouseDown += (s, e) => { if (isGrounded) velY = -18; };
 
             btnLeftAdvanced.TabStop = false;
             btnRightAdvanced.TabStop = false;
@@ -95,7 +97,7 @@ namespace OOP_GroupProject
             {
                 MoveShark();
                 ApplyGravity();
-                CheckHazardCollision();
+                CheckObstacleCollision();
                 CheckDoorReached();
             }
             catch (Exception ex)
@@ -117,7 +119,7 @@ namespace OOP_GroupProject
         private void ApplyGravity()
         {
             isGrounded = false;
-            velY += 1;
+            velY += 2;
             playerY += velY;
 
             // Hardcode all platform panels directly
@@ -174,7 +176,7 @@ namespace OOP_GroupProject
         {
             if (e.KeyCode == Keys.Left) moveLeft = true;
             if (e.KeyCode == Keys.Right) moveRight = true;
-            if (e.KeyCode == Keys.Up && isGrounded) velY = -20; 
+            if (e.KeyCode == Keys.Up && isGrounded) velY = -18; 
         }
 
         private void AdvancedGame_KeyUp(object sender, KeyEventArgs e)
@@ -183,65 +185,74 @@ namespace OOP_GroupProject
             if (e.KeyCode == Keys.Right) moveRight = false;
         }
 
-        // --- HAZARD COLLISION ---
-        private void CheckHazardCollision()
+        // --- OBSTACLE COLLISION ---
+        private void CheckObstacleCollision()
         {
-            Panel[] hazards = { panelPiranha1, panelPiranha2, panelAnchor };
-            foreach (var hazard in hazards)
+            Panel[] obstacles = { panelPiranha1, panelPiranha2, panelAnchor };
+
+            for (int i = 0; i < obstacles.Length; i++)
             {
-                Rectangle sharkRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
-                Rectangle hazardRect = new Rectangle(hazard.Left, hazard.Top, hazard.Width, hazard.Height);
-                if (sharkRect.IntersectsWith(hazardRect))
+                if (!obstacleCleared[i] && obstacles[i].Visible)
                 {
-                    moveLeft = false;  // only reset when hit
-                    moveRight = false;
-                    ResetSharkPosition();
-                    break;
+                    Rectangle sharkRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
+                    Rectangle obstacleRect = new Rectangle(obstacles[i].Left, obstacles[i].Top, obstacles[i].Width, obstacles[i].Height);
+
+                    if (sharkRect.IntersectsWith(obstacleRect))
+                    {
+                        // Stop everything
+                        gameTimer.Stop();
+                        countdownTimer.Stop();
+                        anchorTimer.Stop();
+                        piranhaTimer.Stop();
+
+                        // Open quiz for this obstacle
+                        PopQuiz quiz = new PopQuiz(i, totalSeconds, currentQuiz);
+                        quiz.ShowDialog();
+
+                        // After quiz closes - hide obstacle and mark as cleared
+                        obstacles[i].Visible = false;
+                        obstacleCleared[i] = true;
+
+                        // Reset movement
+                        moveLeft = false;
+                        moveRight = false;
+
+                        // Resume game
+                        gameTimer.Start();
+                        countdownTimer.Start();
+                        anchorTimer.Start();
+                        piranhaTimer.Start();
+                        return;
+                    }
                 }
             }
         }
 
-        private void ResetSharkPosition()
-        {
-            playerX = picFishAdvanced.Left = 50;
-            playerY = picFishAdvanced.Top = 400;
-            velY = 0;
-        }
 
-        // --- DOOR QUIZ ---
+        // --- DOOR LOGIC ---
         private void CheckDoorReached()
         {
-            Rectangle sharkRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
-            Rectangle doorRect = new Rectangle(picDoorAdvanced.Left, picDoorAdvanced.Top, picDoorAdvanced.Width, picDoorAdvanced.Height);
-
-            if (sharkRect.IntersectsWith(doorRect))
+            // Only allow completion if all 3 obstacles cleared
+            if (obstacleCleared[0] && obstacleCleared[1] && obstacleCleared[2])
             {
-                moveLeft = false;  // only reset when door reached
-                moveRight = false;
-                gameTimer.Stop();
-                countdownTimer.Stop();
-                anchorTimer.Stop();
-                piranhaTimer.Stop();
+                Rectangle sharkRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
+                Rectangle doorRect = new Rectangle(picDoorAdvanced.Left, picDoorAdvanced.Top, picDoorAdvanced.Width, picDoorAdvanced.Height);
 
-                IQuiz levelQuiz = new AdvancedQuiz();
-                PopQuiz quiz = new PopQuiz(0, totalSeconds, levelQuiz);
-                quiz.ShowDialog();
-
-                if (quiz.AnsweredCorrectly)
+                if (sharkRect.IntersectsWith(doorRect))
                 {
+                    moveLeft = false;
+                    moveRight = false;
+                    gameTimer.Stop();
+                    countdownTimer.Stop();
+                    anchorTimer.Stop();
+                    piranhaTimer.Stop();
+
                     level.CompleteLevel();
                     GameState.KeysCollected = 6;
 
                     AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds);
                     completed.Show();
                     this.Close(); // Close instead of Hide
-                }
-                else
-                {
-                    gameTimer.Start();
-                    countdownTimer.Start();
-                    anchorTimer.Start();
-                    piranhaTimer.Start();
                 }
             }
         }
