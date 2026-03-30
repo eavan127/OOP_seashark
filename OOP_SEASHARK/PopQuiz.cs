@@ -302,7 +302,6 @@ namespace OOP_GroupProject
             string hintText = quiz.GetHint(obstacleIndex);
             
             // "Jump" to the hint page by hiding the quiz form
-            this.Hide();
             
             frmHint hintForm = new frmHint(hintText);
             hintForm.ShowDialog();

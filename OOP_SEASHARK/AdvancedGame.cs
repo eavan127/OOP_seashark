@@ -241,8 +241,8 @@ namespace OOP_GroupProject
                     GameState.KeysCollected = 3 + correctAnswers; // assuming 3 from beginner
 
                     AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds, GameState.KeysCollected);
-                    completed.Show();
-                    this.Close(); // Close instead of Hide
+                    completed.Show(); // Close instead of Hide
+                    this.Hide();
                 }
             }
         }

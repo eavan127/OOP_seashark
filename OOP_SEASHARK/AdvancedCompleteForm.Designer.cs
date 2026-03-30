@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdvancedCompleteForm));
             label1 = new Label();
             label2 = new Label();
             btnExit = new Button();
@@ -82,7 +83,7 @@
             // 
             btnExit.BackColor = Color.White;
             btnExit.FlatAppearance.BorderSize = 0;
-            btnExit.FlatStyle = FlatStyle.Flat;
+            btnExit.FlatStyle = FlatStyle.Popup;
             btnExit.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnExit.ForeColor = Color.Teal;
             btnExit.Location = new Point(383, 385);
@@ -98,10 +99,11 @@
             // 
             pictureBox1.AccessibleRole = AccessibleRole.TitleBar;
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.Location = new Point(213, 34);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(208, 17);
             pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(231, 149);
+            pictureBox1.Size = new Size(250, 166);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -128,7 +130,7 @@
             // 
             btnPlayAgain.BackColor = Color.White;
             btnPlayAgain.FlatAppearance.BorderSize = 0;
-            btnPlayAgain.FlatStyle = FlatStyle.Flat;
+            btnPlayAgain.FlatStyle = FlatStyle.Popup;
             btnPlayAgain.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnPlayAgain.ForeColor = Color.Teal;
             btnPlayAgain.Location = new Point(183, 385);
@@ -156,6 +158,7 @@
             // pictureBox2
             // 
             pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Image = Properties.Resources.key;
             pictureBox2.Location = new Point(4, 5);
             pictureBox2.Margin = new Padding(4, 5, 4, 5);
             pictureBox2.Name = "pictureBox2";
@@ -213,6 +216,7 @@
             // 
             // pictureBox3
             // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(5, 5);
             pictureBox3.Margin = new Padding(4, 5, 4, 5);
             pictureBox3.Name = "pictureBox3";
@@ -243,6 +247,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(859, 555);
             Controls.Add(panelMain);
+            DoubleBuffered = true;
             Margin = new Padding(4, 5, 4, 5);
             Name = "AdvancedCompleteForm";
             StartPosition = FormStartPosition.CenterScreen;

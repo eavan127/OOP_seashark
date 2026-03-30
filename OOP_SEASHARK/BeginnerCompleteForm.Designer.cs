@@ -28,17 +28,18 @@ namespace OOP_GroupProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeginnerCompleteForm));
             label1 = new Label();
             pictureBox1 = new PictureBox();
             label2 = new Label();
             panelTime = new Panel();
-            label3 = new Label();
-            pictureBox3 = new PictureBox();
             lblTime = new Label();
+            pictureBox3 = new PictureBox();
+            label3 = new Label();
             panelKeys = new Panel();
-            label4 = new Label();
-            label5 = new Label();
             pictureBox2 = new PictureBox();
+            label5 = new Label();
+            label4 = new Label();
             btnNextLevel = new Button();
             btnPlayAgain = new Button();
             panel1 = new Panel();
@@ -69,11 +70,12 @@ namespace OOP_GroupProject
             pictureBox1.AccessibleRole = AccessibleRole.TitleBar;
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.ErrorImage = Properties.Resources.sea_star1;
-            pictureBox1.Location = new Point(242, 26);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(228, 8);
             pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(231, 149);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.Size = new Size(248, 167);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
             pictureBox1.Click += pictureBox1_Click;
@@ -103,6 +105,28 @@ namespace OOP_GroupProject
             panelTime.Size = new Size(143, 82);
             panelTime.TabIndex = 17;
             // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Location = new Point(76, 34);
+            lblTime.Margin = new Padding(4, 0, 4, 0);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(36, 20);
+            lblTime.TabIndex = 2;
+            lblTime.Text = "2:45";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.BackgroundImage = Properties.Resources.key;
+            pictureBox3.Image = Properties.Resources.Timer;
+            pictureBox3.Location = new Point(5, 5);
+            pictureBox3.Margin = new Padding(4, 5, 4, 5);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(59, 72);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 1;
+            pictureBox3.TabStop = false;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -114,27 +138,6 @@ namespace OOP_GroupProject
             label3.Size = new Size(48, 19);
             label3.TabIndex = 0;
             label3.Text = "TIME";
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackgroundImage = Properties.Resources.key;
-            pictureBox3.Location = new Point(5, 5);
-            pictureBox3.Margin = new Padding(4, 5, 4, 5);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(59, 72);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 1;
-            pictureBox3.TabStop = false;
-            // 
-            // lblTime
-            // 
-            lblTime.AutoSize = true;
-            lblTime.Location = new Point(76, 34);
-            lblTime.Margin = new Padding(4, 0, 4, 0);
-            lblTime.Name = "lblTime";
-            lblTime.Size = new Size(36, 20);
-            lblTime.TabIndex = 2;
-            lblTime.Text = "2:45";
             // 
             // panelKeys
             // 
@@ -149,17 +152,18 @@ namespace OOP_GroupProject
             panelKeys.TabIndex = 19;
             panelKeys.Paint += panelKeys_Paint;
             // 
-            // label4
+            // pictureBox2
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Comic Sans MS", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.GrayText;
-            label4.Location = new Point(72, 5);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(46, 19);
-            label4.TabIndex = 7;
-            label4.Text = "KEYS";
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.BackgroundImage = Properties.Resources.key;
+            pictureBox2.Image = Properties.Resources.key;
+            pictureBox2.Location = new Point(4, 5);
+            pictureBox2.Margin = new Padding(4, 5, 4, 5);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(60, 72);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 8;
+            pictureBox2.TabStop = false;
             // 
             // label5
             // 
@@ -171,17 +175,17 @@ namespace OOP_GroupProject
             label5.TabIndex = 9;
             label5.Text = "3/6";
             // 
-            // pictureBox2
+            // label4
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = Properties.Resources.key;
-            pictureBox2.Location = new Point(4, 5);
-            pictureBox2.Margin = new Padding(4, 5, 4, 5);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(60, 72);
-            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox2.TabIndex = 8;
-            pictureBox2.TabStop = false;
+            label4.AutoSize = true;
+            label4.Font = new Font("Comic Sans MS", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.GrayText;
+            label4.Location = new Point(72, 5);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(46, 19);
+            label4.TabIndex = 7;
+            label4.Text = "KEYS";
             // 
             // btnNextLevel
             // 
@@ -239,10 +243,12 @@ namespace OOP_GroupProject
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(859, 555);
             Controls.Add(panel1);
+            DoubleBuffered = true;
             Margin = new Padding(4, 5, 4, 5);
             Name = "BeginnerCompleteForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += BeginnerCompleteForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTime.ResumeLayout(false);
             panelTime.PerformLayout();

@@ -33,11 +33,13 @@ namespace OOP_GroupProject
             panelTime.SizeChanged += (s, e) => UpdatePanelRegions();
 
             // Wire up buttons
-            btnPlayAgain.Click += (s, e) => {
+            btnPlayAgain.Click += (s, e) =>
+            {
                 new BeginnerGame().Show();
                 this.Close();
             };
-            btnNextLevel.Click += (s, e) => {
+            btnNextLevel.Click += (s, e) =>
+            {
                 if (keys < 3)
                 {
                     MessageBox.Show("You have to complete all 3 keys to unlock next level", "Level Locked", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -104,12 +106,12 @@ namespace OOP_GroupProject
         // Designer event handlers — keep them but avoid creating regions here
         private void label1_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            }
+        }
 
         // The designer wired panel1_Paint; leave empty to avoid heavy work in paint.
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -118,6 +120,11 @@ namespace OOP_GroupProject
         }
 
         private void panelKeys_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BeginnerCompleteForm_Load(object sender, EventArgs e)
         {
 
         }

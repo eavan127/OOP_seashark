@@ -247,6 +247,7 @@
             Controls.Add(lblAdvanced);
             DoubleBuffered = true;
             Name = "AdvancedGame";
+            StartPosition = FormStartPosition.CenterScreen;
             Load += AdvancedGame_Load;
             panel42.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picFishAdvanced).EndInit();
