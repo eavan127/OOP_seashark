@@ -45,7 +45,7 @@ namespace OOP_GroupProject
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 450);
+            pictureBox1.Size = new Size(852, 449);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
@@ -56,9 +56,9 @@ namespace OOP_GroupProject
             pictureBox3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pictureBox3.BackgroundImage = Properties.Resources.background;
             pictureBox3.Image = Properties.Resources.background_sea;
-            pictureBox3.Location = new Point(44, 74);
+            pictureBox3.Location = new Point(26, 75);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(724, 285);
+            pictureBox3.Size = new Size(774, 338);
             pictureBox3.TabIndex = 2;
             pictureBox3.TabStop = false;
             // 
@@ -94,9 +94,9 @@ namespace OOP_GroupProject
             // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             button1.BackgroundImage = Properties.Resources.blue;
-            button1.Location = new Point(338, 305);
+            button1.Location = new Point(298, 367);
             button1.Name = "button1";
-            button1.Size = new Size(112, 34);
+            button1.Size = new Size(192, 33);
             button1.TabIndex = 5;
             button1.Text = "Got It";
             button1.UseVisualStyleBackColor = true;
@@ -106,7 +106,7 @@ namespace OOP_GroupProject
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(650, 450);
+            ClientSize = new Size(852, 449);
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
