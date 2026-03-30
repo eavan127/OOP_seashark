@@ -16,17 +16,17 @@ namespace OOP_GroupProject
 
         public void Jump()
         {
-            // jump logic handled in BeginnerGame form
+            // The jump physics are actually handled inside the game screen forms
         }
 
         public void Left()
         {
-            // move left logic handled in BeginnerGame form
+            // Moving left and right is also handled by the game screen forms
         }
 
         public void Right()
         {
-            // move right logic handled in BeginnerGame form
+            // Moving left and right is also handled by the game screen forms
         }
 
         public void ResetPosition()

@@ -22,7 +22,7 @@ namespace OOP_GroupProject
             Application.Exit();
         }
 
-        // Keep this because Designer still references it!
+        // We'll leave this empty method here so the Visual Studio Designer doesn't complain
         private void Form1_Load_1(object sender, EventArgs e)
         {
             

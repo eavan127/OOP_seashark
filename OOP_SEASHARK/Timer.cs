@@ -12,8 +12,10 @@ namespace OOP_GroupProject
 
         public void StartTimer(double timeLimit)
         {
-            timeLeft = (int)timeLimit; // gets 300 or 420 from Level
+            // We get the time limit from the level (usually 300 or 420 seconds)
+            timeLeft = (int)timeLimit; 
         }
+
 
         public void UpdateTimer()
         {

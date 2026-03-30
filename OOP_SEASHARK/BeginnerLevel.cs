@@ -11,13 +11,15 @@ namespace OOP_GroupProject
         public BeginnerLevel()
         {
             difficultyIndex = 1;
-            timeLimit = 300; // in seconds = 5 minutes 
+
+            // We give the player 5 minutes (300 seconds) to finish this level
+            timeLimit = 300; 
             Completed = false;
         }
 
         public override void LoadQuiz()
         {
-            // Load beginner questions here
+            // This is where we'll set up all the beginner-friendly questions
         }
     }
 }

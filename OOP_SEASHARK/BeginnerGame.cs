@@ -22,7 +22,7 @@ namespace OOP_GroupProject
         public event Action TimeUpTriggered;
         private frmTimeUp timeUpForm;
 
-        // Game loop timer 
+        // These timers keep the game world moving and the clock ticking
         private System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer();
         private System.Windows.Forms.Timer countdownTimer = new System.Windows.Forms.Timer();
 
@@ -33,13 +33,31 @@ namespace OOP_GroupProject
         private bool moveLeft = false;
         private bool moveRight = false;
 
-        // Obstacle state 
+        // We'll use this to keep track of which obstacles the player has already cleared
         private bool[] obstacleCleared = { false, false, false };
 
 
         public BeginnerGame()
         {
             InitializeComponent();
+
+            // This ensures our keyboard events trigger even if a button has focus
+            this.KeyPreview = true;
+
+            // Wire up keyboard events manually to make sure they're always connected
+            this.KeyDown += BeginnerGame_KeyDown;
+            this.KeyUp += BeginnerGame_KeyUp;
+
+            // We'll disable TabStop so the buttons don't capture keyboard focus
+            btnLeftBeginner.TabStop = false;
+            btnRightBeginner.TabStop = false;
+            btnUpBeginner.TabStop = false;
+
+            // Add MouseLeave events so movement stops if you slide your mouse off the button
+            btnLeftBeginner.MouseLeave += (s, ev) => { moveLeft = false; };
+            btnRightBeginner.MouseLeave += (s, ev) => { moveRight = false; };
+
+
             gameManager.currentLvl = level;
             gameManager.StartGame();
             totalSeconds = (int)level.GetTimeLimit();
@@ -49,6 +67,8 @@ namespace OOP_GroupProject
             timeUpForm = new frmTimeUp(this, "Beginner");
         }
 
+
+
         // SETUP
         private void SetupGame()
         {
@@ -56,7 +76,7 @@ namespace OOP_GroupProject
             playerX = picFishBeginner.Left;
             playerY = picFishBeginner.Top;
 
-            // Game loop - runs every 20ms (~50fps)
+            // This is the heartbeat of our game - it runs physics and checks collisions every 20ms
             gameTimer.Interval = 20;
             gameTimer.Tick += GameLoop;
             gameTimer.Start();
@@ -83,7 +103,7 @@ namespace OOP_GroupProject
             if (moveLeft) playerX -= 5;
             if (moveRight) playerX += 5;
 
-            // Keep fish inside form boundaries
+            // We've got to make sure our fish doesn't swim right out of the window!
             playerX = Math.Max(0, Math.Min(playerX, this.ClientSize.Width - picFishBeginner.Width));
 
             picFishBeginner.Left = playerX;
@@ -111,7 +131,7 @@ namespace OOP_GroupProject
                 }
             }
 
-            // Floor - bottom of the form
+            // If they aren't on a platform, they'll eventually hit the sea floor
             int floorY = this.ClientSize.Height - picFishBeginner.Height;
             if (playerY >= floorY)
             {
@@ -181,7 +201,7 @@ namespace OOP_GroupProject
 
                     if (fishRect.IntersectsWith(obsRect))
                     {
-                        // Stop everything
+                        // Time for a quick breather while the player answers the quiz
                         gameTimer.Stop();
                         countdownTimer.Stop();
 
@@ -207,8 +227,7 @@ namespace OOP_GroupProject
                         gameTimer.Start();
                         countdownTimer.Start();
 
-                        // Only handle one obstacle per frame — don't
-                        // let the loop continue into the next obstacle
+                        // We only want to deal with one obstacle at a time to keep things smooth
                         return;
                     }
                 }
@@ -268,7 +287,7 @@ namespace OOP_GroupProject
         }
 
 
-        // UNUSED EVENTS (keep empty)
+        // These are just some empty event handlers we don't need right now
 
         private void BeginnerGame_Load(object sender, EventArgs e) { }
         private void picDoorBeginner_Click(object sender, EventArgs e) { }

@@ -1,14 +1,13 @@
 namespace OOP_GroupProject
 {
-    /// <summary>
-    /// Static singleton to share game progress state between forms.
-    /// </summary>
+    // This class helps us keep track of how the player is doing across different screens
     public static class GameState
     {
-        /// <summary>True after the player successfully completes the Beginner level.</summary>
+        // We set this to true once the player clears the first level
         public static bool BeginnerCompleted { get; set; } = false;
 
-        /// <summary>Number of keys collected (Beginner awards 3; max is 6 after Advanced).</summary>
+        // Keeps a count of how many keys the player has managed to grab
         public static int KeysCollected { get; set; } = 0;
     }
+
 }

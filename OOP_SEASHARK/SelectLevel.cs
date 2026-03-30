@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace OOP_GroupProject
@@ -10,8 +10,8 @@ namespace OOP_GroupProject
             InitializeComponent();
         }
 
-        // Re-check state every time the form becomes the active window
-        // (covers the case where we return from BeginnerCompleted)
+        // Every time the player comes back to this screen, we'll refresh the stats to show their progress
+        // (especially helpful when you just finished a level and come back here)
         protected override void OnActivated(EventArgs e)
         {
             base.OnActivated(e);
@@ -20,7 +20,7 @@ namespace OOP_GroupProject
 
         private void RefreshState()
         {
-            // --- Keys label ---
+            // Let's show the player how many keys they've found so far
             lblKeys.Text = $"{GameState.KeysCollected} / 6";
 
             //// --- Beginner button ---

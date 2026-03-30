@@ -11,6 +11,7 @@ namespace OOP_GroupProject
 
         public BeginnerQuiz()
         {
+            // Here's our list of beginner-friendly coding questions
             questions = new string[]
             {
                 "What is the correct syntax to declare a variable in C#?",
@@ -18,6 +19,7 @@ namespace OOP_GroupProject
                 "What does OOP stand for?"
             };
 
+            // And the options for each question
             options = new string[][]
             {
                 new string[] { "int x = 5;", "x = 5;", "variable x = 5;", "int = x 5;" },

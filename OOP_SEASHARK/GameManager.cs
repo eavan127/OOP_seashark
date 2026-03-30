@@ -40,7 +40,8 @@ namespace OOP_GroupProject
                     return;
                 }
 
-                StopMusic(); // prevent overlap
+                // We'll stop any music currently playing to make sure they don't overlap
+                StopMusic();
 
                 wavePlayer = new WaveOutEvent();
                 audioFileReader = new AudioFileReader(musicPath)
@@ -80,7 +81,7 @@ namespace OOP_GroupProject
             }
         }
 
-        //public void RestartPosition() { player.ResetPosition(); }
+
         public void End()
         {
             StopMusic();

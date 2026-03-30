@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace OOP_GroupProject
 {
+    // This is a custom label that lets us draw a nice outline around our text
     public class OutlineLabel : Label
     {
         [Browsable(true)]

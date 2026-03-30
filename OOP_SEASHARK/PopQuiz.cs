@@ -85,21 +85,21 @@ namespace OOP_GroupProject
             lblTimeTextOutline.BringToFront();
             lblTimeOutline.BringToFront();
 
-            // hide old normal labels if you already replaced them
+            // We don't need the default labels since we've got our custom outlined ones now
             lblTimerText.Visible = false;
             lblTimer.Visible = false;
 
-            // store full width of orange time bar
+            // We'll keep track of how wide the bar is so we can shrink it as time runs out
             maxFillWidth = pnlTimeBarFill.Width;
 
             // starting text
             lblTimeOutline.Text = timeLeft + "s";
             lblTimeOutline.Invalidate();
 
-            // start timer immediately when quiz screen appears
+            // Let's get that timer started right away!
             quizTimer.Start();
 
-            // Load Quiz Data
+            // Time to load up the questions and answers
             lblCategory.Text = quiz.GetCategory();
             lblTitle.Text = $"Question {obstacleIndex + 1}";
             lblQuestion.Text = quiz.GetQuestion(obstacleIndex);
@@ -220,11 +220,11 @@ namespace OOP_GroupProject
             {
                 timeLeft--;
 
-                // update timer text
+                // Time to update the clock on the screen
                 lblTimeOutline.Text = timeLeft + "s";
                 lblTimeOutline.Invalidate();
 
-                // update orange progress bar
+                // We'll shrink the progress bar to show the time ticking away
                 int newWidth = (timeLeft * maxFillWidth) / totalTime;
 
                 if (newWidth < 0)
@@ -232,7 +232,7 @@ namespace OOP_GroupProject
 
                 pnlTimeBarFill.Width = newWidth;
 
-                // re-round after width changes
+                // Need to make sure the bar stays rounded even as it gets smaller
                 MakeRoundedControl(pnlTimeBarFill, pnlTimeBarFill.Height);
             }
             else
@@ -255,10 +255,10 @@ namespace OOP_GroupProject
 
             quizAnswered = true;
 
-            // stop timer when player answers
+            // The player answered, so we can stop the clock
             quizTimer.Stop();
 
-            // disable all answer buttons
+            // Let's disable the buttons so they can't change their mind
             btnA.Enabled = false;
             btnB.Enabled = false;
             btnC.Enabled = false;
@@ -270,7 +270,7 @@ namespace OOP_GroupProject
                 clickedButton.Top + (clickedButton.Height - picAnswerResult.Height) / 2
             );
 
-            // check correct or wrong
+            // Now let's see if they got it right or not...
             if (quiz.CheckAns(obstacleIndex, answerIndex))
             {
                 AnsweredCorrectly = true;

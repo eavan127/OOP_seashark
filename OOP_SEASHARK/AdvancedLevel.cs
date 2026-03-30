@@ -10,7 +10,9 @@ namespace OOP_GroupProject
     {
         public AdvancedLevel()
         {
+            // Advanced level is tougher, so we'll give them 7 minutes (420 seconds)
             timeLimit = 420;
+
         }
         public override void LoadQuiz() { }
     }

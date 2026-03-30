@@ -11,6 +11,7 @@ namespace OOP_GroupProject
 
         public AdvancedQuiz()
         {
+            // Here's our list of tougher, advanced-level questions
             questions = new string[]
             {
                 "Which of the following is an example of Polymorphism?",
@@ -18,6 +19,7 @@ namespace OOP_GroupProject
                 "Does C# support multiple inheritance for classes?"
             };
 
+            // And the options for each question
             options = new string[][]
             {
                 new string[] { "Declaring variables", "Method overriding", "A single class", "Using properties" },

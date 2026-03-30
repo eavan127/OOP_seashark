@@ -109,7 +109,7 @@ namespace OOP_GroupProject
             }
         }
 
-        // --- SHARK MOVEMENT ---
+        // --- GETTING THE SHARK MOVING ---
         private void MoveShark()
         {
             if (moveLeft) playerX -= 5;
@@ -143,7 +143,7 @@ namespace OOP_GroupProject
                 }
             }
 
-            // Floor
+            // If they aren't on a platform, they'll eventually hit the sandy bottom
             int floorY = this.ClientSize.Height - picFishAdvanced.Height;
             if (playerY >= floorY)
             {
@@ -171,7 +171,7 @@ namespace OOP_GroupProject
             if (e.KeyCode == Keys.Right) moveRight = false;
         }
 
-        // --- OBSTACLE COLLISION ---
+        // --- WATCH OUT FOR THOSE OBSTACLES! ---
         private void CheckObstacleCollision()
         {
             Panel[] obstacles = { panelPiranha1, panelPiranha2, panelAnchor };
@@ -185,7 +185,7 @@ namespace OOP_GroupProject
 
                     if (fishRect.IntersectsWith(obsRect))
                     {
-                        // Stop everything
+                        // Phew! Let's pause for a second while the quiz shows up
                         gameTimer.Stop();
                         countdownTimer.Stop();
                         anchorTimer.Stop();
@@ -221,7 +221,7 @@ namespace OOP_GroupProject
         }
 
 
-        // --- DOOR = WIN ---
+        // --- THEY MADE IT TO THE DOOR! ---
         private void CheckDoorReached()
         {
             // Only allow door if all 3 obstacles cleared
@@ -247,7 +247,7 @@ namespace OOP_GroupProject
             }
         }
 
-        // --- COUNTDOWN TIMER ---
+        // --- KEEPING TRACK OF THE TIME ---
         private void Countdown_Tick(object sender, EventArgs e)
         {
             totalSeconds--;

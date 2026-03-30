@@ -16,8 +16,10 @@ namespace OOP_GroupProject
         public abstract void LoadQuiz();
         public virtual void StartLevel() { }
 
+        // This marks the level as finished, good job!
         public virtual void CompleteLevel() { Completed = true;
         }
+
         public double GetTimeLimit()
         {
             return timeLimit;
