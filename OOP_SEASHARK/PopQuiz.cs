@@ -300,8 +300,15 @@ namespace OOP_GroupProject
         private void BtnHint_Click(object sender, EventArgs e)
         {
             string hintText = quiz.GetHint(obstacleIndex);
+            
+            // "Jump" to the hint page by hiding the quiz form
+            this.Hide();
+            
             frmHint hintForm = new frmHint(hintText);
             hintForm.ShowDialog();
+            
+            // Return to the quiz form
+            this.Show();
         }
 
         private void pnlBackground_Paint(object sender, PaintEventArgs e)

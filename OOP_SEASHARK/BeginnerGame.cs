@@ -291,9 +291,9 @@ namespace OOP_GroupProject
             GameState.BeginnerCompleted = true;
             GameState.KeysCollected = 3;
 
-            BeginnerCompleteForm completed = new BeginnerCompleteForm(totalSeconds);
+            BeginnerCompleteForm completed = new BeginnerCompleteForm(totalSeconds, 3);
             completed.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
