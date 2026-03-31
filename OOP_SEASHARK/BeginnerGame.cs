@@ -5,15 +5,16 @@ using System.Windows.Forms;
 
 namespace OOP_GroupProject
 {
-    public partial class BeginnerGame : Level  // Level is parent
+    public partial class BeginnerGame : Level  // Level is parent class
+    // inheritance
     {
-        //Override properties to connect base class 
+        //override properties that connecting the virual field in parent class
         protected override PictureBox PlayerPicture => picFishBeginner;
         protected override Label TimerLabel => lblTimer;
         protected override Panel[] Platforms => new Panel[] { panel1, panel2, panel3 };
         protected override string LevelName => "Beginner";
 
-        // beginner-only fields
+        // private fields that belongs to beginner level only
         private GameManager gameManager = new GameManager();
         private IQuiz currentQuiz = new BeginnerQuiz();
 
@@ -26,6 +27,7 @@ namespace OOP_GroupProject
             this.KeyDown += (s, e) => HandleKeyDown(e);
             this.KeyUp += (s, e) => HandleKeyUp(e);
 
+            //button event handler
             btnLeftBeginner.MouseDown += (s, e) => { this.Focus(); moveLeft = true; };
             btnRightBeginner.MouseDown += (s, e) => { this.Focus(); moveRight = true; };
             btnLeftBeginner.MouseUp += (s, e) => moveLeft = false;
@@ -41,6 +43,7 @@ namespace OOP_GroupProject
             SetupGame();
         }
 
+        //game setup
         private void SetupGame()
         {
             playerX = picFishBeginner.Left;

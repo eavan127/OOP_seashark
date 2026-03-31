@@ -2,7 +2,7 @@ using System;
 
 namespace OOP_GroupProject
 {
-    public class BeginnerQuiz : IQuiz
+    public class BeginnerQuiz : IQuiz //inheritance from the Quiz Interface
     {
         private string[] questions;
         private string[][] options;
@@ -11,7 +11,7 @@ namespace OOP_GroupProject
 
         public BeginnerQuiz()
         {
-            // Here's our list of beginner-friendly coding questions
+            // the list of beginner level questions
             questions = new string[]
             {
                 "What is the correct syntax to declare a variable in C#?",
@@ -19,7 +19,7 @@ namespace OOP_GroupProject
                 "What does OOP stand for?"
             };
 
-            // And the options for each question
+            // the options for each question
             options = new string[][]
             {
                 new string[] { "int x = 5;", "x = 5;", "variable x = 5;", "int = x 5;" },
@@ -28,21 +28,38 @@ namespace OOP_GroupProject
                                "Output Oriented Process", "Object Order Program" }
             };
 
+            // the index of the correct answer in the list
             correctAnswerIndex = new int[] { 0, 1, 0 };
             score = 0;
         }
 
-        public string GetCategory() { return "BEGINNER CHALLENGE"; }
-        public string GetQuestion(int index) { return questions[index]; }
-        public string[] GetOptions(int index) { return options[index]; }
+        // encapsulation
+        public string GetCategory() 
+        { 
+            return "BEGINNER CHALLENGE"; 
+        }
+        public string GetQuestion(int index) 
+        { 
+            return questions[index]; 
+        }
+        public string[] GetOptions(int index) 
+        { 
+            return options[index]; 
+        }
 
         public bool CheckAns(int questionIndex, int answerIndex)
         {
             return answerIndex == correctAnswerIndex[questionIndex];
         }
 
-        public void UpdateScore() { score++; }
-        public int GetScore() { return score; }
+        public void UpdateScore() 
+        { 
+            score++; 
+        }
+        public int GetScore() 
+        { 
+            return score; 
+        }
 
         public string GetHint(int questionIndex)
         {
@@ -55,6 +72,9 @@ namespace OOP_GroupProject
             return hints[questionIndex];
         }
 
-        public int TotalQuestions() { return questions.Length; }
+        public int TotalQuestions() 
+        { 
+            return questions.Length; 
+        }
     }
 }
