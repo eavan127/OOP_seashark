@@ -4,14 +4,15 @@ namespace OOP_GroupProject
 {
     public class BeginnerQuiz : IQuiz //inheritance from the Quiz Interface
     {
-        private string[] questions;
-        private string[][] options;
+        //private fields
+        private string[] questions; // 1d array
+        private string[][] options; // 2d array
         private int[] correctAnswerIndex;
         private int score;
 
         public BeginnerQuiz()
         {
-            // the list of beginner level questions
+            // set the three questions
             questions = new string[]
             {
                 "What is the correct syntax to declare a variable in C#?",
@@ -19,7 +20,7 @@ namespace OOP_GroupProject
                 "What does OOP stand for?"
             };
 
-            // the options for each question
+            // the options for each question, each question's option has 4 string options.
             options = new string[][]
             {
                 new string[] { "int x = 5;", "x = 5;", "variable x = 5;", "int = x 5;" },
@@ -36,31 +37,33 @@ namespace OOP_GroupProject
         // encapsulation
         public string GetCategory() 
         { 
-            return "BEGINNER CHALLENGE"; 
+            return "BEGINNER CHALLENGE";  //getter
         }
         public string GetQuestion(int index) 
         { 
-            return questions[index]; 
+            return questions[index]; //getter
         }
         public string[] GetOptions(int index) 
         { 
-            return options[index]; 
+            return options[index]; //getter
         }
 
         public bool CheckAns(int questionIndex, int answerIndex)
         {
+                 //example:0                                 0
             return answerIndex == correctAnswerIndex[questionIndex];
         }
 
         public void UpdateScore() 
         { 
-            score++; 
+            score++; //setter
         }
         public int GetScore() 
         { 
-            return score; 
+            return score; //getter
         }
 
+        // set the hints string
         public string GetHint(int questionIndex)
         {
             string[] hints = new string[]
@@ -69,12 +72,12 @@ namespace OOP_GroupProject
                 "The 'class' keyword is the fundamental building block of Object-Oriented Programming in C#. It acts as a blueprint or template for creating objects.\n\nInside a class, you define the properties (data) and methods (behavior) that the object will have. Most languages like Java and C++ use this same standard keyword.",
                 "OOP stands for Object-Oriented Programming. This approach organizes software design around data, or objects, rather than functions and logic.\n\nAn object can be defined as a data field that has unique attributes and behavior. Think of the letters: O for Object, O for Oriented, and P for Programming!"
             };
-            return hints[questionIndex];
+            return hints[questionIndex]; //getter
         }
 
         public int TotalQuestions() 
         { 
-            return questions.Length; 
+            return questions.Length; //getter
         }
     }
 }

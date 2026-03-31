@@ -8,7 +8,7 @@ namespace OOP_GroupProject
 {
     public partial class SelectLevel : Form
     {
-        //constructor
+        //constructor to initialize component in the UI form
         public SelectLevel()
         {
             InitializeComponent();
@@ -22,13 +22,15 @@ namespace OOP_GroupProject
             RefreshState();
         }
 
-        // show the player how many keys they have gained
+        // show the player how many keys they have gained /
+        // encapsulation 
         private void RefreshState()
         {
             lblKeys.Text = $"{GameState.KeysCollected} / 6";
-            // GameState is the class and KeysCollected is the field
+            // getter properties from GameState to get KeysCollected field
         }
 
+        // each button click create object and handle the navigation
         // create beginner game instance and show then button is clicked
         private void btnPlayBeginner_Click(object sender, EventArgs e)
         {

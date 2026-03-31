@@ -279,14 +279,14 @@ namespace OOP_GroupProject
                 quiz.UpdateScore();
                 picAnswerResult.Visible = true;
 
-                MessageBox.Show("Correct! 🎉 Your answer is correct!", "Quiz", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Correct! Your answer is correct!", "Quiz", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 AnsweredCorrectly = false;
                 picAnswerResult.Visible = true;
 
-                MessageBox.Show("Wrong answer! ❌ Try to do better next time!", "Quiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Wrong answer! Try to do better next time!", "Quiz", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
             // Wait 1.5 seconds so player can see the image icon before closing
@@ -321,31 +321,5 @@ namespace OOP_GroupProject
         {
 
         }
-
-
-        //private void ResetQuiz()
-        //{
-        //    quizAnswered = false;
-
-        //    btnA.Enabled = true;
-        //    btnB.Enabled = true;
-        //    btnC.Enabled = true;
-        //    btnD.Enabled = true;
-
-        //    picAnswerResult.Visible = false;
-
-        //    timeLeft = totalTime;
-        //    pnlTimeBarFill.Width = maxFillWidth;
-        //    MakeRoundedControl(pnlTimeBarFill, pnlTimeBarFill.Height);
-
-        //    lblTimeOutline.Text = timeLeft + "s";
-        //    lblTimeOutline.Invalidate();
-
-        //    quizTimer.Start();
-        //}
     }
-
-
-
-
 }
