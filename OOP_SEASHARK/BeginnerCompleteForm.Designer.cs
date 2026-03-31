@@ -38,7 +38,7 @@ namespace OOP_GroupProject
             label3 = new Label();
             panelKeys = new Panel();
             pictureBox2 = new PictureBox();
-            label5 = new Label();
+            lblKey = new Label();
             label4 = new Label();
             btnNextLevel = new Button();
             btnPlayAgain = new Button();
@@ -142,7 +142,7 @@ namespace OOP_GroupProject
             // 
             panelKeys.BackColor = Color.Lavender;
             panelKeys.Controls.Add(pictureBox2);
-            panelKeys.Controls.Add(label5);
+            panelKeys.Controls.Add(lblKey);
             panelKeys.Controls.Add(label4);
             panelKeys.Location = new Point(387, 277);
             panelKeys.Margin = new Padding(4, 5, 4, 5);
@@ -163,15 +163,15 @@ namespace OOP_GroupProject
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
-            // label5
+            // lblKey
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(72, 34);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(31, 20);
-            label5.TabIndex = 9;
-            label5.Text = "3/6";
+            lblKey.AutoSize = true;
+            lblKey.Location = new Point(72, 34);
+            lblKey.Margin = new Padding(4, 0, 4, 0);
+            lblKey.Name = "lblKey";
+            lblKey.Size = new Size(31, 20);
+            lblKey.TabIndex = 9;
+            lblKey.Text = "3/6";
             // 
             // label4
             // 
@@ -277,20 +277,20 @@ namespace OOP_GroupProject
 
         #endregion
 
-        private Label label1;
-        private PictureBox pictureBox1;
-        private Label label2;
-        private Panel panelTime;
-        private Label lblTime;
-        private PictureBox pictureBox3;
-        private Label label3;
-        private Panel panelKeys;
-        private PictureBox pictureBox2;
-        private Label label5;
-        private Label label4;
-        private Button btnNextLevel;
-        private Button btnPlayAgain;
-        private Panel panel1;
-        private Button btnBackSelect;
+        protected Label label1;
+        protected PictureBox pictureBox1;
+        protected Label label2;
+        protected Panel panelTime;
+        protected Label lblTime;
+        protected PictureBox pictureBox3;
+        protected Label label3;
+        protected Panel panelKeys;
+        protected PictureBox pictureBox2;
+        protected Label lblKey;
+        protected Label label4;
+        protected Button btnNextLevel;
+        protected Button btnPlayAgain;
+        protected Panel panel1;
+        protected Button btnBackSelect;
     }
 }

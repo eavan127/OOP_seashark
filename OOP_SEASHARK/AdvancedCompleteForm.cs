@@ -1,39 +1,42 @@
 using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace OOP_GroupProject
 {
-    public partial class AdvancedCompleteForm : Form
+    public partial class AdvancedCompleteForm : CompleteFormBase  // inheritance
     {
         public AdvancedCompleteForm(int timeRemaining, int keysCollected)
         {
             InitializeComponent();
-            lblTime.Text = FormatTime(timeRemaining);
-            label5.Text = $"{keysCollected}/6";
+            LoadStats(timeRemaining, keysCollected); // use base method
         }
 
-        private string FormatTime(int seconds)
+        protected override void OnPlayAgainClicked() //override method in parent class
         {
-            int mins = seconds / 60;
-            int secs = seconds % 60;
-            return $"{mins:D2}:{secs:D2}";
+            new AdvancedGame().Show();
+            this.Close();
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        protected override void OnExitOrBackClicked()
         {
             frmMain home = new frmMain();
             home.Show();
             this.Close();
         }
 
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            OnExitOrBackClicked();
+        }
+
         private void btnPlayAgain_Click(object sender, EventArgs e)
         {
-            AdvancedGame game = new AdvancedGame();
-            game.Show();
-            this.Close();
+            OnPlayAgainClicked();
+        }
+
+        private void btnExit_Click_1(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

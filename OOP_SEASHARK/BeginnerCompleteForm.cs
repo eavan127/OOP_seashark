@@ -12,7 +12,7 @@ namespace OOP_GroupProject
         {
             InitializeComponent();
             lblTime.Text = FormatTime(timeRemaining);
-            label5.Text = $"{keysCollected}/6";
+            lblKey.Text = $"{keysCollected}/6";
             this.keys = keysCollected;
 
             // buttons navigation

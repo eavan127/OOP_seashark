@@ -1,0 +1,1 @@
+   2:6>C:\Program Files\dotnet\sdk\9.0.311\Microsoft.Common.CurrentVersion.targets(3081,5): error MSB4803: The task "ResolveComReference" is not supported on the .NET Core version of MSBuild. Please use the .NET Framework version of MSBuild. See https://aka.ms/msbuild/MSB4803 for further details. [D:\github clone\OOP_seashark\OOP_SEASHARK\OOP_GroupProject.csproj]
