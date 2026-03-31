@@ -7,7 +7,7 @@ namespace OOP_GroupProject
 {
     public partial class BeginnerGame : Level  // Level is parent
     {
-        //Override properties to connect base class to THIS form's controls 
+        //Override properties to connect base class 
         protected override PictureBox PlayerPicture => picFishBeginner;
         protected override Label TimerLabel => lblTimer;
         protected override Panel[] Platforms => new Panel[] { panel1, panel2, panel3 };
