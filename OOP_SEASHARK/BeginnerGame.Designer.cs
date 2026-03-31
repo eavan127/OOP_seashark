@@ -61,7 +61,6 @@
             lblTimer.Size = new Size(66, 30);
             lblTimer.TabIndex = 0;
             lblTimer.Text = "05:00";
-            lblTimer.Click += lblTimer_Click;
             // 
             // lblBeginner
             // 
@@ -83,7 +82,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(190, 46);
             panel1.TabIndex = 2;
-            panel1.Paint += panel1_Paint;
             // 
             // panel2
             // 
@@ -92,7 +90,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(221, 51);
             panel2.TabIndex = 3;
-            panel2.Paint += panel2_Paint;
             // 
             // panel3
             // 
@@ -101,7 +98,6 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(266, 36);
             panel3.TabIndex = 3;
-            panel3.Paint += panel3_Paint;
             // 
             // picDoorBeginner
             // 
@@ -113,7 +109,6 @@
             picDoorBeginner.SizeMode = PictureBoxSizeMode.StretchImage;
             picDoorBeginner.TabIndex = 9;
             picDoorBeginner.TabStop = false;
-            picDoorBeginner.Click += picDoorBeginner_Click;
             // 
             // picObstacle3
             // 
@@ -125,7 +120,6 @@
             picObstacle3.SizeMode = PictureBoxSizeMode.StretchImage;
             picObstacle3.TabIndex = 8;
             picObstacle3.TabStop = false;
-            picObstacle3.Click += picAnchor_Click;
             // 
             // picObstacle2
             // 
@@ -137,8 +131,7 @@
             picObstacle2.SizeMode = PictureBoxSizeMode.StretchImage;
             picObstacle2.TabIndex = 7;
             picObstacle2.TabStop = false;
-            picObstacle2.Click += picRock_Click;
-            // 
+            //
             // picObstacle1
             // 
             picObstacle1.BackColor = Color.Transparent;
@@ -149,7 +142,6 @@
             picObstacle1.SizeMode = PictureBoxSizeMode.StretchImage;
             picObstacle1.TabIndex = 6;
             picObstacle1.TabStop = false;
-            picObstacle1.Click += picCoral_Click;
             // 
             // picFishBeginner
             // 
@@ -161,7 +153,6 @@
             picFishBeginner.SizeMode = PictureBoxSizeMode.Zoom;
             picFishBeginner.TabIndex = 5;
             picFishBeginner.TabStop = false;
-            picFishBeginner.Click += picFishBeginner_Click;
             // 
             // panel4
             // 
@@ -230,7 +221,6 @@
             Controls.Add(lblTimer);
             Name = "BeginnerGame";
             StartPosition = FormStartPosition.CenterScreen;
-            Load += BeginnerGame_Load;
             ((System.ComponentModel.ISupportInitialize)picDoorBeginner).EndInit();
             ((System.ComponentModel.ISupportInitialize)picObstacle3).EndInit();
             ((System.ComponentModel.ISupportInitialize)picObstacle2).EndInit();

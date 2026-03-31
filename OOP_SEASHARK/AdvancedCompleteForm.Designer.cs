@@ -63,7 +63,6 @@
             label1.Size = new Size(477, 48);
             label1.TabIndex = 0;
             label1.Text = "Advanced Level Completed !";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -77,7 +76,6 @@
             label2.TabIndex = 0;
             label2.Text = "You've  succesfully  navigate  the  deep  sea  currents  and  found  hidden  treasure!";
             label2.TextAlign = ContentAlignment.TopCenter;
-            label2.Click += label2_Click;
             // 
             // btnExit
             // 
@@ -93,7 +91,6 @@
             btnExit.TabIndex = 4;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click;
             // 
             // pictureBox1
             // 
@@ -107,7 +104,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // panelMain
             // 
@@ -124,7 +120,6 @@
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(667, 462);
             panelMain.TabIndex = 6;
-            panelMain.Paint += panelMain_Paint;
             // 
             // btnPlayAgain
             // 
@@ -140,7 +135,6 @@
             btnPlayAgain.TabIndex = 7;
             btnPlayAgain.Text = "Play Again";
             btnPlayAgain.UseVisualStyleBackColor = false;
-            btnPlayAgain.Click += btnPlayAgain_Click;
             // 
             // panelKeys
             // 
@@ -153,7 +147,6 @@
             panelKeys.Name = "panelKeys";
             panelKeys.Size = new Size(143, 82);
             panelKeys.TabIndex = 7;
-            panelKeys.Paint += panelKeys_Paint;
             // 
             // pictureBox2
             // 
@@ -187,9 +180,7 @@
             label4.Name = "label4";
             label4.Size = new Size(46, 19);
             label4.TabIndex = 7;
-            label4.Text = "KEYS";
-            label4.Click += label4_Click;
-            // 
+            label4.Text = "KEYS";            // 
             // panelTime
             // 
             panelTime.BackColor = Color.LightSteelBlue;
@@ -201,7 +192,6 @@
             panelTime.Name = "panelTime";
             panelTime.Size = new Size(143, 82);
             panelTime.TabIndex = 6;
-            panelTime.Paint += panelTime_Paint;
             // 
             // lblTime
             // 
@@ -212,7 +202,6 @@
             lblTime.Size = new Size(36, 20);
             lblTime.TabIndex = 2;
             lblTime.Text = "2:45";
-            lblTime.Click += lblTime_Click;
             // 
             // pictureBox3
             // 
@@ -236,7 +225,6 @@
             label3.Size = new Size(48, 19);
             label3.TabIndex = 0;
             label3.Text = "TIME";
-            label3.Click += label3_Click;
             // 
             // AdvancedCompleteForm
             // 
@@ -252,7 +240,6 @@
             Name = "AdvancedCompleteForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();

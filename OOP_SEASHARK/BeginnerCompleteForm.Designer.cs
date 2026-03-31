@@ -43,6 +43,7 @@ namespace OOP_GroupProject
             btnNextLevel = new Button();
             btnPlayAgain = new Button();
             panel1 = new Panel();
+            btnBackSelect = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -63,7 +64,6 @@ namespace OOP_GroupProject
             label1.Size = new Size(461, 48);
             label1.TabIndex = 14;
             label1.Text = "Beginner Level Completed !";
-            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 
@@ -78,7 +78,6 @@ namespace OOP_GroupProject
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label2
             // 
@@ -150,7 +149,6 @@ namespace OOP_GroupProject
             panelKeys.Name = "panelKeys";
             panelKeys.Size = new Size(143, 82);
             panelKeys.TabIndex = 19;
-            panelKeys.Paint += panelKeys_Paint;
             // 
             // pictureBox2
             // 
@@ -221,6 +219,7 @@ namespace OOP_GroupProject
             // 
             panel1.AllowDrop = true;
             panel1.BackColor = Color.LightCyan;
+            panel1.Controls.Add(btnBackSelect);
             panel1.Controls.Add(btnPlayAgain);
             panel1.Controls.Add(btnNextLevel);
             panel1.Controls.Add(panelKeys);
@@ -233,7 +232,22 @@ namespace OOP_GroupProject
             panel1.Name = "panel1";
             panel1.Size = new Size(705, 463);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            // 
+            // btnBackSelect
+            // 
+            btnBackSelect.BackColor = Color.White;
+            btnBackSelect.FlatAppearance.BorderSize = 0;
+            btnBackSelect.FlatStyle = FlatStyle.Flat;
+            btnBackSelect.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBackSelect.ForeColor = Color.Teal;
+            btnBackSelect.Location = new Point(18, 17);
+            btnBackSelect.Margin = new Padding(4, 5, 4, 5);
+            btnBackSelect.Name = "btnBackSelect";
+            btnBackSelect.Size = new Size(135, 72);
+            btnBackSelect.TabIndex = 20;
+            btnBackSelect.Text = "Back to Select Level";
+            btnBackSelect.UseVisualStyleBackColor = false;
+            btnBackSelect.Click += btnBackSelect_Click;
             // 
             // BeginnerCompleteForm
             // 
@@ -248,7 +262,6 @@ namespace OOP_GroupProject
             Name = "BeginnerCompleteForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += BeginnerCompleteForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTime.ResumeLayout(false);
             panelTime.PerformLayout();
@@ -278,5 +291,6 @@ namespace OOP_GroupProject
         private Button btnNextLevel;
         private Button btnPlayAgain;
         private Panel panel1;
+        private Button btnBackSelect;
     }
 }

@@ -1,10 +1,14 @@
 using System;
 using System.Windows.Forms;
 
+#pragma warning disable CA1416
+//to disable the compatibility warning for Windows Forms
+
 namespace OOP_GroupProject
-{
-    public partial class frmMain : Form //inheritance from the Form bass class
-        //partial class is used to seperate this logic from the designer code, prevent accidental edit
+{ 
+    //inheritance from the Form bass class
+    //partial class is used to seperate this logic from the designer code
+    public partial class frmMain : Form 
     {
         public frmMain() //constructor method
         {
