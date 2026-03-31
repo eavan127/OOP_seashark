@@ -5,10 +5,10 @@ using System.Windows.Forms;
 //to disable the compatibility warning for Windows Forms
 
 namespace OOP_GroupProject
-{ 
+{
     //inheritance from the Form bass class
     //partial class is used to seperate this logic from the designer code
-    public partial class frmMain : Form 
+    public partial class frmMain : Form
     {
         public frmMain() //constructor method
         {

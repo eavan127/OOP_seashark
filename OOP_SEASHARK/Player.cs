@@ -1,9 +1,5 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+
 #pragma warning disable CA1416
 
 // a container for all classes
@@ -12,9 +8,8 @@ namespace OOP_GroupProject
 {
     public class Player
     {
-        private string playerName = "";
-        private int crtPosition;
-        private int crtLevel;
+        private int crtPosition; // current position
+        private int crtLevel; // current level
         private int collectedKeys;
 
         public void Jump()
