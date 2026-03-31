@@ -114,7 +114,6 @@ namespace OOP_GroupProject
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Home Screen";
-            Load += Form1_Load_1;
             ((System.ComponentModel.ISupportInitialize)picFish).EndInit();
             ResumeLayout(false);
             PerformLayout();
