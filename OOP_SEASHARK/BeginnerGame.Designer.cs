@@ -175,8 +175,6 @@
             btnRightBeginner.TabIndex = 2;
             btnRightBeginner.Text = "→";
             btnRightBeginner.UseVisualStyleBackColor = false;
-            btnRightBeginner.MouseDown += btnRightBeginner_MouseDown;
-            btnRightBeginner.MouseUp += btnRightBeginner_MouseUp;
             // 
             // btnLeftBeginner
             // 
@@ -188,8 +186,6 @@
             btnLeftBeginner.TabIndex = 1;
             btnLeftBeginner.Text = "←";
             btnLeftBeginner.UseVisualStyleBackColor = false;
-            btnLeftBeginner.MouseDown += btnLeftBeginner_MouseDown;
-            btnLeftBeginner.MouseUp += btnLeftBeginner_MouseUp;
             // 
             // btnUpBeginner
             // 
@@ -201,7 +197,6 @@
             btnUpBeginner.TabIndex = 0;
             btnUpBeginner.Text = "↑";
             btnUpBeginner.UseVisualStyleBackColor = false;
-            btnUpBeginner.Click += btnUpBeginner_Click;
             // 
             // BeginnerGame
             // 

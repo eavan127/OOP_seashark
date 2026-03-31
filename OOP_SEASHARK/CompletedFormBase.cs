@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
+#pragma warning disable CA1416
 
 namespace OOP_GroupProject
 {
     public class CompleteFormBase : Form
     {
-        // must be protected so child Designer files can access them
+        // Declare , but not initialized
         protected Label lblTime;
         protected Label lblKey;
         protected Button btnPlayAgain;
@@ -23,14 +24,7 @@ namespace OOP_GroupProject
             lblKey.Text = $"{keysCollected}/6";
         }
 
-        protected virtual void OnPlayAgainClicked()
-        {
-            // to be override in child class
-        }
-
-        protected virtual void OnExitOrBackClicked()
-        {
-            // to be override in child class
-        }
+        protected virtual void OnPlayAgainClicked() { }
+        protected virtual void OnExitOrBackClicked() { }
     }
 }

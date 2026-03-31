@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+#pragma warning disable CA1416
 
 namespace OOP_GroupProject
 {

@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using NAudio.Wave;
 using System.IO;
 
+
 namespace OOP_GroupProject
 {
     public class GameManager
@@ -20,7 +21,6 @@ namespace OOP_GroupProject
         public void StartGame()
         {
             PlayMusic();
-            currentLvl.StartLevel();
         }
 
         public void PlayMusic()

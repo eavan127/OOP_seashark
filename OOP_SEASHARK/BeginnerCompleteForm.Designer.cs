@@ -1,16 +1,9 @@
-namespace OOP_GroupProject
+﻿namespace OOP_GroupProject
 {
     partial class BeginnerCompleteForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@ namespace OOP_GroupProject
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeginnerCompleteForm));
@@ -33,15 +22,15 @@ namespace OOP_GroupProject
             pictureBox1 = new PictureBox();
             label2 = new Label();
             panelTime = new Panel();
-            lblTime = new Label();
+            lblTime = new Label();          // ✅ initialize shared control
             pictureBox3 = new PictureBox();
             label3 = new Label();
             panelKeys = new Panel();
             pictureBox2 = new PictureBox();
-            lblKey = new Label();
+            lblKey = new Label();           // ✅ initialize shared control
             label4 = new Label();
             btnNextLevel = new Button();
-            btnPlayAgain = new Button();
+            btnPlayAgain = new Button();    // ✅ initialize shared control
             panel1 = new Panel();
             btnBackSelect = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -95,7 +84,7 @@ namespace OOP_GroupProject
             // panelTime
             // 
             panelTime.BackColor = Color.Lavender;
-            panelTime.Controls.Add(lblTime);
+            panelTime.Controls.Add(lblTime);        // ✅ add to panel
             panelTime.Controls.Add(pictureBox3);
             panelTime.Controls.Add(label3);
             panelTime.Location = new Point(195, 277);
@@ -142,7 +131,7 @@ namespace OOP_GroupProject
             // 
             panelKeys.BackColor = Color.Lavender;
             panelKeys.Controls.Add(pictureBox2);
-            panelKeys.Controls.Add(lblKey);
+            panelKeys.Controls.Add(lblKey);         // ✅ add to panel
             panelKeys.Controls.Add(label4);
             panelKeys.Location = new Point(387, 277);
             panelKeys.Margin = new Padding(4, 5, 4, 5);
@@ -220,7 +209,7 @@ namespace OOP_GroupProject
             panel1.AllowDrop = true;
             panel1.BackColor = Color.LightCyan;
             panel1.Controls.Add(btnBackSelect);
-            panel1.Controls.Add(btnPlayAgain);
+            panel1.Controls.Add(btnPlayAgain);      // ✅ add to panel
             panel1.Controls.Add(btnNextLevel);
             panel1.Controls.Add(panelKeys);
             panel1.Controls.Add(panelTime);
@@ -272,24 +261,21 @@ namespace OOP_GroupProject
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-
         }
 
         #endregion
 
+        // ✅ Unique controls only — shared ones (lblTime, lblKey, btnPlayAgain) removed
         protected Label label1;
         protected PictureBox pictureBox1;
         protected Label label2;
         protected Panel panelTime;
-        protected Label lblTime;
         protected PictureBox pictureBox3;
         protected Label label3;
         protected Panel panelKeys;
         protected PictureBox pictureBox2;
-        protected Label lblKey;
         protected Label label4;
         protected Button btnNextLevel;
-        protected Button btnPlayAgain;
         protected Panel panel1;
         protected Button btnBackSelect;
     }

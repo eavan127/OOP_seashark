@@ -2,15 +2,8 @@
 {
     partial class AdvancedCompleteForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdvancedCompleteForm));
@@ -34,10 +23,13 @@
             btnExit = new Button();
             pictureBox1 = new PictureBox();
             panelMain = new Panel();
+            btnPlayAgain = new Button();    
             panelKeys = new Panel();
             pictureBox2 = new PictureBox();
+            lblKey = new Label();           
             label4 = new Label();
             panelTime = new Panel();
+            lblTime = new Label();          
             pictureBox3 = new PictureBox();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -88,7 +80,7 @@
             btnExit.TabIndex = 4;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
-            btnExit.Click += btnExit_Click_1;
+            btnExit.Click += btnExit_Click;
             // 
             // pictureBox1
             // 
@@ -106,6 +98,7 @@
             // panelMain
             // 
             panelMain.BackColor = Color.LightCyan;
+            panelMain.Controls.Add(btnPlayAgain);   
             panelMain.Controls.Add(btnExit);
             panelMain.Controls.Add(panelKeys);
             panelMain.Controls.Add(panelTime);
@@ -118,10 +111,27 @@
             panelMain.Size = new Size(667, 462);
             panelMain.TabIndex = 6;
             // 
+            // btnPlayAgain
+            // 
+            btnPlayAgain.BackColor = Color.White;
+            btnPlayAgain.FlatAppearance.BorderSize = 0;
+            btnPlayAgain.FlatStyle = FlatStyle.Popup;
+            btnPlayAgain.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPlayAgain.ForeColor = Color.Teal;
+            btnPlayAgain.Location = new Point(183, 385);
+            btnPlayAgain.Margin = new Padding(4, 5, 4, 5);
+            btnPlayAgain.Name = "btnPlayAgain";
+            btnPlayAgain.Size = new Size(135, 58);
+            btnPlayAgain.TabIndex = 7;
+            btnPlayAgain.Text = "Play Again";
+            btnPlayAgain.UseVisualStyleBackColor = false;
+            btnPlayAgain.Click += btnPlayAgain_Click;
+            // 
             // panelKeys
             // 
             panelKeys.BackColor = Color.LightSteelBlue;
             panelKeys.Controls.Add(pictureBox2);
+            panelKeys.Controls.Add(lblKey);         
             panelKeys.Controls.Add(label4);
             panelKeys.Location = new Point(375, 285);
             panelKeys.Margin = new Padding(4, 5, 4, 5);
@@ -141,6 +151,16 @@
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
+            // lblKey
+            // 
+            lblKey.AutoSize = true;
+            lblKey.Location = new Point(72, 34);
+            lblKey.Margin = new Padding(4, 0, 4, 0);
+            lblKey.Name = "lblKey";
+            lblKey.Size = new Size(31, 20);
+            lblKey.TabIndex = 9;
+            lblKey.Text = "6/6";
+            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -156,6 +176,7 @@
             // panelTime
             // 
             panelTime.BackColor = Color.LightSteelBlue;
+            panelTime.Controls.Add(lblTime);        
             panelTime.Controls.Add(pictureBox3);
             panelTime.Controls.Add(label3);
             panelTime.Location = new Point(183, 285);
@@ -163,6 +184,16 @@
             panelTime.Name = "panelTime";
             panelTime.Size = new Size(143, 82);
             panelTime.TabIndex = 6;
+            // 
+            // lblTime
+            // 
+            lblTime.AutoSize = true;
+            lblTime.Location = new Point(76, 34);
+            lblTime.Margin = new Padding(4, 0, 4, 0);
+            lblTime.Name = "lblTime";
+            lblTime.Size = new Size(36, 20);
+            lblTime.TabIndex = 2;
+            lblTime.Text = "2:45";
             // 
             // pictureBox3
             // 
@@ -211,11 +242,9 @@
             panelTime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
-
         protected System.Windows.Forms.Label label1;
         protected System.Windows.Forms.Label label2;
         protected System.Windows.Forms.Button btnExit;
@@ -227,9 +256,5 @@
         protected System.Windows.Forms.Label label4;
         protected System.Windows.Forms.PictureBox pictureBox2;
         protected System.Windows.Forms.PictureBox pictureBox3;
-        //protected System.Windows.Forms.Label lblTime;
-        //protected System.Windows.Forms.Label label5;
-        //protected System.Windows.Forms.Button btnPlayAgain;
     }
 }
-
