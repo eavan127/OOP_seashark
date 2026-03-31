@@ -75,7 +75,7 @@ namespace OOP_GroupProject
             // picFish
             // 
             picFish.BackColor = Color.Transparent;
-            picFish.Image = global::OOP_GroupProject.Properties.Resources.shark2;
+            picFish.Image = Properties.Resources.shark2;
             picFish.Location = new Point(262, 134);
             picFish.Margin = new Padding(3, 4, 3, 4);
             picFish.Name = "picFish";
@@ -103,7 +103,7 @@ namespace OOP_GroupProject
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = global::OOP_GroupProject.Properties.Resources.background;
+            BackgroundImage = Properties.Resources.background;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(800, 562);
             Controls.Add(btnExit);
@@ -114,7 +114,6 @@ namespace OOP_GroupProject
             Name = "frmMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Home Screen";
-            Load += Form1_Load_1;
             ((System.ComponentModel.ISupportInitialize)picFish).EndInit();
             ResumeLayout(false);
             PerformLayout();

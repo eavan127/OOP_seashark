@@ -1,16 +1,9 @@
-namespace OOP_GroupProject
+﻿namespace OOP_GroupProject
 {
     partial class BeginnerCompleteForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@ namespace OOP_GroupProject
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BeginnerCompleteForm));
@@ -33,16 +22,17 @@ namespace OOP_GroupProject
             pictureBox1 = new PictureBox();
             label2 = new Label();
             panelTime = new Panel();
-            lblTime = new Label();
+            lblTime = new Label();          // ✅ initialize shared control
             pictureBox3 = new PictureBox();
             label3 = new Label();
             panelKeys = new Panel();
             pictureBox2 = new PictureBox();
-            label5 = new Label();
+            lblKey = new Label();           // ✅ initialize shared control
             label4 = new Label();
             btnNextLevel = new Button();
-            btnPlayAgain = new Button();
+            btnPlayAgain = new Button();    // ✅ initialize shared control
             panel1 = new Panel();
+            btnBackSelect = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelTime.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -63,7 +53,6 @@ namespace OOP_GroupProject
             label1.Size = new Size(461, 48);
             label1.TabIndex = 14;
             label1.Text = "Beginner Level Completed !";
-            label1.Click += label1_Click;
             // 
             // pictureBox1
             // 
@@ -78,7 +67,6 @@ namespace OOP_GroupProject
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 16;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // label2
             // 
@@ -96,7 +84,7 @@ namespace OOP_GroupProject
             // panelTime
             // 
             panelTime.BackColor = Color.Lavender;
-            panelTime.Controls.Add(lblTime);
+            panelTime.Controls.Add(lblTime);        // ✅ add to panel
             panelTime.Controls.Add(pictureBox3);
             panelTime.Controls.Add(label3);
             panelTime.Location = new Point(195, 277);
@@ -143,14 +131,13 @@ namespace OOP_GroupProject
             // 
             panelKeys.BackColor = Color.Lavender;
             panelKeys.Controls.Add(pictureBox2);
-            panelKeys.Controls.Add(label5);
+            panelKeys.Controls.Add(lblKey);         // ✅ add to panel
             panelKeys.Controls.Add(label4);
             panelKeys.Location = new Point(387, 277);
             panelKeys.Margin = new Padding(4, 5, 4, 5);
             panelKeys.Name = "panelKeys";
             panelKeys.Size = new Size(143, 82);
             panelKeys.TabIndex = 19;
-            panelKeys.Paint += panelKeys_Paint;
             // 
             // pictureBox2
             // 
@@ -165,15 +152,15 @@ namespace OOP_GroupProject
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
-            // label5
+            // lblKey
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(72, 34);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(31, 20);
-            label5.TabIndex = 9;
-            label5.Text = "3/6";
+            lblKey.AutoSize = true;
+            lblKey.Location = new Point(72, 34);
+            lblKey.Margin = new Padding(4, 0, 4, 0);
+            lblKey.Name = "lblKey";
+            lblKey.Size = new Size(31, 20);
+            lblKey.TabIndex = 9;
+            lblKey.Text = "3/6";
             // 
             // label4
             // 
@@ -221,7 +208,8 @@ namespace OOP_GroupProject
             // 
             panel1.AllowDrop = true;
             panel1.BackColor = Color.LightCyan;
-            panel1.Controls.Add(btnPlayAgain);
+            panel1.Controls.Add(btnBackSelect);
+            panel1.Controls.Add(btnPlayAgain);      // ✅ add to panel
             panel1.Controls.Add(btnNextLevel);
             panel1.Controls.Add(panelKeys);
             panel1.Controls.Add(panelTime);
@@ -233,7 +221,22 @@ namespace OOP_GroupProject
             panel1.Name = "panel1";
             panel1.Size = new Size(705, 463);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
+            // 
+            // btnBackSelect
+            // 
+            btnBackSelect.BackColor = Color.White;
+            btnBackSelect.FlatAppearance.BorderSize = 0;
+            btnBackSelect.FlatStyle = FlatStyle.Flat;
+            btnBackSelect.Font = new Font("Comic Sans MS", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBackSelect.ForeColor = Color.Teal;
+            btnBackSelect.Location = new Point(18, 17);
+            btnBackSelect.Margin = new Padding(4, 5, 4, 5);
+            btnBackSelect.Name = "btnBackSelect";
+            btnBackSelect.Size = new Size(135, 72);
+            btnBackSelect.TabIndex = 20;
+            btnBackSelect.Text = "Back to Select Level";
+            btnBackSelect.UseVisualStyleBackColor = false;
+            btnBackSelect.Click += btnBackSelect_Click;
             // 
             // BeginnerCompleteForm
             // 
@@ -248,7 +251,6 @@ namespace OOP_GroupProject
             Name = "BeginnerCompleteForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += BeginnerCompleteForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelTime.ResumeLayout(false);
             panelTime.PerformLayout();
@@ -259,24 +261,22 @@ namespace OOP_GroupProject
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
-
         }
 
         #endregion
 
-        private Label label1;
-        private PictureBox pictureBox1;
-        private Label label2;
-        private Panel panelTime;
-        private Label lblTime;
-        private PictureBox pictureBox3;
-        private Label label3;
-        private Panel panelKeys;
-        private PictureBox pictureBox2;
-        private Label label5;
-        private Label label4;
-        private Button btnNextLevel;
-        private Button btnPlayAgain;
-        private Panel panel1;
+        // ✅ Unique controls only — shared ones (lblTime, lblKey, btnPlayAgain) removed
+        protected Label label1;
+        protected PictureBox pictureBox1;
+        protected Label label2;
+        protected Panel panelTime;
+        protected PictureBox pictureBox3;
+        protected Label label3;
+        protected Panel panelKeys;
+        protected PictureBox pictureBox2;
+        protected Label label4;
+        protected Button btnNextLevel;
+        protected Panel panel1;
+        protected Button btnBackSelect;
     }
 }

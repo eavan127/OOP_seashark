@@ -73,7 +73,6 @@
             lblTimer2.Size = new Size(66, 30);
             lblTimer2.TabIndex = 3;
             lblTimer2.Text = "07:00";
-            lblTimer2.Click += lblTimer2_Click;
             // 
             // panel42
             // 
@@ -214,7 +213,6 @@
             picDoorAdvanced.SizeMode = PictureBoxSizeMode.StretchImage;
             picDoorAdvanced.TabIndex = 10;
             picDoorAdvanced.TabStop = false;
-            picDoorAdvanced.Click += picDoorAdvanced_Click;
             // 
             // panelPiranha1
             // 
@@ -248,7 +246,6 @@
             DoubleBuffered = true;
             Name = "AdvancedGame";
             StartPosition = FormStartPosition.CenterScreen;
-            Load += AdvancedGame_Load;
             panel42.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picFishAdvanced).EndInit();
             ((System.ComponentModel.ISupportInitialize)picDoorAdvanced).EndInit();

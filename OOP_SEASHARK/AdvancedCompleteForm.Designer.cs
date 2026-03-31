@@ -2,15 +2,8 @@
 {
     partial class AdvancedCompleteForm
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -22,10 +15,6 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdvancedCompleteForm));
@@ -34,13 +23,13 @@
             btnExit = new Button();
             pictureBox1 = new PictureBox();
             panelMain = new Panel();
-            btnPlayAgain = new Button();
+            btnPlayAgain = new Button();    
             panelKeys = new Panel();
             pictureBox2 = new PictureBox();
-            label5 = new Label();
+            lblKey = new Label();           
             label4 = new Label();
             panelTime = new Panel();
-            lblTime = new Label();
+            lblTime = new Label();          
             pictureBox3 = new PictureBox();
             label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -63,7 +52,6 @@
             label1.Size = new Size(477, 48);
             label1.TabIndex = 0;
             label1.Text = "Advanced Level Completed !";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -77,7 +65,6 @@
             label2.TabIndex = 0;
             label2.Text = "You've  succesfully  navigate  the  deep  sea  currents  and  found  hidden  treasure!";
             label2.TextAlign = ContentAlignment.TopCenter;
-            label2.Click += label2_Click;
             // 
             // btnExit
             // 
@@ -107,12 +94,11 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // panelMain
             // 
             panelMain.BackColor = Color.LightCyan;
-            panelMain.Controls.Add(btnPlayAgain);
+            panelMain.Controls.Add(btnPlayAgain);   
             panelMain.Controls.Add(btnExit);
             panelMain.Controls.Add(panelKeys);
             panelMain.Controls.Add(panelTime);
@@ -124,7 +110,6 @@
             panelMain.Name = "panelMain";
             panelMain.Size = new Size(667, 462);
             panelMain.TabIndex = 6;
-            panelMain.Paint += panelMain_Paint;
             // 
             // btnPlayAgain
             // 
@@ -146,14 +131,13 @@
             // 
             panelKeys.BackColor = Color.LightSteelBlue;
             panelKeys.Controls.Add(pictureBox2);
-            panelKeys.Controls.Add(label5);
+            panelKeys.Controls.Add(lblKey);         
             panelKeys.Controls.Add(label4);
             panelKeys.Location = new Point(375, 285);
             panelKeys.Margin = new Padding(4, 5, 4, 5);
             panelKeys.Name = "panelKeys";
             panelKeys.Size = new Size(143, 82);
             panelKeys.TabIndex = 7;
-            panelKeys.Paint += panelKeys_Paint;
             // 
             // pictureBox2
             // 
@@ -167,15 +151,15 @@
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
             // 
-            // label5
+            // lblKey
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(72, 34);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(31, 20);
-            label5.TabIndex = 9;
-            label5.Text = "6/6";
+            lblKey.AutoSize = true;
+            lblKey.Location = new Point(72, 34);
+            lblKey.Margin = new Padding(4, 0, 4, 0);
+            lblKey.Name = "lblKey";
+            lblKey.Size = new Size(31, 20);
+            lblKey.TabIndex = 9;
+            lblKey.Text = "6/6";
             // 
             // label4
             // 
@@ -188,12 +172,11 @@
             label4.Size = new Size(46, 19);
             label4.TabIndex = 7;
             label4.Text = "KEYS";
-            label4.Click += label4_Click;
             // 
             // panelTime
             // 
             panelTime.BackColor = Color.LightSteelBlue;
-            panelTime.Controls.Add(lblTime);
+            panelTime.Controls.Add(lblTime);        
             panelTime.Controls.Add(pictureBox3);
             panelTime.Controls.Add(label3);
             panelTime.Location = new Point(183, 285);
@@ -201,7 +184,6 @@
             panelTime.Name = "panelTime";
             panelTime.Size = new Size(143, 82);
             panelTime.TabIndex = 6;
-            panelTime.Paint += panelTime_Paint;
             // 
             // lblTime
             // 
@@ -212,7 +194,6 @@
             lblTime.Size = new Size(36, 20);
             lblTime.TabIndex = 2;
             lblTime.Text = "2:45";
-            lblTime.Click += lblTime_Click;
             // 
             // pictureBox3
             // 
@@ -236,7 +217,6 @@
             label3.Size = new Size(48, 19);
             label3.TabIndex = 0;
             label3.Text = "TIME";
-            label3.Click += label3_Click;
             // 
             // AdvancedCompleteForm
             // 
@@ -252,7 +232,6 @@
             Name = "AdvancedCompleteForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMain.ResumeLayout(false);
             panelMain.PerformLayout();
@@ -263,25 +242,19 @@
             panelTime.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnExit;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panelMain;
-        private System.Windows.Forms.Panel panelKeys;
-        private System.Windows.Forms.Panel panelTime;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lblTime;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnPlayAgain;
+        protected System.Windows.Forms.Label label1;
+        protected System.Windows.Forms.Label label2;
+        protected System.Windows.Forms.Button btnExit;
+        protected System.Windows.Forms.PictureBox pictureBox1;
+        protected System.Windows.Forms.Panel panelMain;
+        protected System.Windows.Forms.Panel panelKeys;
+        protected System.Windows.Forms.Panel panelTime;
+        protected System.Windows.Forms.Label label3;
+        protected System.Windows.Forms.Label label4;
+        protected System.Windows.Forms.PictureBox pictureBox2;
+        protected System.Windows.Forms.PictureBox pictureBox3;
     }
 }
-

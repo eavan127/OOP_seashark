@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+#pragma warning disable CA1416
 
 namespace OOP_GroupProject
 {
@@ -35,7 +36,7 @@ namespace OOP_GroupProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Restart Level: Close current game and start a new level based on type
+            // close current game and start a new level based on type
             if (gameForm != null)
             {
                 gameForm.Close();
@@ -57,7 +58,7 @@ namespace OOP_GroupProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // Exit To Home: Close current game and show frmMain
+            // Close current game and show frmMain
             if (gameForm != null)
             {
                 gameForm.Close();
@@ -66,10 +67,5 @@ namespace OOP_GroupProject
             home.Show();
             this.Close();
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e) { }
-        private void label2_Click(object sender, EventArgs e) { }
-        private void label1_Click(object sender, EventArgs e) { }
-        private void pictureBox3_Click(object sender, EventArgs e) { }
     }
 }

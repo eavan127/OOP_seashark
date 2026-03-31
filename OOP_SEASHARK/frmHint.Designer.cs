@@ -50,7 +50,6 @@ namespace OOP_GroupProject
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
             // 
             // pictureBox3
             // 
@@ -75,7 +74,6 @@ namespace OOP_GroupProject
             label1.Size = new Size(188, 35);
             label1.TabIndex = 3;
             label1.Text = "Helpful Tips !!!";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -92,7 +90,6 @@ namespace OOP_GroupProject
             label2.TabIndex = 4;
             label2.Text = resources.GetString("label2.Text");
             label2.TextAlign = ContentAlignment.MiddleCenter;
-            label2.Click += label2_Click;
             // 
             // button1
             // 
@@ -105,7 +102,6 @@ namespace OOP_GroupProject
             button1.TabIndex = 5;
             button1.Text = "Got It";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
             // 
             // frmHint
             // 

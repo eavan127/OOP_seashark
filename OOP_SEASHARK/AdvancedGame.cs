@@ -1,36 +1,26 @@
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Windows.Forms;
+#pragma warning disable CA1416
+
 
 namespace OOP_GroupProject
 {
-    public partial class AdvancedGame : Form
+    public partial class AdvancedGame : Level  // Level is parent
     {
-        private AdvancedLevel level = new AdvancedLevel();
-        private GameManager gameManager = new GameManager();
-        private int totalSeconds;
-        private IQuiz currentQuiz = new AdvancedQuiz();
-        private bool[] obstacleCleared = { false, false, false };
-        private int correctAnswers = 0;
+        // override properties to connect base class 
+        protected override PictureBox PlayerPicture => picFishAdvanced;
+        protected override Label TimerLabel => lblTimer2;
+        protected override Panel[] Platforms => new Panel[] { panel1, panel2, panel3, panel4, panel5, panel6 };
+        protected override string LevelName => "Advanced";
 
-        private System.Windows.Forms.Timer gameTimer = new System.Windows.Forms.Timer();
-        private System.Windows.Forms.Timer countdownTimer = new System.Windows.Forms.Timer();
+        // fields
+        private GameManager gameManager = new GameManager();
+        private IQuiz currentQuiz = new AdvancedQuiz();
+
+        // advanced has extra timers 
         private System.Windows.Forms.Timer anchorTimer = new System.Windows.Forms.Timer();
         private System.Windows.Forms.Timer piranhaTimer = new System.Windows.Forms.Timer();
-
-        // Shark movement
-        private int playerX, playerY;
-        private int velY = 0;
-        private bool isGrounded = false;
-        private bool moveLeft = false, moveRight = false;
-
-        // Anchor movement
         private int anchorDirection = 2;
-
-        // Piranha movement
         private int piranha1Direction = 3;
         private int piranha2Direction = 2;
 
@@ -39,30 +29,25 @@ namespace OOP_GroupProject
             InitializeComponent();
             this.KeyPreview = true;
 
-            // Wire up keyboard events
-            this.KeyDown += AdvancedGame_KeyDown;
-            this.KeyUp += AdvancedGame_KeyUp;
+            // use base class keyboard methods
+            this.KeyDown += (s, e) => HandleKeyDown(e);
+            this.KeyUp += (s, e) => HandleKeyUp(e);
 
-            // Wire up button events manually (they're inside panel42)
             btnLeftAdvanced.MouseDown += (s, e) => { moveLeft = true; };
-            btnLeftAdvanced.MouseUp += (s, e) => { moveLeft = false; };
-            btnLeftAdvanced.MouseLeave += (s, e) => { moveLeft = false; };
-
             btnRightAdvanced.MouseDown += (s, e) => { moveRight = true; };
+            btnLeftAdvanced.MouseUp += (s, e) => { moveLeft = false; };
             btnRightAdvanced.MouseUp += (s, e) => { moveRight = false; };
+            btnLeftAdvanced.MouseLeave += (s, e) => { moveLeft = false; };
             btnRightAdvanced.MouseLeave += (s, e) => { moveRight = false; };
-
             btnUpAdvanced.Click += (s, e) => { if (isGrounded) velY = -24; };
 
             btnLeftAdvanced.TabStop = false;
             btnRightAdvanced.TabStop = false;
             btnUpAdvanced.TabStop = false;
 
-            gameManager.currentLvl = level;
             gameManager.StartGame();
-            totalSeconds = (int)level.GetTimeLimit();
-            this.DoubleBuffered = true;
-            UpdateTimerLabel();
+            totalSeconds = 420; // 7 minutes for advanced
+            UpdateTimerLabel();  // base method
             SetupGame();
             picFishAdvanced.BringToFront();
         }
@@ -77,28 +62,22 @@ namespace OOP_GroupProject
             gameTimer.Tick += GameLoop;
             gameTimer.Start();
 
-            // Countdown timer
+            // Countdown
             countdownTimer.Interval = 1000;
-            countdownTimer.Tick += Countdown_Tick;
+            countdownTimer.Tick += Countdown_Tick;  // base method
             countdownTimer.Start();
 
-            // Anchor movement
+            // Advanced-only timers
             anchorTimer.Interval = 20;
-            // anchorTimer.Tick += AnchorMovement;
-            // anchorTimer.Start();
-
-            // Piranha movement
             piranhaTimer.Interval = 20;
-            // piranhaTimer.Tick += PiranhaMovement;
-            // piranhaTimer.Start();
         }
 
         private void GameLoop(object sender, EventArgs e)
         {
             try
             {
-                MoveShark();
-                ApplyGravity();
+                MovePlayer();           // base method
+                ApplyGravity();         // base method
                 CheckObstacleCollision();
                 CheckDoorReached();
             }
@@ -108,147 +87,8 @@ namespace OOP_GroupProject
                 MessageBox.Show("Game error: " + ex.Message);
             }
         }
-
-        // --- GETTING THE SHARK MOVING ---
-        private void MoveShark()
-        {
-            if (moveLeft) playerX -= 5;
-            if (moveRight) playerX += 5;
-            playerX = Math.Max(0, Math.Min(playerX, this.ClientSize.Width - picFishAdvanced.Width));
-            picFishAdvanced.Left = playerX;
-        }
-
-        private void ApplyGravity()
-        {
-            isGrounded = false;
-            velY += 2;
-            playerY += velY;
-
-            // Hardcode all platform panels directly
-            Panel[] platforms = { panel1, panel2, panel3, panel4, panel5, panel6 };
-            foreach (Panel p in platforms)
-            {
-                Rectangle fishRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
-                Rectangle platRect = new Rectangle(p.Left, p.Top, p.Width, p.Height);
-
-                if (fishRect.IntersectsWith(platRect))
-                {
-                    // Simple landing: if falling and overlapping with top part of panel
-                    if (velY >= 0 && playerY + picFishAdvanced.Height <= p.Top + 25)
-                    {
-                        playerY = p.Top - picFishAdvanced.Height;
-                        velY = 0;
-                        isGrounded = true;
-                    }
-                }
-            }
-
-            // If they aren't on a platform, they'll eventually hit the sandy bottom
-            int floorY = this.ClientSize.Height - picFishAdvanced.Height;
-            if (playerY >= floorY)
-            {
-                playerY = floorY;
-                velY = 0;
-                isGrounded = true;
-            }
-
-            picFishAdvanced.Left = playerX;
-            picFishAdvanced.Top = playerY;
-        }
-
-
-        // --- KEYBOARD CONTROLS ---
-        private void AdvancedGame_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Left) moveLeft = true;
-            if (e.KeyCode == Keys.Right) moveRight = true;
-            if (e.KeyCode == Keys.Up && isGrounded) velY = -24;
-        }
-
-        private void AdvancedGame_KeyUp(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Left) moveLeft = false;
-            if (e.KeyCode == Keys.Right) moveRight = false;
-        }
-
-        // --- WATCH OUT FOR THOSE OBSTACLES! ---
-        private void CheckObstacleCollision()
-        {
-            Panel[] obstacles = { panelPiranha1, panelPiranha2, panelAnchor };
-
-            for (int i = 0; i < obstacles.Length; i++)
-            {
-                if (!obstacleCleared[i] && obstacles[i].Visible)
-                {
-                    Rectangle fishRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
-                    Rectangle obsRect = new Rectangle(obstacles[i].Left, obstacles[i].Top, obstacles[i].Width, obstacles[i].Height);
-
-                    if (fishRect.IntersectsWith(obsRect))
-                    {
-                        // Phew! Let's pause for a second while the quiz shows up
-                        gameTimer.Stop();
-                        countdownTimer.Stop();
-                        anchorTimer.Stop();
-                        piranhaTimer.Stop();
-
-                        // Open quiz for this obstacle
-                        PopQuiz quiz = new PopQuiz(i, totalSeconds, currentQuiz);
-                        quiz.ShowDialog();
-
-                        // After quiz closes - hide obstacle and mark as cleared
-                        if (quiz.AnsweredCorrectly)
-                        {
-                            correctAnswers++;
-                        }
-                        obstacles[i].Visible = false;
-                        obstacleCleared[i] = true;
-
-                        // Reset movement flags
-                        moveLeft = false;
-                        moveRight = false;
-
-                        // Resume game
-                        gameTimer.Start();
-                        countdownTimer.Start();
-                        anchorTimer.Start();
-                        piranhaTimer.Start();
-
-                        // Only handle one obstacle per frame
-                        return;
-                    }
-                }
-            }
-        }
-
-
-        // --- THEY MADE IT TO THE DOOR! ---
-        private void CheckDoorReached()
-        {
-            // Only allow door if all 3 obstacles cleared
-            if (obstacleCleared[0] && obstacleCleared[1] && obstacleCleared[2])
-            {
-                Rectangle fishRect = new Rectangle(playerX, playerY, picFishAdvanced.Width, picFishAdvanced.Height);
-                Rectangle doorRect = new Rectangle(picDoorAdvanced.Left, picDoorAdvanced.Top, picDoorAdvanced.Width, picDoorAdvanced.Height);
-
-                if (fishRect.IntersectsWith(doorRect))
-                {
-                    gameTimer.Stop();
-                    countdownTimer.Stop();
-                    anchorTimer.Stop();
-                    piranhaTimer.Stop();
-
-                    level.CompleteLevel();
-                    GameState.KeysCollected = 3 + correctAnswers; // assuming 3 from beginner
-
-                    AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds, GameState.KeysCollected);
-                    completed.Show(); // Close instead of Hide
-                    this.Hide();
-                }
-            }
-        }
-
-        // --- KEEPING TRACK OF THE TIME ---
-        private void Countdown_Tick(object sender, EventArgs e)
+        //count down timer
+        protected void Countdown_Tick(object sender, EventArgs e)
         {
             totalSeconds--;
             UpdateTimerLabel();
@@ -259,21 +99,83 @@ namespace OOP_GroupProject
                 countdownTimer.Stop();
                 anchorTimer.Stop();
                 piranhaTimer.Stop();
-
-                frmTimeUp timeUp = new frmTimeUp(this, "Advanced");
+                frmTimeUp timeUp = new frmTimeUp(this, LevelName);
                 timeUp.Show();
-                this.Close(); // Close instead of Hide
+                this.Hide();
             }
         }
 
-        private void UpdateTimerLabel()
+        // obstacle collision 
+        private void CheckObstacleCollision()
         {
-            int mins = totalSeconds / 60;
-            int secs = totalSeconds % 60;
-            lblTimer2.Text = $"{mins:D2}:{secs:D2}";
+            Panel[] obstacles = { panelPiranha1, panelPiranha2, panelAnchor };
+
+            for (int i = 0; i < obstacles.Length; i++)
+            {
+                if (!obstacleCleared[i] && obstacles[i].Visible)
+                {
+                    Rectangle fishRect = new Rectangle(playerX, playerY,
+                        picFishAdvanced.Width, picFishAdvanced.Height);
+                    Rectangle obsRect = new Rectangle(obstacles[i].Left, obstacles[i].Top,
+                        obstacles[i].Width, obstacles[i].Height);
+
+                    if (fishRect.IntersectsWith(obsRect))
+                    {
+                        // Pause all timers
+                        gameTimer.Stop();
+                        countdownTimer.Stop();
+                        anchorTimer.Stop();
+                        piranhaTimer.Stop();
+
+                        PopQuiz quiz = new PopQuiz(i, totalSeconds, currentQuiz);
+                        quiz.ShowDialog();
+
+                        if (quiz.AnsweredCorrectly) correctAnswers++;
+                        obstacles[i].Visible = false;
+                        obstacleCleared[i] = true;
+                        moveLeft = false;
+                        moveRight = false;
+
+                        // Resume all timers
+                        gameTimer.Start();
+                        countdownTimer.Start();
+                        anchorTimer.Start();
+                        piranhaTimer.Start();
+                        return;
+                    }
+                }
+            }
         }
 
-        // --- ANCHOR MOVEMENT ---
+        // reached door
+        private void CheckDoorReached()
+        {
+            if (obstacleCleared[0] && obstacleCleared[1] && obstacleCleared[2])
+            {
+                Rectangle fishRect = new Rectangle(playerX, playerY,
+                    picFishAdvanced.Width, picFishAdvanced.Height);
+                Rectangle doorRect = new Rectangle(picDoorAdvanced.Left, picDoorAdvanced.Top,
+                    picDoorAdvanced.Width, picDoorAdvanced.Height);
+
+                if (fishRect.IntersectsWith(doorRect))
+                {
+                    // Stop ALL timers first
+                    gameTimer.Stop();
+                    countdownTimer.Stop();
+                    anchorTimer.Stop();
+                    piranhaTimer.Stop();
+
+                    GameState.KeysCollected = 3 + correctAnswers;
+
+                    // pass totalSeconds correctly
+                    AdvancedCompleteForm completed = new AdvancedCompleteForm(totalSeconds, GameState.KeysCollected);
+                    completed.Show();
+                    this.Close();  // close not Hide
+                }
+            }
+        }
+
+        // anchor movement
         private void AnchorMovement(object sender, EventArgs e)
         {
             panelAnchor.Top += anchorDirection;
@@ -281,7 +183,7 @@ namespace OOP_GroupProject
                 anchorDirection = -anchorDirection;
         }
 
-        // --- PIRANHA MOVEMENT ---
+        // piranha movement
         private void PiranhaMovement(object sender, EventArgs e)
         {
             panelPiranha1.Left += piranha1Direction;
@@ -291,31 +193,6 @@ namespace OOP_GroupProject
             panelPiranha2.Left += piranha2Direction;
             if (panelPiranha2.Left <= 0 || panelPiranha2.Left >= this.ClientSize.Width - panelPiranha2.Width)
                 piranha2Direction = -piranha2Direction;
-        }
-
-        private void panelPiranha2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void AdvancedGame_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTimer2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picFishAdvanced_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void picDoorAdvanced_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -1,44 +1,35 @@
 ﻿using System;
 using System.Windows.Forms;
 
+#pragma warning disable CA1416
+//just to disable the compatibility warning for Windows Forms
+
 namespace OOP_GroupProject
 {
     public partial class SelectLevel : Form
     {
+        //constructor
         public SelectLevel()
         {
             InitializeComponent();
         }
 
-        // Every time the player comes back to this screen, we'll refresh the stats to show their progress
-        // (especially helpful when you just finished a level and come back here)
+        // every time the player comes back again, which reactivate this screen
+        // it will refresh the state by calling the RefreshState method
         protected override void OnActivated(EventArgs e)
         {
             base.OnActivated(e);
             RefreshState();
         }
 
+        // show the player how many keys they have gained
         private void RefreshState()
         {
-            // Let's show the player how many keys they've found so far
             lblKeys.Text = $"{GameState.KeysCollected} / 6";
-
-            //// --- Beginner button ---
-            //if (GameState.BeginnerCompleted)
-            //{
-            //    btnPlayBeginner.Text = "Completed ✓";
-            //    btnPlayBeginner.Enabled = false;  // prevent replaying; remove this line to allow replay
-            //}
-            //else
-            //{
-            //    btnPlayBeginner.Text = "Play Level";
-            //    btnPlayBeginner.Enabled = true;
-            //}
-
-            //// --- Advanced button: enabled only after Beginner is done ---
-            //btnPlayAdvanced.Enabled = GameState.BeginnerCompleted;
+            // GameState is the class and KeysCollected is the field
         }
 
+        // create beginner game instance and show then button is clicked
         private void btnPlayBeginner_Click(object sender, EventArgs e)
         {
             BeginnerGame beginnerGame = new BeginnerGame();
@@ -46,6 +37,7 @@ namespace OOP_GroupProject
             this.Hide();
         }
 
+        // create advanced game instance and show then button is clicked
         private void btnPlayAdvanced_Click(object sender, EventArgs e)
         {
             AdvancedGame advancedGame = new AdvancedGame();
@@ -53,13 +45,12 @@ namespace OOP_GroupProject
             this.Hide();
         }
 
+        // create main page instance and navigate back then button is clicked
         private void btnBackMain_Click(object sender, EventArgs e)
         {
             frmMain main = new frmMain();
             main.Show();
             this.Hide();
         }
-
-        private void SelectLevel_Load(object sender, EventArgs e) { }
     }
 }
