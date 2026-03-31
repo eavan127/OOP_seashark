@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+#pragma warning disable CA1416
 
 namespace OOP_GroupProject
 {
@@ -23,24 +24,24 @@ namespace OOP_GroupProject
             
             label2.Text = hintText;
             
-            // Fix layout after components are initialized to ensure centering/wrapping
+            // Fix layout after components are initialized
             SetupLayout();
         }
 
         private void SetupLayout()
         {
-            // Ensure the main decorative background covers enough space
+            // ensure the main decorative background covers enough space
             pictureBox3.Size = new Size(this.ClientSize.Width - 80, this.ClientSize.Height - 160);
             pictureBox3.Location = new Point(40, 80);
 
-            // Ensure the hint text fits perfectly within the blue box and wraps correctly
+            // ensure the hint text fits perfectly within the blue box and wraps correctly
             label2.AutoSize = false;
             label2.TextAlign = ContentAlignment.MiddleCenter;
             label2.Size = new Size(pictureBox3.Width - 40, pictureBox3.Height - 40);
             label2.Location = new Point(pictureBox3.Left + 20, pictureBox3.Top + 20);
             label2.BringToFront();
 
-            // Center the "Got It" button
+            // center the "Got It" button
             button1.Location = new Point((this.ClientSize.Width - button1.Width) / 2, this.ClientSize.Height - 70);
             button1.BringToFront();
         }
@@ -48,36 +49,6 @@ namespace OOP_GroupProject
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
