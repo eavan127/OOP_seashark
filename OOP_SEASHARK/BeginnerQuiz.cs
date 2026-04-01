@@ -3,8 +3,10 @@ using System;
 namespace OOP_GroupProject
 {
     public class BeginnerQuiz : IQuiz //inheritance from the Quiz Interface
+        //use abtstration becauee all methods in the interface
+        ////will be added implementation details here
     {
-        //private fields
+        //private fields for quizzes inside beginner only
         private string[] questions; // 1d array
         private string[][] options; // 2d array
         private int[] correctAnswerIndex;
@@ -23,14 +25,14 @@ namespace OOP_GroupProject
             // the options for each question, each question's option has 4 string options.
             options = new string[][]
             {
-                new string[] { "int x = 5;", "x = 5;", "variable x = 5;", "int = x 5;" },
+                new string[] { "int x = 5;", "x = 5;", "variable x = 5;", "int = x 5;" }, // first row 
                 new string[] { "object", "class", "struct", "form" },
                 new string[] { "Object Oriented Programming", "Open Object Program",
                                "Output Oriented Process", "Object Order Program" }
             };
 
             // the index of the correct answer in the list
-            correctAnswerIndex = new int[] { 0, 1, 0 };
+            correctAnswerIndex = new int[] { 0, 1, 0 }; // 0 in first row, 1 in second row and 0 in third row
             score = 0;
         }
 
@@ -72,7 +74,7 @@ namespace OOP_GroupProject
                 "The 'class' keyword is the fundamental building block of Object-Oriented Programming in C#. It acts as a blueprint or template for creating objects.\n\nInside a class, you define the properties (data) and methods (behavior) that the object will have. Most languages like Java and C++ use this same standard keyword.",
                 "OOP stands for Object-Oriented Programming. This approach organizes software design around data, or objects, rather than functions and logic.\n\nAn object can be defined as a data field that has unique attributes and behavior. Think of the letters: O for Object, O for Oriented, and P for Programming!"
             };
-            return hints[questionIndex]; //getter
+            return hints[questionIndex]; //getter when hind button is triggered
         }
 
         public int TotalQuestions() 

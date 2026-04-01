@@ -5,10 +5,12 @@ using System.Windows.Forms;
 //just to disable the compatibility warning for Windows Forms
 
 namespace OOP_GroupProject
+    //for class organisation and avoid naming conflict
 {
     public partial class SelectLevel : Form
+        //partial class so that compiler to merge it with designer into one class
     {
-        //constructor to initialize component in the UI form
+        //constructor to initialize component in the UI 
         public SelectLevel()
         {
             InitializeComponent();
@@ -22,7 +24,7 @@ namespace OOP_GroupProject
             RefreshState();
         }
 
-        // show the player how many keys they have gained /
+        // encapsulate the UI update logic in this method
         // encapsulation 
         private void RefreshState()
         {
