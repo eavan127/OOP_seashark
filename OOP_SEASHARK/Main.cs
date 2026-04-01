@@ -31,10 +31,5 @@ namespace OOP_GroupProject
         {
             Application.Exit();
         }
-
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
