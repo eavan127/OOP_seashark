@@ -8,8 +8,7 @@ namespace OOP_GroupProject
 {
     public class Timer
     {
-        private int timeLeft;
-        //Apply Encapsulation
+        private int timeLeft; //Apply Encapsulation
 
         public void StartTimer(double timeLimit) // Method to start or initialize the timer
         {
@@ -17,18 +16,18 @@ namespace OOP_GroupProject
             timeLeft = (int)timeLimit; 
         }
 
-
         public void UpdateTimer()
         {
             timeLeft--;  // Decrease time by 1 (countdown effect)
         }
 
-        public bool TimeUp()
+        public bool TimeUp() //To check if time is finished 
+
         {
             return timeLeft <= 0;
         }
 
-        public int GetTimeLeft()
+        public int GetTimeLeft() //To get remaining time for display purposes
         {
             return timeLeft;
         }
