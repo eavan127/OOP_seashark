@@ -46,9 +46,9 @@ namespace OOP_GroupProject
 
                 if (fishRect.IntersectsWith(platRect) && velY > 0)
                 {
-                    playerY = p.Top - PlayerPicture.Height;
-                    velY = 0;
-                    isGrounded = true;
+                    playerY = p.Top - PlayerPicture.Height; // place player ON TOP of platform
+                    velY = 0; // stop falling
+                    isGrounded = true; // allow jumping again
                 }
             }
 
@@ -69,7 +69,7 @@ namespace OOP_GroupProject
         {
             int mins = totalSeconds / 60;
             int secs = totalSeconds % 60;
-            if (TimerLabel != null)  //null check
+            if (TimerLabel != null)  // null check
                 TimerLabel.Text = $"{mins:D2}:{secs:D2}";
         }
 
@@ -93,14 +93,14 @@ namespace OOP_GroupProject
         }
 
         // shared keyboard
-        protected void HandleKeyDown(KeyEventArgs e)
+        protected void HandleKeyDown(KeyEventArgs e) // key is pressed down
         {
             if (e.KeyCode == Keys.Left) moveLeft = true;
             if (e.KeyCode == Keys.Right) moveRight = true;
             if (e.KeyCode == Keys.Up && isGrounded) velY = -24;
         }
 
-        protected void HandleKeyUp(KeyEventArgs e)
+        protected void HandleKeyUp(KeyEventArgs e) // key is released
         {
             if (e.KeyCode == Keys.Left) moveLeft = false;
             if (e.KeyCode == Keys.Right) moveRight = false;
