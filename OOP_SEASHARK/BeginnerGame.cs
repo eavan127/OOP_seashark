@@ -17,6 +17,7 @@ namespace OOP_GroupProject
         // private fields that belongs to beginner level only
         private GameManager gameManager = new GameManager();
         private IQuiz currentQuiz = new BeginnerQuiz();
+        //beginner quiz object with quiz interface reference type
 
         public BeginnerGame()
         {
@@ -24,8 +25,8 @@ namespace OOP_GroupProject
             this.KeyPreview = true;
 
             // keyboard inputs for
-            this.KeyDown += (s, e) => HandleKeyDown(e);
-            this.KeyUp += (s, e) => HandleKeyUp(e);
+            this.KeyDown += (s, e) => HandleKeyDown(e); //key press down
+            this.KeyUp += (s, e) => HandleKeyUp(e); // key release up 
 
             //button event handler inputs 
             btnLeftBeginner.MouseDown += (s, e) => { this.Focus(); moveLeft = true; };
@@ -35,6 +36,7 @@ namespace OOP_GroupProject
             btnLeftBeginner.MouseLeave += (s, e) => moveLeft = false;
             btnRightBeginner.MouseLeave += (s, e) => moveRight = false;
             btnUpBeginner.Click += (s, e) => { this.Focus(); if (isGrounded) velY = -24; };
+            //moving up negative, moving down positive
 
             gameManager.StartGame();
             totalSeconds = 300; //5 minutes 
@@ -73,11 +75,11 @@ namespace OOP_GroupProject
         private void CheckObstacleCollision()
         {
             PictureBox[] obstacles = { picObstacle1, picObstacle2, picObstacle3 };
-            // 3 obstacles
+            // 3 picturebox object
 
             for (int i = 0; i < obstacles.Length; i++)
             {
-                //only process the uncleared obstacle or unanswered one
+                //only process the obstacle that have not been unanswered yet
                 if (!obstacleCleared[i] && obstacles[i].Visible)
                 {
                     //model the character and player as rectangle // using the coordinates
@@ -89,7 +91,8 @@ namespace OOP_GroupProject
                     //if they touches
                     if (fishRect.IntersectsWith(obsRect))
                     {
-                        gameTimer.Stop(); // count down timer does not stop
+                        gameTimer.Stop(); //pause, stop the character movement 
+                        // count down timer does not stop
                         // pop up quizz appear
                         PopQuiz quiz = new PopQuiz(i, totalSeconds, currentQuiz);
                         quiz.ShowDialog();
@@ -120,10 +123,10 @@ namespace OOP_GroupProject
                 Rectangle doorRect = new Rectangle(picDoorBeginner.Left, picDoorBeginner.Top,
                     picDoorBeginner.Width, picDoorBeginner.Height);
 
-                // if the rectangles touche
+                // if the rectangle of character and door touch
                 if (fishRect.IntersectsWith(doorRect))
                 {
-                    gameTimer.Stop();
+                    gameTimer.Stop(); 
                     countdownTimer.Stop(); // count down also stop
                     // indiciate that the beginner level finishes
                     GameState.BeginnerCompleted = true; //setter
