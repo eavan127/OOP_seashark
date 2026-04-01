@@ -131,7 +131,7 @@
             picObstacle2.SizeMode = PictureBoxSizeMode.StretchImage;
             picObstacle2.TabIndex = 7;
             picObstacle2.TabStop = false;
-            //
+            // 
             // picObstacle1
             // 
             picObstacle1.BackColor = Color.Transparent;
