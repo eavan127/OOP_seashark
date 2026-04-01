@@ -22,8 +22,8 @@ namespace OOP_GroupProject
         private void btnStart_Click(object sender, EventArgs e) //event handler function
         {
             SelectLevel selectLevel = new SelectLevel(); //association relationship
-            selectLevel.Show(); // keep memory instead of .Close()
-            this.Hide();
+            selectLevel.Show();
+            this.Hide(); // keep memory instead of .Close()
         }
 
         //exit button to exit application

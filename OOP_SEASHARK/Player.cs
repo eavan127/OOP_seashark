@@ -1,7 +1,5 @@
 using System;
 
-#pragma warning disable CA1416
-
 // a container for all classes
 // avoid same name class conflict
 namespace OOP_GroupProject
