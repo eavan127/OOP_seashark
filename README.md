@@ -13,10 +13,6 @@
 **Sea Shark Game** is an interactive educational game designed to teach C# programming concepts through a gamified undersea platformer. Players control a shark avatar, navigating multi-tiered underwater levels, collecting keys, avoiding obstacles, and answering C# quizzes with immediate feedback and hints. The project demonstrates how Object-Oriented Programming (OOP) can be applied in a practical and engaging scenario.
 
 The game combines learning and gameplay, ensuring that players can practice programming concepts in an interactive and progressive manner.
-
-**🎮 Game Preview:**
-
-![Gameplay Preview](;;;.png)
 ---
 
 ## 🎯 Objectives
